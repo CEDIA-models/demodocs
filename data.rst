@@ -2,17 +2,18 @@
 
 
 *********************
-Les données et Compas
+Importer des données
 *********************
 
 .. _registers:
 
-Compas permet d'utiliser des données de plusieurs sources. Cependant, Compas requière une mise-en-forme particulière des données afin de les rendre utilisables par le simulateur.  
+Compas permet d'utiliser des données de plusieurs sources. Cependant, une mise-en-forme particulière des données est nécessaire afin de les rendre utilisable par le simulateur.  
 
 Les registres de données
 ========================
 
-Compas utilise trois registres de données: 
+Compas utilise trois registres de données:
+ 
 * registre dominant (hh)
 * registre conjoint (sp)
 * registre enfants (kd)

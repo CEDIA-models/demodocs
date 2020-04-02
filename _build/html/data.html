@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Les données et Compas &mdash; Documentation Compas </title>
+  <title>Importer des données &mdash; Documentation Compas </title>
   
 
   
@@ -36,6 +36,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Exemple de mise en forme des données" href="import.html" />
     <link rel="prev" title="Premier pas avec Compas" href="premierpas.html" /> 
 </head>
 
@@ -83,12 +84,13 @@
               <p class="caption"><span class="caption-text">Menu:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="premierpas.html">Premier pas avec Compas</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Les données et Compas</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Importer des données</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#les-registres-de-donnees">Les registres de données</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mettre-en-forme-des-donnees-sources">Mettre en forme des données sources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#population-dans-compas">Population dans Compas</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="import.html">Exemple de mise en forme des données</a></li>
 </ul>
 
             
@@ -134,7 +136,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Les données et Compas</li>
+      <li>Importer des données</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -153,15 +155,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="les-donnees-et-compas">
-<span id="data"></span><h1>Les données et Compas<a class="headerlink" href="#les-donnees-et-compas" title="Lien permanent vers ce titre">¶</a></h1>
-<p id="registers">Compas permet d’utiliser des données de plusieurs sources. Cependant, Compas requière une mise-en-forme particulière des données afin de les rendre utilisables par le simulateur.</p>
+  <div class="section" id="importer-des-donnees">
+<span id="data"></span><h1>Importer des données<a class="headerlink" href="#importer-des-donnees" title="Lien permanent vers ce titre">¶</a></h1>
+<p id="registers">Compas permet d’utiliser des données de plusieurs sources. Cependant, une mise-en-forme particulière des données est nécessaire afin de les rendre utilisable par le simulateur.</p>
 <div class="section" id="les-registres-de-donnees">
 <h2>Les registres de données<a class="headerlink" href="#les-registres-de-donnees" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Compas utilise trois registres de données:
-* registre dominant (hh)
-* registre conjoint (sp)
-* registre enfants (kd)</p>
+<p>Compas utilise trois registres de données:</p>
+<ul class="simple">
+<li><p>registre dominant (hh)</p></li>
+<li><p>registre conjoint (sp)</p></li>
+<li><p>registre enfants (kd)</p></li>
+</ul>
 <p>Le registre des dominants doit contenir une clé identifiante <strong>nas</strong> unique pour chaque dominant. Les conjoints des dominants sont listés dans le registre conjoint en utilisant cette même clé identifiante <strong>nas</strong>. Donc, un conjoint n’a pas son propre nas mais le <strong>nas</strong> du dominant qui est son conjoint. Dans un modèle ouvert, les conjoints, tout comme les enfants sont des acteurs fantômes. Le registre enfants doint être mis en forme de la même façon, en listant chaque enfants sur une ligne différente.  Donc, un dominant qui a un conjoint et 3 enfants aura une entrée dans le registre dominant et conjoint et trois entrées dans le registre enfants.</p>
 <p>Nous décrivons chacun des registres ici-bas:</p>
 </div>
@@ -181,6 +185,8 @@
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="import.html" class="btn btn-neutral float-right" title="Exemple de mise en forme des données" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="premierpas.html" class="btn btn-neutral float-left" title="Premier pas avec Compas" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
