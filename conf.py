@@ -10,16 +10,17 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+import os
+import sys
+sys.path.insert(0, os.path.abspath('../simgen'))
+#sys.path.insert(0,'/users/loulou/cedia/OLG_CAN/demo/compas')
 
 
 # -- Project information -----------------------------------------------------
 
-project = 'Compas'
-copyright = '2020, Pierre-Carl Michaud'
-author = 'Pierre-Carl Michaud'
+project = 'SimGen'
+copyright = '2020, Équipe CREEi'
+author = 'Équipe CREEi'
 
 
 # -- General configuration ---------------------------------------------------
@@ -27,7 +28,7 @@ author = 'Pierre-Carl Michaud'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ["sphinx_rtd_theme"
+extensions = ["sphinx_rtd_theme","sphinx.ext.autodoc", "sphinx.ext.napoleon","sphinx.ext.mathjax"
 ]
 
 # Add any paths that contain templates here, relative to this directory.

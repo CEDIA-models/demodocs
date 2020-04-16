@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Premier pas avec Compas &mdash; Documentation Compas </title>
+  <title>Premier pas avec Compas &mdash; Documentation SimGen </title>
   
 
   
@@ -26,6 +26,7 @@
         <script src="_static/doctools.js"></script>
         <script src="_static/language_data.js"></script>
         <script src="_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -36,8 +37,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="next" title="Importer des données" href="data.html" />
-    <link rel="prev" title="Documentation de Compas" href="index.html" /> 
+    <link rel="next" title="Exemple de mise en forme des données" href="import.html" />
+    <link rel="prev" title="Documentation de SimGen" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -51,7 +52,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Compas
+            <a href="index.html" class="icon icon-home"> SimGen
           
 
           
@@ -84,13 +85,14 @@
               <p class="caption"><span class="caption-text">Menu:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Premier pas avec Compas</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#installation-de-compas">Installation de Compas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#importer-compas-dans-un-notebook-ou-script">Importer Compas dans un notebook ou script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-de-simgen">Installation de SimGen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#importer-simgen-dans-un-notebook-ou-script">Importer SimGen dans un notebook ou script</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#rouler-une-premiere-simulation">Rouler une première simulation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="data.html">Importer des données</a></li>
 <li class="toctree-l1"><a class="reference internal" href="import.html">Exemple de mise en forme des données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html">Documentation des fonctions de SimGen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transition_models.html">Modèles de transition</a></li>
 </ul>
 
             
@@ -105,7 +107,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Compas</a>
+          <a href="index.html">SimGen</a>
         
       </nav>
 
@@ -157,26 +159,73 @@
             
   <div class="section" id="premier-pas-avec-compas">
 <span id="premierpas"></span><h1>Premier pas avec Compas<a class="headerlink" href="#premier-pas-avec-compas" title="Lien permanent vers ce titre">¶</a></h1>
-<div class="section" id="installation-de-compas">
-<span id="installing-docdir"></span><h2>Installation de Compas<a class="headerlink" href="#installation-de-compas" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="installation-de-simgen">
+<span id="installing-docdir"></span><h2>Installation de SimGen<a class="headerlink" href="#installation-de-simgen" title="Lien permanent vers ce titre">¶</a></h2>
 <p>On peut installer facilement Compas en utilisant pip</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">compas</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">creei</span><span class="o">-</span><span class="n">simgen</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="importer-compas-dans-un-notebook-ou-script">
-<h2>Importer Compas dans un notebook ou script<a class="headerlink" href="#importer-compas-dans-un-notebook-ou-script" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="importer-simgen-dans-un-notebook-ou-script">
+<h2>Importer SimGen dans un notebook ou script<a class="headerlink" href="#importer-simgen-dans-un-notebook-ou-script" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Pour importer compas dans un notebook ou un script python on ajoute</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">compas</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">simgen</span>
 </pre></div>
 </div>
 <p>On peut aussi importer des sous-modules spécifiques en utilisant</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">compas</span> <span class="kn">import</span> <span class="n">actors</span><span class="p">,</span> <span class="n">demographics</span><span class="p">,</span> <span class="n">data</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">simgen</span> <span class="kn">import</span> <span class="n">model</span><span class="p">,</span> <span class="n">update</span><span class="p">,</span> <span class="n">parse</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="rouler-une-premiere-simulation">
 <h2>Rouler une première simulation<a class="headerlink" href="#rouler-une-premiere-simulation" title="Lien permanent vers ce titre">¶</a></h2>
+<p>On importe le modèle:</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">simgen</span> <span class="kn">import</span> <span class="n">model</span>
+</pre></div>
+</div>
+<p>On déclare une instance avec année de départ et d’arrêt.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">base</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">start_yr</span><span class="o">=</span><span class="mi">2017</span><span class="p">,</span><span class="n">stop_yr</span><span class="o">=</span><span class="mi">2040</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>On donne le nom du fichier pickle qui contient la base de départ</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">base</span><span class="o">.</span><span class="n">startpop</span><span class="p">(</span><span class="s1">&#39;startpop&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>On donne les hypothèses d’immigration ainsi que le nom du fichier pour
+la population de nouveaux immigrants.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">base</span><span class="o">.</span><span class="n">immig_assumptions</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="s1">&#39;newimmpop&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>On prend les hypothèses par défaut pour les naissances</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">base</span><span class="o">.</span><span class="n">birth_assumptions</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>On prend aussi les hypothèses par défaut pour la mortalité</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">base</span><span class="o">.</span><span class="n">dead_assumptions</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>On peut toujours ré-initialiser avec reset.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">base</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">base</span><span class="o">.</span><span class="n">pop</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">8298827.000000236</span>
+</pre></div>
+</div>
+<p>On peut faire juste une année en utilisant next()</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">base</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Pour faire la simulation de l’année de départ à l’année de fin, on lance
+simulate</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">time</span> <span class="n">base</span><span class="o">.</span><span class="n">simulate</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2040</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -188,10 +237,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="data.html" class="btn btn-neutral float-right" title="Importer des données" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="import.html" class="btn btn-neutral float-right" title="Exemple de mise en forme des données" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral float-left" title="Documentation de Compas" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Documentation de SimGen" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -200,7 +249,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, Pierre-Carl Michaud
+        &copy; Copyright 2020, Équipe CREEi
 
     </p>
   </div>

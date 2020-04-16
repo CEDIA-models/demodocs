@@ -1,14 +1,20 @@
 Exemple de mise en forme des données
 ====================================
+Il est important de noter que les données populationnelles de base pour ce modèle provienennt de la Base de données de simulation de politiques sociales (BDSPS)
+qui est produite par Statistiques Canada (https://www.statcan.gc.ca/fra/microsimulation/bdmsps/bdmsps). La BDSPS est une base non confidentielle, statistiquement 
+représentative, de données sur des particuliers canadiens dans leur contexte familial, contenant suffisamment de renseignements sur chaque particulier pour calculer 
+les impôts payés au gouvernement et les transferts de fonds versés par ce dernier.
 
-.. code:: ipython3
+La Base de données de simulation de politiques sociales (BDSPS) est disponible au moyen L'Initiative de démocratisation des données (IDD). 
+Les professeurs et étudiants dans les établissements postsecondaires participants peuvent accéder au modèle par l'entremise de leurs contacts avec l'IDD.
 
-    import sys
-    sys.path.append('/users/loulou/cedia/OLG_CAN/demo/compas/')
-    import warnings
-    warnings.filterwarnings("ignore")
+Pour plus de renseignements sur le programme de l’IDD, consultez le site Web de l'Initiative de démocratisation des données (https://www.statcan.gc.ca/fra/idd/idd).
 
-On utilise trois fonctions de compas: 
+Dans cette section, on illustre comment effectuer la mise en forme des données provenant de la BDSPS, par contre le modèle pourrait fonctionner
+avec une base de données différentes permettant une mise en forme identiques.
+
+
+On utilise trois fonctions de simgen: 
 * bdsps: manipule la base BDSPS
 de Statistiques Canada pour mettre en forme certaines variables et créer
 les registres avec NAS de dominants. 
@@ -19,12 +25,12 @@ population
 
 .. code:: ipython3
 
-    from compas import bdsps, population, parse
+    from simgen import bdsps, population, parse
 
 Nettoyage de la BDSPS
 ---------------------
 
-Compas vient avec une fonction, bdsps qui nettoie les données de la
+SimGen vient avec une fonction, bdsps qui nettoie les données de la
 BDSPS, crée les NAS et les trois registres. Cette fonction peut être
 adapté pour d’autres bases de données. Fait important à noter, la
 fonction BDSPS calibre aussi les poids des répondants, par âge et sexe
@@ -496,14 +502,14 @@ registres différents.
     sp_imm = sp.loc[sp.index.isin(imm_nas),:]
     kd_imm = kd.loc[kd.index.isin(imm_nas),:]
 
-Adapter les noms de variables pour Compas
+Adapter les noms de variables pour SimGen
 -----------------------------------------
 
 Une étape importante est de faire la correspondance entre les noms de
-variables des registres de la BDSPS et ceux dans COMPAS. Pour ce faire,
+variables des registres de la BDSPS et ceux dans SimGen. Pour ce faire,
 nous avons la classe parse(). Cette classe permet, à l’aide d’un
 dictionnaire de faire cette correspondance, pour chaque registre. Par
-défaut, parse() suppose les mêmes noms de variables que dans Compas.
+défaut, parse() suppose les mêmes noms de variables que dans SimGen.
 
 .. code:: ipython3
 
