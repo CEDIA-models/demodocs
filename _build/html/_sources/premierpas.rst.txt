@@ -2,7 +2,7 @@
 
 
 ***********************
-Premier pas avec Compas
+Premier pas avec SimGen
 ***********************
 
 .. _installing-docdir:
@@ -15,12 +15,15 @@ On peut installer facilement SimGen suivant deux étapes. La première est de t�
   git clone https://github.com/creei-models/simgen simgen 
 
 Ensuite on doit l'installer au terminal en allant a la racine du repertoire simgen ::
+
   python setup.py install
+
+Par la suite, nous ne devriez pas travailler dans ce répertoire d'installation. Pour aller chercher une nouvelle version, il suffit de répetez les étapes précédentes. 
 
 Importer SimGen dans un notebook ou script
 ==========================================
 
-Pour importer compas dans un notebook ou un script python on ajoute ::
+Pour importer SimGen dans un notebook ou un script python on ajoute ::
 
   import simgen 
 
