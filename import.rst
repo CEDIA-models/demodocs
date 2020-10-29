@@ -1,3 +1,8 @@
+.. _import:
+
+Base de départ
+==============
+
 Exemple de mise en forme des données
 ====================================
 Il est important de noter que les données populationnelles de base pour ce modèle provienennt de la Base de données de simulation de politiques sociales (BDSPS)
@@ -12,6 +17,9 @@ Pour plus de renseignements sur le programme de l’IDD, consultez le site Web d
 
 Dans cette section, on illustre comment effectuer la mise en forme des données provenant de la BDSPS, par contre le modèle pourrait fonctionner
 avec une base de données différentes permettant une mise en forme identiques.
+
+Une version de base des fichiers de départ est fournie dans le répertoire params, soit startpop.pkl et newimmpop.pkl, tous deux en format pickle. 
+
 
 
 On utilise trois fonctions de simgen: 
