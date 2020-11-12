@@ -1,0 +1,49 @@
+\select@language {french}
+\contentsline {chapter}{\numberline {1}Premiers pas avec SimGen}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}Installation de SimGen}{3}{section.1.1}
+\contentsline {section}{\numberline {1.2}Importer SimGen dans un notebook ou un script}{3}{section.1.2}
+\contentsline {section}{\numberline {1.3}Rouler une premi\IeC {\`e}re simulation}{4}{section.1.3}
+\contentsline {chapter}{\numberline {2}Base de d\IeC {\'e}part}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Exemple de mise en forme des donn\IeC {\'e}es}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}Nettoyage de la BDSPS}{6}{section.2.2}
+\contentsline {section}{\numberline {2.3}Adapter les noms de variables pour SimGen}{6}{section.2.3}
+\contentsline {section}{\numberline {2.4}Cr\IeC {\'e}ation des structures de population et sauvegarde des donn\IeC {\'e}es}{7}{section.2.4}
+\contentsline {chapter}{\numberline {3}Documentation des fonctions de SimGen}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Donn\IeC {\'e}es}{9}{section.3.1}
+\contentsline {section}{\numberline {3.2}Transitions}{10}{section.3.2}
+\contentsline {section}{\numberline {3.3}Simulation}{11}{section.3.3}
+\contentsline {section}{\numberline {3.4}Statistiques}{11}{section.3.4}
+\contentsline {chapter}{\numberline {4}Mod\IeC {\`e}les de transition}{13}{chapter.4}
+\contentsline {section}{\numberline {4.1}Naissances}{13}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Mod\IeC {\`e}le \IeC {\'e}conom\IeC {\'e}trique}{13}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Donn\IeC {\'e}es et \IeC {\'e}chantillon}{13}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Variables d\IeC {\'e}pendantes et variables explicatives}{14}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}R\IeC {\'e}sultats de la r\IeC {\'e}gression logistique et mise en \IeC {\oe }uvre dans le mod\IeC {\`e}le d\IeC {\'e}mographique}{14}{subsection.4.1.4}
+\contentsline {section}{\numberline {4.2}Fin des \IeC {\'e}tudes et niveau de scolarit\IeC {\'e} associ\IeC {\'e}}{15}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Mod\IeC {\`e}le \IeC {\'e}conom\IeC {\'e}trique}{15}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Donn\IeC {\'e}es et \IeC {\'e}chantillon}{15}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Variables d\IeC {\'e}pendantes et variables explicatives}{16}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}R\IeC {\'e}sultats des r\IeC {\'e}gressions logistiques et mise en \IeC {\oe }uvre dans le mod\IeC {\`e}le d\IeC {\'e}mographique}{16}{subsection.4.2.4}
+\contentsline {section}{\numberline {4.3}Mises en couple et s\IeC {\'e}parations}{17}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Mod\IeC {\`e}le \IeC {\'e}conom\IeC {\'e}trique}{17}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Donn\IeC {\'e}es et \IeC {\'e}chantillon}{17}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Variables d\IeC {\'e}pendantes et variables explicatives}{17}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}R\IeC {\'e}sultats des r\IeC {\'e}gressions logistiques et mise en \IeC {\oe }uvre dans le mod\IeC {\`e}le d\IeC {\'e}mographique}{18}{subsection.4.3.4}
+\contentsline {section}{\numberline {4.4}D\IeC {\'e}c\IeC {\`e}s}{20}{section.4.4}
+\contentsline {section}{\numberline {4.5}Migrations}{20}{section.4.5}
+\contentsline {chapter}{\numberline {5}R\IeC {\'e}sultats}{21}{chapter.5}
+\contentsline {section}{\numberline {5.1}Donn\IeC {\'e}es de comparaison}{21}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Donn\IeC {\'e}es historiques}{21}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Donn\IeC {\'e}es de projections de population}{21}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Donn\IeC {\'e}es par niveau de scolarit\IeC {\'e}}{21}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.4}Donn\IeC {\'e}es pour personnes en couple}{22}{subsection.5.1.4}
+\contentsline {subsection}{\numberline {5.1.5}Base de donn\IeC {\'e}es de d\IeC {\'e}part}{22}{subsection.5.1.5}
+\contentsline {section}{\numberline {5.2}Donn\IeC {\'e}es de simulation}{22}{section.5.2}
+\contentsline {section}{\numberline {5.3}Comparaison}{22}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Population totale}{22}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Population par groupe d\IeC {\textquoteright }\IeC {\^a}ge}{23}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Niveau de scolarit\IeC {\'e}}{23}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Personnes en couple}{24}{subsection.5.3.4}
+\contentsline {chapter}{\numberline {6}Index et Tables}{25}{chapter.6}
+\contentsline {chapter}{Index des modules Python}{27}{section*.23}
+\contentsline {chapter}{Index}{29}{section*.24}
