@@ -28,7 +28,7 @@ author = 'Équipe CREEi'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ["sphinx_rtd_theme","sphinx.ext.autodoc", "sphinx.ext.napoleon","sphinx.ext.mathjax"
+extensions = ["sphinx_rtd_theme","sphinx.ext.autodoc", "sphinx.ext.napoleon","sphinx.ext.mathjax",'sphinxcontrib.contentui','sphinx.ext.autosectionlabel'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
