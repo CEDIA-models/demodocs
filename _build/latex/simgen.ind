@@ -1,0 +1,75 @@
+\begin{sphinxtheindex}
+\let\bigletter\sphinxstyleindexlettergroup
+\let\spxpagem \sphinxstyleindexpagemain
+\let\spxentry \sphinxstyleindexentry
+\let\spxextra \sphinxstyleindexextra
+
+  \bigletter A
+  \item \spxentry{add()}\spxextra{méthode simgen.statistics}, \hyperpage{29}
+
+  \indexspace
+  \bigletter B
+  \item \spxentry{bdsps}\spxextra{classe dans simgen}, \hyperpage{8}
+  \item \spxentry{bdsps()}\spxextra{dans le module simgen}, \hyperpage{26}
+  \item \spxentry{birth()}\spxextra{méthode simgen.update}, \hyperpage{27}
+  \item \spxentry{birth\_assumptions()}\spxextra{méthode simgen.model}, \hyperpage{9}, 
+		\hyperpage{29}
+
+  \indexspace
+  \bigletter D
+  \item \spxentry{dead()}\spxextra{méthode simgen.update}, \hyperpage{28}
+  \item \spxentry{dead\_assumptions()}\spxextra{méthode simgen.model}, \hyperpage{9}, 
+		\hyperpage{29}
+  \item \spxentry{divorce()}\spxextra{méthode simgen.update}, \hyperpage{28}
+  \item \spxentry{dominants()}\spxextra{méthode simgen.parse}, \hyperpage{27}
+
+  \indexspace
+  \bigletter E
+  \item \spxentry{educ()}\spxextra{méthode simgen.update}, \hyperpage{28}
+  \item \spxentry{emig()}\spxextra{méthode simgen.update}, \hyperpage{28}
+
+  \indexspace
+  \bigletter F
+  \item \spxentry{freq()}\spxextra{méthode simgen.statistics}, \hyperpage{11}, \hyperpage{30}
+
+  \indexspace
+  \bigletter I
+  \item \spxentry{immig\_assumptions()}\spxextra{méthode simgen.model}, \hyperpage{9}, 
+		\hyperpage{29}
+  \item \spxentry{input()}\spxextra{méthode simgen.population}, \hyperpage{27}
+  \item \spxentry{isq()}\spxextra{dans le module simgen}, \hyperpage{26}
+
+  \indexspace
+  \bigletter K
+  \item \spxentry{kids()}\spxextra{méthode simgen.parse}, \hyperpage{27}
+
+  \indexspace
+  \bigletter M
+  \item \spxentry{marriage()}\spxextra{méthode simgen.update}, \hyperpage{28}
+  \item \spxentry{model}\spxextra{classe dans simgen}, \hyperpage{8--10}, \hyperpage{28}
+  \item \spxentry{module}
+    \subitem \spxentry{simgen}, \hyperpage{26}
+
+  \indexspace
+  \bigletter P
+  \item \spxentry{parse}\spxextra{classe dans simgen}, \hyperpage{27}
+  \item \spxentry{population}\spxextra{classe dans simgen}, \hyperpage{27}
+  \item \spxentry{prop()}\spxextra{méthode simgen.statistics}, \hyperpage{12}, \hyperpage{30}
+
+  \indexspace
+  \bigletter S
+  \item \spxentry{save()}\spxextra{méthode simgen.statistics}, \hyperpage{12}, \hyperpage{30}
+  \item \spxentry{set\_statistics()}\spxextra{méthode simgen.model}, \hyperpage{29}
+  \item \spxentry{simgen}
+    \subitem \spxentry{module}, \hyperpage{26}
+  \item \spxentry{simulate()}\spxextra{méthode simgen.model}, \hyperpage{10}, \hyperpage{29}
+  \item \spxentry{spouses()}\spxextra{méthode simgen.parse}, \hyperpage{27}
+  \item \spxentry{start()}\spxextra{méthode simgen.statistics}, \hyperpage{30}
+  \item \spxentry{startpop()}\spxextra{méthode simgen.model}, \hyperpage{9}, \hyperpage{29}
+  \item \spxentry{statistics}\spxextra{classe dans simgen}, \hyperpage{11, 12}, \hyperpage{29}
+
+  \indexspace
+  \bigletter U
+  \item \spxentry{update}\spxextra{classe dans simgen}, \hyperpage{27}
+
+\end{sphinxtheindex}

@@ -71,12 +71,12 @@
 \addto\captionsfrench{\renewcommand{\contentsname}{Menu :}}
 
 \usepackage{sphinxmessages}
-\setcounter{tocdepth}{1}
+
 
 
 
 \title{SimGen}
-\date{avr. 28, 2021}
+\date{avr. 30, 2021}
 \release{}
 \author{Équipe CREEi}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -97,78 +97,87 @@
 \phantomsection\label{\detokenize{index::doc}}
 
 
-SimGen est un modèle de microsimulation effectuant des projections démographiques de long terme (jusqu’en 2100) pour le Québec.
-Ce modèle prend en compte la fécondité (naissances), le statut conjugal (formation d’unions et séparations), la scolarité, l’immigration, l’émigration
-et finalement la mortalité (décès).
+SimGen est un modèle de microsimulation effectuant des projections démographiques de long terme pour le Québec (2017 à 2100).
+Ce modèle prend en compte les transitions démographiques majeures de la fécondité (naissances), de la mortalité (décès) et des migrations (immigration et émigration).
+SimGen modélise également la scolarité et l’état matrimonial (formation d’unions et séparations).
 
 SimGen peut être utilisé afin de produire des distributions démographiques très utiles dans le cadre de recherches et d’enseignements.
 Les résultats des simulations permettent notamment d’analyser les conséquences économiques de la taille et de la structure de la population québécoise.
-
 SimGen a été développé par l’équipe
 de la \sphinxhref{https://www.creei.ca}{Chaire de recherche sur les enjeux économiques intergénérationnels},
 une chaire conjointe \sphinxhref{https://esg.uqam.ca/}{ESG UQAM} et \sphinxhref{https://www.hec.ca/}{HEC Montréal}
-soutenue par le \sphinxhref{https://cirano.qc.ca/}{CIRANO} et
+soutenue par le \sphinxhref{https://cirano.qc.ca/}{CIRANO}, \sphinxhref{https://ire.hec.ca/}{l’Institut sur la retraite et l’épargne (IRE)} et
 \sphinxhref{https://www.retraitequebec.gouv.qc.ca/fr/Pages/accueil.aspx}{Retraite Québec}.
+
 Pour rester informé.e des mises à jour de SimGen, inscrivez\sphinxhyphen{}vous à notre \sphinxhref{http://eepurl.com/hs0YED}{liste d’envoi dédiée}.
 
 
-\chapter{Installation}
-\label{\detokenize{installation:installation}}\label{\detokenize{installation:premierpas}}\label{\detokenize{installation::doc}}\phantomsection\label{\detokenize{installation:installing-docdir}}
-SimGen est programmé en langage Python. Il est donc nécessaire de posséder la version 3.7 de Python ou une version supérieure
-pour faire fonctionner SimGen sur votre ordinateur.
-Malgré tout, si vous n’avez pas accès au logiciel Python mais que vous disposez d’un compte Google, il vous
-sera possible d’utiliser SimGen en accès à distance via \sphinxstyleemphasis{Google colab} (Voir méthode 3).
+\chapter{Droits d’utilisation}
+\label{\detokenize{index:droits-d-utilisation}}
+Le SimGen est fourni sous \sphinxhref{https://opensource.org/licenses/MIT}{licence MIT} (« MIT License »):
 
-Ainsi, il est possible d’avoir accès à SimGen selon trois méthodes : 1) installation automatisée, 2) installation manuelle et 3) accès à distance.
-Celles\sphinxhyphen{}ci sont présentées ci\sphinxhyphen{}dessous.
-Pour rester informé.e des mises à jour de SimGen, inscrivez\sphinxhyphen{}vous à notre \sphinxhref{http://eepurl.com/hs0YED}{liste d’envoi dédiée}.
-Il est à noter que SimGen est fourni « tel quel », sous une \sphinxhref{https://rsi-models.github.io/CPR/credits.html\#licence}{licence MIT}.
+A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
+
+Les conditions de la licence sont les suivantes:
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the « Software »), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED « AS IS », WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+\section{Installation}
+\label{\detokenize{installation:installation}}\label{\detokenize{installation:id1}}\label{\detokenize{installation::doc}}\phantomsection\label{\detokenize{installation:installing-docdir}}
+SimGen est programmé en langage Python. Il est ainsi nécessaire de posséder la version 3.7 de Python ou une version supérieure pour faire fonctionner SimGen sur votre ordinateur.
+Malgré tout, si vous n’avez pas accès au logiciel Python mais que vous disposez d’un compte Google, il vous sera possible d’utiliser SimGen en accès à distance via \sphinxstyleemphasis{Google Colab}.
+Ainsi, il est possible d’avoir accès à SimGen selon trois méthodes présentées ci\sphinxhyphen{}dessous.
+Dans tous les cas, veillez lire les \sphinxhref{https://pypi.org/policy/terms-of-use/}{condition d’utilisation} du site internet \sphinxstyleemphasis{pypi} qui héberge le package.
 
 \begin{sphinxadmonition}{note}{Important}
 
-SimGen utilise par défaut la Base de données de simulation de politiques sociales (BDSPS)
-comme base de données de départ. Cette base de donnée nécessite toutefois une licence d’utilisation gratuite octroyée sur demande par Statistique Canada.
+SimGen utilise par défaut la Base de données de simulation de politiques sociales (BDSPS) comme base de données de départ. Cette base de données nécessite toutefois une licence d’utilisation gratuite octroyée sur demande par Statistique Canada.
 
-La BDSPS est disponible par l’entremise de l’Initiative
-de démocratisation des données (IDD). Les professeurs et étudiants des établissements
-postsecondaires participants possèdent ainsi une licence d’utilisation de la BDSPS par l’entremise
-de leur établissement.
+La BDSPS est disponible par l’entremise de \sphinxhref{https://www.statcan.gc.ca/fra/microdonnees/idd}{l’Initiative de démocratisation des données (IDD)} .
+Les professeurs et étudiants \sphinxhref{https://www.statcan.gc.ca/fra/microdonnees/centres-donnees/communaute}{des établissements postsecondaires participants}
+possèdent ainsi une licence d’utilisation de la BDSPS par l’entremise de leur établissement.
 
-Si \sphinxstylestrong{vous possédez une licence},
-écrivez à \sphinxhref{mailto:yann.decarie@hec.ca}{yann.decarie@hec.ca} et un fichier .csv prêt à l’emploi
-dans SimGen vous sera envoyé.
+Si \sphinxstylestrong{vous possédez une licence}, écrivez à \sphinxhref{mailto:yann.decarie@hec.ca}{yann.decarie@hec.ca} en fournissant une preuve de licence ou d’appartenance à un établissement postsecondaire participant à l’IDD.
+Un fichier .csv prêt à l’emploi dans SimGen vous sera ensuite envoyé.
 
-Si \sphinxstylestrong{vous ne possédez pas de licence}, vous devez faire une demande de licence pour la BDSPS
-en écrivant à \sphinxhref{mailto:statcan.spsdm-bdmsps.statcan@canada.ca}{statcan.spsdm\sphinxhyphen{}bdmsps.statcan@canada.ca} (Voir également le \sphinxhref{https://www.statcan.gc.ca/fra/microsimulation/bdmsps/bdmsps}{site internet} de la BDSPS). Lorsque vous aurez obtenu
-cette licence, il vous suffira d’écrire à \sphinxhref{mailto:yann.decarie@hec.ca}{yann.decarie@hec.ca} et
-un fichier .csv prêt à l’emploi dans SimGen vous sera envoyé.
+Si \sphinxstylestrong{vous ne possédez pas de licence}, vous devez faire une demande de licence pour la BDSPS en écrivant à \sphinxhref{mailto:statcan.spsdm-bdmsps.statcan@canada.ca}{statcan.spsdm\sphinxhyphen{}bdmsps.statcan@canada.ca} (voir également le \sphinxhref{https://www.statcan.gc.ca/fra/microsimulation/bdmsps/bdmsps}{site internet} de la BDSPS). Lorsque vous aurez obtenu cette licence, il vous suffira d’écrire à \sphinxhref{mailto:yann.decarie@hec.ca}{yann.decarie@hec.ca} et un fichier .csv prêt à l’emploi dans SimGen vous sera envoyé.
 \end{sphinxadmonition}
 
 
-\section{Installation automatisée}
+\subsection{Installation automatisée}
 \label{\detokenize{installation:installation-automatisee}}
-Si vous avez accès à Python et à votre invité de commande, il est possible d’installer SimGen
-de manière automatisée en écrivant simplement cette commande dans l’invité de commande (terminal) :
+Si Python est installé sur votre ordinateur et que vous avez accès à votre invite de commande,
+il est possible d’installer SimGen de manière automatisée en écrivant simplement cette commande dans l’invite de commande (terminal ou anaconda prompt):
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{pip} \PYG{n}{install} \PYG{n}{simgen}
+\PYG{n}{pip} \PYG{n}{install} \PYG{n}{simgen}\PYG{o}{\PYGZhy{}}\PYG{n}{creei}
 \end{sphinxVerbatim}
 
-Par la suite, il est possible d’importer SimGen dans un notebook ou un script en tant que module.
+Par la suite, il est possible d’invoquer SimGen dans un notebook ou un script en tant que module de la manière suivante:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{k+kn}{import} \PYG{n+nn}{simgen}
 \end{sphinxVerbatim}
 
 
-\section{Installation manuelle}
+\subsection{Installation manuelle}
 \label{\detokenize{installation:installation-manuelle}}
-Si vous avez accès au logiciel Python, mais que vous ne pouvez utiliser l’invité de commande,
-il est possible d’installer manuellement SimGen en suivant les étapes suivantes :
+Si Python est installé sur votre ordinateur, mais que vous ne pouvez utiliser l’invite de commande,
+il est possible d’installer manuellement SimGen en complétant les étapes suivantes:
 \begin{enumerate}
 \sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
 \item {} 
-Allez sur le site internet \sphinxhref{https://pypi.org/}{Pypi} et faites une recherche du package « simgen ».
+Allez sur le site internet \sphinxhref{https://pypi.org/}{Pypi} et faites une recherche du package « simgen\sphinxhyphen{}creei ».
 
 \item {} 
 Cliquez sur l’onglet « simgen\sphinxhyphen{}x.x.x », où « x.x.x » correspond au numéro de version.
@@ -183,10 +192,10 @@ Une fois le fichier téléchargé, décompressez le fichier « simgen\sphinxhyp
 Ouvrez le dossier créé par l’extraction (ex. simgen\sphinxhyphen{}x.x.x.tar), continuez ensuite en ouvrant le dossier « dist » et décompressez le fichier « simgen\sphinxhyphen{}x.x.x.tar ».
 
 \item {} 
-Une fois le fichier décompressé, transférez le dossier « simgen\sphinxhyphen{}x.x.x » dans le dossier où vous entreposez vos packages (Si vous n’en avez pas créez\sphinxhyphen{}en un à l’endroit qui vous convient le mieux).
+Une fois le fichier décompressé, transférez le dossier « simgen\sphinxhyphen{}x.x.x » qui en résulte dans le dossier où vous entreposez vos packages (si vous n’en avez pas, créez\sphinxhyphen{}en un à l’endroit qui vous convient le mieux).
 
 \item {} 
-Enfin, ajoutez dans votre notebook ou votre script le sentier d’accès de votre dossier de packages et vous pourrez importer SimGen en tant que module.
+Enfin, ajoutez dans votre notebook ou votre script le chemin d’accès de votre dossier de packages et vous pourrez invoquer SimGen en tant que module de la manière suivante:
 
 \end{enumerate}
 
@@ -198,78 +207,93 @@ Enfin, ajoutez dans votre notebook ou votre script le sentier d’accès de votr
 \end{sphinxVerbatim}
 
 
-\section{Accès à distance}
+\subsection{Accès à distance}
 \label{\detokenize{installation:acces-a-distance}}
 Si vous ne possédez pas ou ne pouvez pas avoir accès au logiciel Python,
 il est possible d’utiliser SimGen par l’entremise de Google Colab.
 Après avoir accédé à votre compte Google Colab ou en avoir créé un, vous n’avez
-qu’à utiliser la commande suivante dans un notebook ou un script pour installer SimGen :
+qu’à utiliser la commande suivante dans un notebook ou un script pour installer SimGen:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{pip} \PYG{n}{install} \PYG{n}{simgen}
+\PYG{n}{pip} \PYG{n}{install} \PYG{n}{simgen}\PYG{o}{\PYGZhy{}}\PYG{n}{creei}
 \end{sphinxVerbatim}
 
-Par la suite, il est possible d’importer SimGen en tant que module :
+Par la suite, il est possible d’invoquer SimGen en tant que module de la manière suivante:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{k+kn}{import} \PYG{n+nn}{simgen}
 \end{sphinxVerbatim}
 
 
-\chapter{Utilisation}
+\section{Utilisation}
 \label{\detokenize{utilisation:utilisation}}\label{\detokenize{utilisation:id1}}\label{\detokenize{utilisation::doc}}
 Cette section a pour objectif de guider les utilisateurs de SimGen dans l’utilisation de celui\sphinxhyphen{}ci.
-Dans un premier temps, les étapes d’utilisation et les différents choix possibiles de paramètres sont présentés.
+Dans un premier temps, les étapes d’utilisation et les différents choix possibles de paramètres sont présentés.
 Par la suite, un exemple de notebook/script est proposé afin de servir de point de départ
 aux utilisateurs pour le lancement de simulations et l’analyse des résultats.
 
 
-\section{Étapes}
-\label{\detokenize{utilisation:etapes}}
-Lors de la rédaction d’un notebook ou d’un script Python, quatre étapes principales doivent être suivies afin d’obtenir des résultats de simulation avec SimGen :
+\subsection{Étapes}
+\label{\detokenize{utilisation:id2}}
+Lors de la rédaction d’un notebook ou d’un script Python, quatre étapes principales doivent être suivies afin d’obtenir des résultats de simulation avec SimGen:
 
 
-\subsection{1. Choix des paramètres d’utilisation}
+\subsubsection{1. Choix des paramètres d’utilisation}
 \label{\detokenize{utilisation:choix-des-parametres-d-utilisation}}
 La première étapes consiste à choisir les paramètres qui guideront SimGen par rapport à la localisation de la base de données de départ et
 aux hypothèses de modélisation.
 
-\sphinxstylestrong{Sentier d’accès et nom du fichier de la BDSPS}
+\sphinxstylestrong{Chemin d’accès et nom du fichier de la BDSPS}
 
-Un premier paramètre d’utilisation à déterminer est le sentier d’accès et le nom du fichier .csv
-qui vous aura été fourni par l’équipe du CREEi et qui correspond à une version épurée de
+Un premier paramètre d’utilisation à déterminer est le chemin d’accès et le nom du fichier .csv
+qui vous aura été fourni par l’équipe de la CREEi et qui correspond à une version épurée de
 la \sphinxhref{https://www.statcan.gc.ca/fra/microsimulation/bdmsps/bdmsps}{Base de données de simulation de politiques sociales (BDSPS)}.
-En début de notebook/script, il est suggéré de définir un objet qui comprend le sentier d’accès et le nom du fichier
-de la BDSPS selon l’endroit où vous aurez enregistré le fichier, et le nom que vous lui aurez donné :
+En début de notebook/script, il est suggéré de définir un objet qui comprend le chemin d’accès et le nom du fichier
+de la BDSPS selon l’endroit où vous aurez enregistré le fichier, et le nom que vous lui aurez donné:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{donnees\PYGZus{}brutes} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{.../bdsps2017\PYGZus{}slice.csv}\PYG{l+s+s1}{\PYGZsq{}}
 \end{sphinxVerbatim}
 
-Cet objet servira d’intrant dans la fonction de formattage des données (\sphinxstyleemphasis{bdsps\_format()}) à l’étape d’initialisation du modèle.
+Cet objet servira d’intrant dans la fonction de formatage des données (\sphinxstyleemphasis{bdsps\_format()}) à l’étape d’initialisation du modèle.
 
 \sphinxstylestrong{Année de fin}
 
 L’année de fin de la simulation détermine la durée des projections effectuées par SimGen. Les valeurs possibles vont de 2018 à 2100.
-Ce paramètre doit figurer comme intrant dans la fonction de création d’instance de classe de SimGen (\sphinxstyleemphasis{model()}), qui est couvert plus en détails à l’étape d’initialisation du modèle.
+La valeur minimale de l’année de fin correspond à 2018, puisque l’année de départ est fixée par défaut à 2017.
+Cette dernière valeur ne peut être choisie par l’utilisateur, puisque la base de données de départ date de 2017 et que l’année de départ doit correspondre à cette valeur.
+
+Il est suggéré de définir, en début de notebook/script, un objet qui comprend l’année de fin choisie comme suit:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{annee\PYGZus{}fin} \PYG{o}{=} \PYG{l+m+mi}{2050}
+\end{sphinxVerbatim}
+
+Cet objet sera utilisé à l’étape 2 lors du chargement des principaux intrants. Il en va de même pour tous les autres paramètres d’utilisation.
 
 \sphinxstylestrong{Nombre de réplications}
 
-Le nombre de réplications détermine le nombre de fois où SimGen simule l’ensemble de l’horizon de temps (année de début à l’année de fin) dans une simulation.
-Ce paramètre est fixé par défaut à 1. Lorsque le nombre de réplication est supérieur à 1, les résultats de la simulation correspondent à la moyenne des résultats des réplications.
+Le nombre de réplications détermine le nombre de fois où SimGen simule l’ensemble de l’horizon de temps (année du début à l’année de fin) dans une simulation.
+Ce paramètre est fixé par défaut à 1. Lorsque le nombre de réplications est supérieur à 1, les résultats de la simulation correspondent à la moyenne des résultats des réplications.
 
 Il est suggéré d’utiliser plus d’une réplication afin d’obtenir des résultats uniformes d’une simulation à une autre.
-Le nombre optimal de réplications varie selon les résultats utilisés. Les résultats précis comprenant un petit nombre d’observations (ex. : le nombre de personnes en couple de 95 ans) sont plus susceptibles de varier
-d’une simulation à une autre qu’un résultat global comportant un grand nombre d’observations (ex. : le nombre total de personnes en couple âgées de 15 à 65 ans).
-Les résultats précis nécessitent donc un plus grand nombre de réplications pour être stables (50 réplications),
+Le nombre optimal de réplications varie selon les résultats utilisés. Les résultats précis comprenant un petit nombre d’observations (ex.: le nombre de personnes en couple de 95 ans) sont plus susceptibles de varier
+d’une simulation à une autre qu’un résultat global comportant un grand nombre d’observations (ex.: le nombre total de personnes en couple âgées de 15 à 65 ans).
+Les résultats précis nécessitent donc un plus grand nombre de réplications pour être stables (50 réplications)
 que les résultats globaux (10 réplications).
+
+Il est suggéré de définir, en début de notebook/script, un objet qui comprend le nombre de réplications choisi comme suit:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{nb\PYGZus{}rep} \PYG{o}{=} \PYG{l+m+mi}{50}
+\end{sphinxVerbatim}
 
 \sphinxstylestrong{Hypothèses}
 
 \sphinxstyleemphasis{Fécondité}
 
-Dans SimGen, il est possible de calibrer le nombre de naissances selon trois scénarios de \sphinxhref{https://bdso.gouv.qc.ca/docs-ken/multimedia/PB01661FR\_Perspective\_demo2019H00F00.pdf}{fécondité} issus du plus récent document de projection démographique de l’Institut de la statistique du Québec (ISQ).
-Les scénarios supposent la convergence de l’indice synthétique de fécondité (ISF) vers les trois valeurs suivantes d’ici 2026 :
+Dans SimGen, il est possible de calibrer le nombre de naissances selon trois scénarios de fécondité issus du plus récent \sphinxhref{https://bdso.gouv.qc.ca/docs-ken/multimedia/PB01661FR\_Perspective\_demo2019H00F00.pdf}{document de projection démographique} de l’Institut de la statistique du Québec (ISQ).
+Les scénarios de fécondité supposent la convergence de l’indice synthétique de fécondité (ISF) vers les valeurs suivantes d’ici 2026, selon le scénario:
 
 
 \begin{savenotes}\sphinxattablestart
@@ -277,7 +301,7 @@ Les scénarios supposent la convergence de l’indice synthétique de fécondit�
 \begin{tabulary}{\linewidth}[t]{|T|T|}
 \hline
 \sphinxstyletheadfamily 
-Scénario
+Fécondité
 &\sphinxstyletheadfamily 
 ISF
 \\
@@ -287,12 +311,12 @@ Faible (weak)
 1,45
 \\
 \hline
-Référence
+Référence (reference)
 &
 1,60
 \\
 \hline
-Fort (strong)
+Forte (strong)
 &
 1,75
 \\
@@ -302,18 +326,16 @@ Fort (strong)
 \sphinxattableend\end{savenotes}
 
 Dans le version actuelle de SimGen, les termes anglais \sphinxstyleemphasis{weak}, \sphinxstyleemphasis{reference}, et \sphinxstyleemphasis{strong} doivent être utilisés comme intrant dans la fonction d’hypothèse de fécondité.
-Il est suggéré de définir un objet qui comprend le nom du scénario de fécondité choisi comme suit :
+Il est suggéré de définir, en début de notebook/script, un objet qui comprend le nom du scénario de fécondité choisi comme suit:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{fecondite} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{reference}\PYG{l+s+s1}{\PYGZsq{}}
 \end{sphinxVerbatim}
 
-Cet objet sere utilisé à l’étpae 2 lors du chargement des des principaux intrants.
-
 \sphinxstyleemphasis{Mortalité}
 
-Il est possible de fixer les quotients de mortalité selon trois scénarios de \sphinxhref{https://www150.statcan.gc.ca/n1/pub/91-620-x/91-620-x2014001-fra.pdf}{mortalité} issus du plus récent document de projection démographique de Statistique Canada.
-Les scénarios supposent l’atteinte de trois valeurs possibles de l’espérance de vie à la naissance selon le genre d’ici 2062 :
+Il est possible de fixer les quotients de mortalité selon trois scénarios de mortalité issus du plus récent \sphinxhref{https://www150.statcan.gc.ca/n1/pub/91-620-x/91-620-x2014001-fra.pdf}{document de projection démographique} de Statistique Canada.
+Les scénarios de mortalité supposent l’atteinte de trois valeurs possibles de l’espérance de vie à la naissance selon le genre d’ici 2062:
 
 
 \begin{savenotes}\sphinxattablestart
@@ -321,7 +343,7 @@ Les scénarios supposent l’atteinte de trois valeurs possibles de l’espéran
 \begin{tabulary}{\linewidth}[t]{|T|T|T|}
 \hline
 \sphinxstyletheadfamily 
-Scénario
+Mortalité
 &\sphinxstyletheadfamily 
 Hommes
 &\sphinxstyletheadfamily 
@@ -335,14 +357,14 @@ Faible (low)
 92,0 ans
 \\
 \hline
-Moyen (medium)
+Moyenne (medium)
 &
 87,5 ans
 &
 89,2 ans
 \\
 \hline
-Élevé (high)
+Élevée (high)
 &
 85,9 ans
 &
@@ -355,44 +377,43 @@ Moyen (medium)
 
 En 2020, l’espérance de vie à la naissance est estimée à 80,6 ans pour les hommes et 84,0 ans pour les femmes (\sphinxhref{https://statistique.quebec.ca/fr/communique/baisse-de-lesperance-de-vie-au-quebec-en-2020-a-la-suite-de-la-hausse-marquee-du-nombre-de-deces}{ISQ, mars 2021}).
 Dans le version actuelle de SimGen, les termes anglais \sphinxstyleemphasis{weak}, \sphinxstyleemphasis{medium}, et \sphinxstyleemphasis{strong} doivent être utilisés comme intrant dans la fonction d’hypothèse de mortalité.
-Il est suggéré de définir un objet qui comprend le nom du scénario de mortalité choisi comme suit :
+Il est suggéré de définir, en début de notebook/script, un objet qui comprend le nom du scénario de mortalité choisi comme suit:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{mortalite} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{low}\PYG{l+s+s1}{\PYGZsq{}}
 \end{sphinxVerbatim}
 
-Cet objet sere utilisé à l’étpae 2 lors du chargement des des principaux intrants.
-
 \sphinxstyleemphasis{Immigration}
 
-Dans SimGen, le nombre de nouveaux immigrants par année est déterminé par le taux prospectif d’immigration internationnale
+Dans SimGen, le nombre de nouveaux immigrants par année est déterminé par le taux prospectif d’immigration internationale
 (proportion de nouveaux immigrants par rapport à la population totale).
 Ce paramètre est fixé par défaut à une valeur de 0,0066.
-Cette valeur correspond à 55 000 nouveaux immigrants internationnaux en 2017 (sur une population totale de 8 302 063),
-conformément au scénario de référence du plus récent \sphinxhref{https://bdso.gouv.qc.ca/docs-ken/multimedia/PB01661FR\_Perspective\_demo2019H00F00.pdf}{document} de projection démographique de l’ISQ.
+Cette valeur correspond à 55 000 nouveaux immigrants internationaux en 2017 (sur une population totale de 8 302 063),
+conformément au scénario de référence du plus récent \sphinxhref{https://bdso.gouv.qc.ca/docs-ken/multimedia/PB01661FR\_Perspective\_demo2019H00F00.pdf}{document de projection démographique} de l’ISQ.
 
-Le paramètre de taux prospectif d’immigration internationnale peut être fixé à la valeur désirée (supérieure ou égale à 0).
+Le paramètre de taux prospectif d’immigration internationale peut être fixé à la valeur désirée (supérieure ou égale à 0).
 Ce paramètre reste toutefois fixe durant toutes les années de la simulation.
 Cette caractéristique implique une augmentation graduelle du nombre de nouveaux immigrants suivant la croissance de la population totale.
 
-Si l’utilisateur souhaite modifier l’hypothèse d’immigration, il est suggéré de définir un objet qui comprend le taux d’immigration internationnale choisi comme suit :
+Si l’utilisateur souhaite modifier l’hypothèse d’immigration, il est suggéré de définir, en début de notebook/script, un objet qui comprend le taux d’immigration internationale choisi comme suit:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{taux\PYGZus{}immigration} \PYG{o}{=} \PYG{l+m+mf}{0.0066}
 \end{sphinxVerbatim}
 
-Cet objet sere utilisé à l’étpae 2 lors du chargement des des principaux intrants.
-Il est à noter que les caractéristiques des nouveaux immigrants sont issues des immigrants récents (depuis 5 ans ou moins) de la BDSPS de 2017.
+Il est à noter que les caractéristiques des nouveaux immigrants sont celles des immigrants récents (depuis 5 ans ou moins) dans la BDSPS de 2017.
+Par ailleurs, la migration interprovinciale est prise en compte dans SimGen, mais il n’existe toutefois pas de paramètre d’utilisation par rapport à cet aspect
+(consultez la section {\hyperref[\detokenize{methodologie:emigration}]{\sphinxcrossref{\DUrole{std,std-ref}{Émigration}}}} pour les détails méthodologiques).
 
 
-\subsection{2. Initialisation du modèle}
+\subsubsection{2. Initialisation du modèle}
 \label{\detokenize{utilisation:initialisation-du-modele}}
 L’initialisation du modèle vise à charger en mémoire l’ensemble des informations nécessaires au lancement de la simulation.
 Cette étape se divise en plusieurs sous\sphinxhyphen{}étapes.
 
 \sphinxstylestrong{Importation des packages}
 
-SimGen utilise certains packages standards, qu’il est nécessaire d’importer :
+SimGen utilise certains packages Python standards, qu’il est nécessaire d’importer:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{k+kn}{import} \PYG{n+nn}{warnings}
@@ -402,28 +423,31 @@ SimGen utilise certains packages standards, qu’il est nécessaire d’importer
 \PYG{n}{warnings}\PYG{o}{.}\PYG{n}{filterwarnings}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ignore}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
 \end{sphinxVerbatim}
 
-\sphinxstylestrong{Importation des fonctions et des classes de SIMGEN}
+\sphinxstylestrong{Importation des fonctions et des classes de SimGen}
 
-Il est ensuite nécessaire d’importer SimGen en tant que tel :
+Il est ensuite nécessaire d’importer SimGen en tant que tel:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{k+kn}{import} \PYG{n+nn}{simgen}
 \PYG{k+kn}{from} \PYG{n+nn}{simgen} \PYG{k+kn}{import} \PYG{n}{model}\PYG{p}{,} \PYG{n}{formating}
 \end{sphinxVerbatim}
 
-\sphinxstylestrong{Formattage données de départ}
+\sphinxstylestrong{Formatage données de départ}
 
 La fonction bdsps\_format transforme la BDSPS de Statistique Canada afin de mettre en forme certaines variables et créer les registres des individus (dominants, conjoints et enfants).
 Cette fonction calibre également les poids des répondants, par âge et sexe, afin de s’arrimer à la population québécoise de 2017, selon l’ISQ.
+Enfin, cette fonction sauvegarde la base de données de départ en format \sphinxstyleemphasis{pkl} en lui donnant le nom de « startpop » et
+sauvegarde la banque de données des caractéristiques des nouveaux immigrants en format \sphinxstyleemphasis{pkl} en lui donnant le nom de « imm\_pop ».
+La commande à utiliser est comme suit:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{preparation\PYGZus{}data}\PYG{o}{=}\PYG{n}{formating}\PYG{p}{(}\PYG{p}{)}
 \PYG{n}{preparation\PYGZus{}data}\PYG{o}{.}\PYG{n}{bdsps\PYGZus{}format}\PYG{p}{(}\PYG{n}{donnees\PYGZus{}brutes}\PYG{p}{)}
 \end{sphinxVerbatim}
 
-où \sphinxstyleemphasis{donnees\_brutes} correspond au sentier d’accès et au nom du fichier .csv de la BDSPS (ex. : donnees\_brutes = “…/bdsps2017\_slice.csv”).
+où \sphinxstyleemphasis{donnees\_brutes} correspond au chemin d’accès et au nom du fichier .csv de la BDSPS dans votre système (ex.: donnees\_brutes = “…/bdsps2017\_slice.csv”).
 
-\sphinxstylestrong{Détails : bdsps\_format()}
+\sphinxstylestrong{Détails: bdsps\_format()}
 \index{bdsps (classe dans simgen)@\spxentry{bdsps}\spxextra{classe dans simgen}}
 
 \begin{fulllineitems}
@@ -452,15 +476,15 @@ Fonction qui permet de mettre en forme la BDSPS.
 
 \sphinxstylestrong{Création de l’instance du modèle}
 
-La commande suivante crée un gabarit permettant entre autres de stocker les résultats propres à la simulation selon les paramètres d’utilisation choisis :
+La commande suivante crée un gabarit permettant entre autres de stocker les résultats propres à la simulation selon les paramètres d’utilisation choisis:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{base} \PYG{o}{=} \PYG{n}{model}\PYG{p}{(}\PYG{n}{stop\PYGZus{}yr}\PYG{o}{=}\PYG{n}{annee\PYGZus{}fin}\PYG{p}{)}
 \end{sphinxVerbatim}
 
-où \sphinxstyleemphasis{annee\_fin} correspond à l’année de fin de la simulation (ex. : annee\_fin = 2050).
+où \sphinxstyleemphasis{annee\_fin} correspond à l’année de fin de la simulation (ex.: annee\_fin = 2050). Si l’argument \sphinxstyleemphasis{stop\_yr} n’est pas spécifié, SimGen fixe par défaut l’année de fin à 2100.
 
-\sphinxstylestrong{Détails : classe model()}
+\sphinxstylestrong{Détails: classe model()}
 \index{model (classe dans simgen)@\spxentry{model}\spxextra{classe dans simgen}}
 
 \begin{fulllineitems}
@@ -488,25 +512,26 @@ Cette classe permet de créer une instance d’un modèle de microsimulation.
 \end{DUlineblock}
 
 Pour être en mesure de lancer une deuxième simulation avec des paramètres d’utilisation différents et de comparer les résultats des deux simulations,
-vous n’avez qu’à réutiliser cette commande en donnant un nom différent au gabarit :
+vous n’avez qu’à réutiliser cette commande en donnant un nom différent au gabarit:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{base2} \PYG{o}{=} \PYG{n}{model}\PYG{p}{(}\PYG{n}{stop\PYGZus{}yr}\PYG{o}{=}\PYG{n}{annee\PYGZus{}fin}\PYG{p}{)}
 \end{sphinxVerbatim}
 
-où \sphinxstyleemphasis{annee\_fin} correspond à l’année de fin de la simulation (ex. : annee\_fin = 2050).
+et de suivre les mêmes étapes de programmation que pour le premier gabarit (\sphinxstyleemphasis{base}).
 
 \sphinxstylestrong{Chargement des principaux intrants}
 
-Tout d’abord, le chargement de la base de données de départ s’effectue à l’aide de la commande suivant :
+Tout d’abord, le chargement de la base de données de départ s’effectue à l’aide de la commande suivante:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{base}\PYG{o}{.}\PYG{n}{startpop}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{start\PYGZus{}pop}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 \end{sphinxVerbatim}
 
 où \sphinxstyleemphasis{start\_pop} est le nom donné par défaut à la base de données de départ à la suite du formattage de la BDSPS.
+Ce nom exacte doit être utilisé, puisqu’un message d’erreur vous sera envoyé en cas contraire.
 
-\sphinxstylestrong{Détails : fonction startpop()}
+\sphinxstylestrong{Détails: fonction startpop()}
 \index{model (classe dans simgen)@\spxentry{model}\spxextra{classe dans simgen}}
 
 \begin{fulllineitems}
@@ -548,21 +573,25 @@ Fonction membre qui permet de charger une population de départ.
 \item[] 
 \end{DUlineblock}
 
-Le chargement des hypothèses de la simulation s’effectue ensuite à l’aide des commandes suivantes et des objets définis à l’étape 1 (\sphinxstyleemphasis{taux\_immigration}, \sphinxstyleemphasis{fecondite}, \sphinxstyleemphasis{mortalite}) :
+Le chargement des hypothèses de la simulation s’effectue ensuite à l’aide des commandes suivantes et des objets définis à l’étape 1 (\sphinxstyleemphasis{taux\_immigration}, \sphinxstyleemphasis{fecondite}, \sphinxstyleemphasis{mortalite}):
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{base}\PYG{o}{.}\PYG{n}{immig\PYGZus{}assumptions}\PYG{p}{(}\PYG{n}{init}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{imm\PYGZus{}pop}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{num}\PYG{o}{=}\PYG{n}{taux\PYGZus{}immigration}\PYG{p}{)}
 \PYG{n}{base}\PYG{o}{.}\PYG{n}{birth\PYGZus{}assumptions}\PYG{p}{(}\PYG{n}{scenario}\PYG{o}{=}\PYG{n}{fecondite}\PYG{p}{)}
 \PYG{n}{base}\PYG{o}{.}\PYG{n}{dead\PYGZus{}assumptions}\PYG{p}{(}\PYG{n}{scenario}\PYG{o}{=}\PYG{n}{mortalite}\PYG{p}{)}
+\PYG{n}{base}\PYG{o}{.}\PYG{n}{immig\PYGZus{}assumptions}\PYG{p}{(}\PYG{n}{init}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{imm\PYGZus{}pop}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{num}\PYG{o}{=}\PYG{n}{taux\PYGZus{}immigration}\PYG{p}{)}
 \end{sphinxVerbatim}
 
 où \sphinxstyleemphasis{imm\_pop} correspond à la la banque de données des immigrants récents produite par la fonction \sphinxstyleemphasis{bdsps\_format()}.
+Ce nom exacte doit être utilisé pour l’argument \sphinxstyleemphasis{init}, puisqu’un message d’erreur vous sera envoyé en cas contraire.
+Si les arguments \sphinxstyleemphasis{scenario} des fonctions \sphinxstyleemphasis{birth\_assumptions} et \sphinxstyleemphasis{dead\_assumptions} ne sont pas spécifiés, SimGen utilise par défaut le scénario de fécondité de référence (\sphinxstyleemphasis{reference})
+et le scénario de mortalité moyenne (\sphinxstyleemphasis{medium}).
+Pour l’immigration, SimGen fixe par défaut le taux d’immigration internationnale à 0,0066, si l’argument \sphinxstyleemphasis{num} n’est pas spécifié.
 
-\sphinxstylestrong{Détails : fonction immig\_assumptions()}
+\sphinxstylestrong{Détails: fonction \_assumptions()}
 \index{model (classe dans simgen)@\spxentry{model}\spxextra{classe dans simgen}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{utilisation:id2}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{model}}}{\emph{\DUrole{n}{start\_yr}\DUrole{o}{=}\DUrole{default_value}{2017}}, \emph{\DUrole{n}{stop\_yr}\DUrole{o}{=}\DUrole{default_value}{2100}}}{}
+\phantomsection\label{\detokenize{utilisation:id5}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{model}}}{\emph{\DUrole{n}{start\_yr}\DUrole{o}{=}\DUrole{default_value}{2017}}, \emph{\DUrole{n}{stop\_yr}\DUrole{o}{=}\DUrole{default_value}{2100}}}{}
 Modèle de simulation SimGen.
 
 Cette classe permet de créer une instance d’un modèle de microsimulation.
@@ -577,6 +606,42 @@ Cette classe permet de créer une instance d’un modèle de microsimulation.
 \end{itemize}
 
 \end{description}\end{quote}
+\index{birth\_assumptions() (méthode simgen.model)@\spxentry{birth\_assumptions()}\spxextra{méthode simgen.model}}
+
+\begin{fulllineitems}
+\phantomsection\label{\detokenize{utilisation:simgen.model.birth_assumptions}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{birth\_assumptions}}}{\emph{\DUrole{n}{scenario}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}reference\textquotesingle{}}}, \emph{\DUrole{n}{align}\DUrole{o}{=}\DUrole{default_value}{True}}}{}
+Hypothèses de fécondité.
+
+Fonction membre qui permet de spécifier les hypothèses de fécondité.
+\begin{quote}\begin{description}
+\item[{Paramètres}] \leavevmode\begin{itemize}
+\item {} 
+\sphinxstyleliteralstrong{\sphinxupquote{scenario}} (\sphinxstyleliteralemphasis{\sphinxupquote{str}}) \textendash{} Permet de choisir entre les différents scénarios de fécondité produits pas l’ISQ (weak, reference, strong)
+
+\item {} 
+\sphinxstyleliteralstrong{\sphinxupquote{aling}} (\sphinxstyleliteralemphasis{\sphinxupquote{boolean}}) \textendash{} paramètre permettant d’aligner le nombre d’immigrants sur l’ISQ
+
+\end{itemize}
+
+\end{description}\end{quote}
+
+\end{fulllineitems}
+
+\index{dead\_assumptions() (méthode simgen.model)@\spxentry{dead\_assumptions()}\spxextra{méthode simgen.model}}
+
+\begin{fulllineitems}
+\phantomsection\label{\detokenize{utilisation:simgen.model.dead_assumptions}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{dead\_assumptions}}}{\emph{\DUrole{n}{scenario}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}medium\textquotesingle{}}}}{}
+Hypothèses de mortalité.
+
+Fonction membre qui permet de spécifier les hypothèses de mortalité.
+\begin{quote}\begin{description}
+\item[{Paramètres}] \leavevmode
+\sphinxstyleliteralstrong{\sphinxupquote{scenario}} (\sphinxstyleliteralemphasis{\sphinxupquote{str}}) \textendash{} Permet de choisir entre les différents scénarios de mortalité produits pas l’STC (low, medium, high)
+
+\end{description}\end{quote}
+
+\end{fulllineitems}
+
 \index{immig\_assumptions() (méthode simgen.model)@\spxentry{immig\_assumptions()}\spxextra{méthode simgen.model}}
 
 \begin{fulllineitems}
@@ -610,24 +675,24 @@ Fonction membre qui permet de spécifier les hypothèses d’immigration.
 \end{DUlineblock}
 
 
-\subsection{3. Lancement de la simulation}
+\subsubsection{3. Lancement de la simulation}
 \label{\detokenize{utilisation:lancement-de-la-simulation}}
-Le lancement de la simulation s’effectue à l’aide de la fonction suivante :
+Le lancement de la simulation s’effectue à l’aide de la fonction suivante:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{base}\PYG{o}{.}\PYG{n}{simulate}\PYG{p}{(}\PYG{n}{rep}\PYG{o}{=}\PYG{n}{nb\PYGZus{}rep}\PYG{p}{)}
 \end{sphinxVerbatim}
 
-où \sphinxstyleemphasis{nb\_rep} correspond au nombre de réplications de la simulation (ex. : nb\_rep = 100).
+où \sphinxstyleemphasis{nb\_rep} correspond au nombre de réplications de la simulation (ex.: nb\_rep = 50). Si l’argument \sphinxstyleemphasis{rep} n’est pas spécifié, SimGen fixe par défaut le nombre de réplications à 1.
 
 Il est à noter que cette commande a un temps d’exécution plus élevé que les commandes présentées précédemment.
-Le temps de simulation croît de manière substantielle selon l’année de fin et le nombre de réplications.
+Le temps de simulation croît de manière substantielle avec l’année de fin et le nombre de réplications.
 
-\sphinxstylestrong{Détails : fonction simulate()}
+\sphinxstylestrong{Détails: fonction simulate()}
 \index{model (classe dans simgen)@\spxentry{model}\spxextra{classe dans simgen}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{utilisation:id3}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{model}}}{\emph{\DUrole{n}{start\_yr}\DUrole{o}{=}\DUrole{default_value}{2017}}, \emph{\DUrole{n}{stop\_yr}\DUrole{o}{=}\DUrole{default_value}{2100}}}{}
+\phantomsection\label{\detokenize{utilisation:id6}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{model}}}{\emph{\DUrole{n}{start\_yr}\DUrole{o}{=}\DUrole{default_value}{2017}}, \emph{\DUrole{n}{stop\_yr}\DUrole{o}{=}\DUrole{default_value}{2100}}}{}
 Modèle de simulation SimGen.
 
 Cette classe permet de créer une instance d’un modèle de microsimulation.
@@ -642,6 +707,19 @@ Cette classe permet de créer une instance d’un modèle de microsimulation.
 \end{itemize}
 
 \end{description}\end{quote}
+\index{simulate() (méthode simgen.model)@\spxentry{simulate()}\spxextra{méthode simgen.model}}
+
+\begin{fulllineitems}
+\phantomsection\label{\detokenize{utilisation:simgen.model.simulate}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{simulate}}}{\emph{\DUrole{n}{rep}\DUrole{o}{=}\DUrole{default_value}{1}}}{}
+Fonction déclenchant le lancement de la simulation.
+\begin{quote}\begin{description}
+\item[{Paramètres}] \leavevmode
+\sphinxstyleliteralstrong{\sphinxupquote{stratas}} (\sphinxstyleliteralemphasis{\sphinxupquote{rep}}) \textendash{} Nombre de réplications
+
+\end{description}\end{quote}
+
+\end{fulllineitems}
+
 
 \end{fulllineitems}
 
@@ -651,9 +729,9 @@ Cette classe permet de créer une instance d’un modèle de microsimulation.
 \end{DUlineblock}
 
 
-\subsection{4. Affichage des résultats}
-\label{\detokenize{utilisation:affichage-des-resultats}}
-Tout d’abord, le tableau ci\sphinxhyphen{}dessous présente la liste des variables pouvant servir lors de l’affichage des résultats de SimGen :
+\subsubsection{4. Production des résultats}
+\label{\detokenize{utilisation:production-des-resultats}}
+Tout d’abord, le tableau ci\sphinxhyphen{}dessous présente la liste des variables pouvant servir lors de l’affichage des résultats de SimGen:
 
 
 \begin{savenotes}\sphinxattablestart
@@ -711,7 +789,7 @@ Aux études
 Études terminées
 \\
 \hline
-Niveau scolarité
+Scolarité complétée
 &
 educ
 &
@@ -731,7 +809,7 @@ Secondaire
 
 Collégial
 
-Universitaire (Bacc. et supérieur)
+Universitaire (bacc. et supérieur)
 \\
 \hline
 Statut conjugal
@@ -755,25 +833,26 @@ nkids
 &
 Entier
 &
-0 à 3+
+0 à 3
 &\\
 \hline
 \end{tabulary}
 \par
 \sphinxattableend\end{savenotes}
 
-\sphinxstylestrong{Production de résultats}
+Il est possible de produire deux types de résultats: 1) des fréquences et 2) des proportions.
 
-Il est possible de produire des résultats à l’aide de deux fonctions.
-La fonction \sphinxstyleemphasis{stats.freq()} calcul le nombre d’individus selon le sous\sphinxhyphen{}groupe spécifié. Par exemple :
+\sphinxstylestrong{Fréquences}
+
+La fonction \sphinxstyleemphasis{stats.freq()} calcule le nombre d’individus selon le sous\sphinxhyphen{}groupe spécifié. Par exemple:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{population\PYGZus{}hommes}\PYG{o}{=}\PYG{n}{base}\PYG{o}{.}\PYG{n}{stats}\PYG{o}{.}\PYG{n}{freq}\PYG{p}{(}\PYG{n}{sub}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{male==True}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 \end{sphinxVerbatim}
 
-Si aucun argument n’est inscrit dans la fonction, celle\sphinxhyphen{}ci calcule le nombre de personne dans l’ensemble de la population.
+Si l’argument \sphinxstyleemphasis{sub} n’est pas spécifié, la fonction renvoie le nombre de personnes dans l’ensemble de la population.
 
-\sphinxstylestrong{Détails : fonction stats.freq()}
+\sphinxstylestrong{Détails: fonction stats.freq()}
 \index{statistics (classe dans simgen)@\spxentry{statistics}\spxextra{classe dans simgen}}
 
 \begin{fulllineitems}
@@ -824,17 +903,21 @@ dataframe
 \item[] 
 \end{DUlineblock}
 
-La fonction \sphinxstyleemphasis{stats.prop()} calcule pour sa part la proportion de la population respectant les caractéristiques spécifiées. Par exemple :
+\sphinxstylestrong{Proportion}
+
+La fonction \sphinxstyleemphasis{stats.prop()} calcule pour sa part la proportion de la population respectant les caractéristiques spécifiées. Par exemple:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{proportion\PYGZus{}niveau\PYGZus{}scolarite} \PYG{o}{=} \PYG{n}{base}\PYG{o}{.}\PYG{n}{stats}\PYG{o}{.}\PYG{n}{prop}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{educ}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{sub}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{age\PYGZgt{}=25 and age\PYGZlt{}=64 and insch==False}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
 \end{sphinxVerbatim}
 
-\sphinxstylestrong{Détails : fonction stats.prop()}
+Si l’argument \sphinxstyleemphasis{sub} n’est pas spécifié, la fonction renvoie la proportion de personnes selon les catégories de la variable spécifiée dans l’ensemble de la population.
+
+\sphinxstylestrong{Détails: fonction stats.prop()}
 \index{statistics (classe dans simgen)@\spxentry{statistics}\spxextra{classe dans simgen}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{utilisation:id4}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{statistics}}}{\emph{\DUrole{n}{stratas}}}{}
+\phantomsection\label{\detokenize{utilisation:id7}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{statistics}}}{\emph{\DUrole{n}{stratas}}}{}
 Classe pour créer les statistiques provenant d’une simulation.
 
 Cette classe permet de capturer la distribution de la population par strate durant une simulation. Elle permet ensuite de faire plusieurs tableaux dynamiques à partir de ces distributions.
@@ -881,19 +964,19 @@ dataframe
 \item[] 
 \end{DUlineblock}
 
-\sphinxstylestrong{Sauvegarde des données}
+\sphinxstylestrong{Sauvegarde des données des résultats}
 
-Enfin, il est possible de sauvegarder les résultats de la simulation dans un fichier .pkl à l’aide de la commande suivante :
+Enfin, il est possible de sauvegarder les résultats de la simulation dans un fichier .pkl à l’aide de la commande suivante:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{base}\PYG{o}{.}\PYG{n}{stats}\PYG{o}{.}\PYG{n}{save}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{.../resultats\PYGZus{}simgen}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 \end{sphinxVerbatim}
 
-\sphinxstylestrong{Détails : fonction save()}
+\sphinxstylestrong{Détails: fonction save()}
 \index{statistics (classe dans simgen)@\spxentry{statistics}\spxextra{classe dans simgen}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{utilisation:id5}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{statistics}}}{\emph{\DUrole{n}{stratas}}}{}
+\phantomsection\label{\detokenize{utilisation:id8}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{statistics}}}{\emph{\DUrole{n}{stratas}}}{}
 Classe pour créer les statistiques provenant d’une simulation.
 
 Cette classe permet de capturer la distribution de la population par strate durant une simulation. Elle permet ensuite de faire plusieurs tableaux dynamiques à partir de ces distributions.
@@ -923,38 +1006,40 @@ Fonction pour sauvegarder les fichiers de fréquences.
 \item[] 
 \end{DUlineblock}
 
-Pour une descrption complète des classes et des fonctions de SimGen, consultez la page {\hyperref[\detokenize{code:code}]{\sphinxcrossref{\DUrole{std,std-ref}{Dictionnaire (classes et des fonctions)}}}}.
+Pour une description complète des classes et des fonctions de SimGen, consultez la page {\hyperref[\detokenize{code:code}]{\sphinxcrossref{\DUrole{std,std-ref}{Dictionnaire (classes et fonctions)}}}}.
 
 
-\section{Exemple}
+\subsection{Exemple}
 \label{\detokenize{utilisation:exemple}}
 
-\subsection{Simulation de base}
+\subsubsection{Simulation de base}
 \label{\detokenize{utilisation:simulation-de-base}}
-Cet exemple de notebook permet de se familiariser avec l’utilisation de Simgen en effectuent une simulation
-et en présentant des résutats de base.
+Cet exemple de notebook permet de se familiariser avec l’utilisation de Simgen en effectuant une simulation
+et en présentant des résultats de base.
 \begin{description}
-\item[{\sphinxstylestrong{Téléchargement du notebook :}}] \leavevmode
-Cliquez \sphinxcode{\sphinxupquote{ici}}
-Puis sauvegarder le fichier en format .ipynb.
+\item[{\sphinxstylestrong{Téléchargement du notebook:}}] \leavevmode
+Cliquez \sphinxcode{\sphinxupquote{ici}}, puis sauvegardez le fichier en format .ipynb.
 
-\item[{\sphinxstylestrong{Accès au notebook via Google colab* :}}] \leavevmode
-Cliquez \sphinxcode{\sphinxupquote{ici}}
+\item[{\sphinxstylestrong{Accès au notebook via Google Colab*:}}] \leavevmode
+Cliquez ici: \sphinxhref{https://colab.research.google.com/drive/1Vrxo7kSp0\_USMbECH-SlFdsZ3IYQwCCn?usp=sharing}{\sphinxincludegraphics{{colab-badge}.png}}
 
 \end{description}
+\begin{itemize}
+\item {} 
+Il est à noter qu’il est nécessaire de posséder un compte Google pour utiliser Google Colab.
 
-Il est à noter qu’il est nécessaire de posséder un compte Google pour utiliser Google colab.
+\end{itemize}
 
 
-\chapter{Méthodologie}
+\section{Méthodologie}
 \label{\detokenize{methodologie:methodologie}}\label{\detokenize{methodologie:transition-models}}\label{\detokenize{methodologie::doc}}
-L’année de départ, la base de données de simulation de SimGen correspond  à
+À l’année de départ, la base de données de simulation de SimGen correspond  à
 la \sphinxhref{https://www.statcan.gc.ca/fra/microsimulation/bdmsps/bdmsps}{Base de données de simulation de politiques sociales (BDSPS)} de 2017 de Statistique Canada.
 Cette base de données est composée
 d’observations statistiquement représentatives des particuliers canadiens et québécois
 dans leur contexte familial.
 
-Les années ultérieures, SimGen fait évoluer chaque individu selon les transitions suivantes :
+Durant les année ultérieures, SimGen fait évoluer chaque individu selon les transitions suivantes dans l’ordre suivant:
 \begin{enumerate}
 \sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
 \item {} 
@@ -964,7 +1049,7 @@ Fécondité
 Scolarité
 
 \item {} 
-Statut conjugal
+État matrimonial
 
 \item {} 
 Mortalité
@@ -975,9 +1060,9 @@ Migrations
 \end{enumerate}
 
 De nouvelles observations sont ajoutées dans la base de données de simulation
-lors des transitions de fécondité (naissances) et d’immigrations. À l’opposé,
+lors des transitions de fécondité (naissances) et d’immigration. À l’opposé,
 certaines observations sont retirées de la base de données lors des transitions de mortalité (décès) et
-d’émigration. La figure suivante illustre plus explicitement la dynamique des transitions :
+d’émigration. La figure suivante illustre plus explicitement la dynamique des transitions:
 
 \begin{figure}[htbp]
 \centering
@@ -986,34 +1071,34 @@ d’émigration. La figure suivante illustre plus explicitement la dynamique des
 \end{figure}
 
 Lorsque SimGen arrive à l’année de fin de la simulation, celui\sphinxhyphen{}ci recommence le processus de simulation
-de l’année de départ à l’année de fin, jusqu’à ce que le nombre de réplications sélectionnés soit atteint.
+de l’année de départ à l’année de fin, jusqu’à ce que le nombre de réplications sélectionné soit atteint.
 Une fois cette étape accomplie, la moyenne des résultats des réplications est calculée afin de créer
 la base de données finale des résultats.
 
 \sphinxstylestrong{Structure des données}
 
 De manière plus spécifique, la base de données de simulation de SimGen est composée de trois registres. Un premier registre contient les individus dominants, un deuxième contient les conjoints de ceux\sphinxhyphen{}ci et
-un troisième contient leurs enfants. Le registre des individus dominants représente l’échantillon principal sur lequel les transitions sont appliquées et sur lequels les sorties statistiques sont basées.
+un troisième contient leurs enfants. Le registre des individus dominants représente l’échantillon principal sur lequel les transitions sont appliquées et sur lequel les sorties statistiques sont basées.
 Les registres des conjoints et des enfants servent essentiellement à décrire le contexte familial des individus dominants. Ils ne sont donc pas inclus dans les sorties statistiques.
-Cette approche a été choisie, puisqu’elle permet de simplifier le processus de simulation et de rendre plus flexible la production de résultats
-(Voir \sphinxhref{https://www.statcan.gc.ca/fra/microsimulation/modgen/nouveau/chap2/chap2/chap2-fra.pdf}{document suivant} de Statistique Canada
+Cette approche a été choisie car elle permet de simplifier le processus de simulation et de rendre plus flexible la production de résultats
+(voir le \sphinxhref{https://www.statcan.gc.ca/fra/microsimulation/modgen/nouveau/chap2/chap2/chap2-fra.pdf}{document suivant} de Statistique Canada
 pour des explications sur les différentes approches possibles des modèles de microsimulation).
 
 
-\section{Fécondité}
+\subsection{Fécondité}
 \label{\detokenize{methodologie:fecondite}}
 
-\subsection{Modèle économétrique}
+\subsubsection{Modèle économétrique}
 \label{\detokenize{methodologie:modele-econometrique}}
 Pour chaque rang de naissance d’un enfant (\sphinxstyleemphasis{k=1,2,3}), la probabilité d’avoir un enfant est estimée à l’aide d’un modèle logistique
 incluant trois groupes de variables explicatives liées à l’âge, au niveau de scolarité et à l’âge du dernier enfant, le cas échéant.
 \begin{equation*}
-\begin{split}\mu_{i,t,k} = \mu_{0,k} + \mu_{1,k} age_{i,t} + \mu_{2,k} edu_{i,t} + \mu_{3,k} lastkidage_{i,t}\end{split}
+\begin{split}\mu_{i,t,k} = \mu_{0,k} + \mu_{1,k} age_{i,t} + \mu_{2,k} edu_{i,t} + \mu_{3,k} lkidage_{i,t}\end{split}
 \end{equation*}\begin{equation*}
 \begin{split}\Pr(b_{i,t}=1) = \frac{\exp(\mu_{i,t,k})}{1+\exp(\mu_{i,t,k})}\end{split}
 \end{equation*}
 
-\subsection{Données et échantillon}
+\subsubsection{Données et échantillon}
 \label{\detokenize{methodologie:donnees-et-echantillon}}
 Les effets marginaux sont calculés à partir des vagues 2006 et 2011 de
 \sphinxhref{https://www150.statcan.gc.ca/n1/pub/89f0115x/89f0115x2013001-fra.htm}{l’Enquête sociale générale (ESG)} menée auprès des ménages
@@ -1033,7 +1118,7 @@ Un fichier de pseudo panel des répondants qui recense l’historique des transi
 
 \item {} 
 Seul l’historique des transitions du pseudo panel depuis 30 années est conservé afin d’éviter les effets des cohortes les plus anciennes
-(1976 à 2006 pour l’ESG de 2006 et 1981 à 2011 pour celui de 2011).
+(1976 à 2006 pour l’ESG de 2006 et 1981 à 2011 pour celle de 2011).
 
 \item {} 
 L’échantillon est finalement restreint aux femmes âgées de 18 à 44 ans inclusivement.
@@ -1041,60 +1126,64 @@ L’échantillon est finalement restreint aux femmes âgées de 18 à 44 ans inc
 \end{enumerate}
 
 
-\subsection{Variables du modèle}
+\subsubsection{Variables du modèle}
 \label{\detokenize{methodologie:variables-du-modele}}
 Les variables dépendantes pour les régressions 1, 2 et 3 sont des variables indicatrices,
 égales à 1 lors de l’année de naissance de l’enfant d’ordre \sphinxstyleemphasis{k=1,2,3}
 et égales à 0 depuis l’année de naissance du dernier enfant (pour les naissances d’ordre 2 et 3) ou
 depuis 18 ans pour le premier enfant (naissance d’ordre 1).
 
+Prenons l’exemple d’une femme qui a eu deux enfants : un enfant à 20 ans et un enfant à 30 ans.
+Dans ce cas, la variable dépendante pour le premier enfant sera égale à 0 de 18 ans à 19 ans, puis elle sera égale à 1 à 20 ans.
+La variable dépendante pour le second enfant sera égale à 0 de 21 ans à 29 ans et elle sera égale à 1 à l’âge de 30 ans.
+
 \sphinxstylestrong{Variables explicatives d’âge (variables indicatrices):}
 \begin{itemize}
 \item {} 
-\sphinxstyleemphasis{dage1824} (référence) : la femme a entre 18 et 24 ans.
+\sphinxstyleemphasis{age1824} (référence): la femme a entre 18 et 24 ans.
 
 \item {} 
-\sphinxstyleemphasis{dage2529} : la femme a entre 25 et 29 ans.
+\sphinxstyleemphasis{age2529}: la femme a entre 25 et 29 ans.
 
 \item {} 
-\sphinxstyleemphasis{dage3034} : la femme a entre 30 et 34 ans.
+\sphinxstyleemphasis{age3034}: la femme a entre 30 et 34 ans.
 
 \item {} 
-\sphinxstyleemphasis{dage3539} : la femme a entre 35 et 39 ans.
+\sphinxstyleemphasis{age3539}: la femme a entre 35 et 39 ans.
 
 \item {} 
-\sphinxstyleemphasis{dage40p} : la femme a entre 40 et 44 ans.
+\sphinxstyleemphasis{age40p}: la femme a entre 40 et 44 ans.
 
 \end{itemize}
 
-\sphinxstylestrong{Variables explicatives d’éducation (variables indicatrices):}
+\sphinxstylestrong{Variables explicatives d’éducation (variables indicatrices, notées « edu » dans l’équation du modèle économétrique):}
 \begin{itemize}
 \item {} 
-\sphinxstyleemphasis{insch} : la femme n’a pas terminé ses études.
+\sphinxstyleemphasis{insch}: la femme n’a pas terminé ses études.
 
 \item {} 
-\sphinxstyleemphasis{inf} (référence) : la femme a terminé ses études, mais n’a pas complété ses études secondaires.
+\sphinxstyleemphasis{inf} (référence): la femme a terminé ses études, mais n’a pas complété ses études secondaires.
 
 \item {} 
-\sphinxstyleemphasis{des} : la femme a terminé ses études et a un diplôme d’études secondaires ou des études partielles à l’université ou au cégep.
+\sphinxstyleemphasis{des}: la femme a terminé ses études et a un diplôme d’études secondaires ou des études partielles à l’université ou au cégep.
 
 \item {} 
-\sphinxstyleemphasis{dec} : la femme a terminé ses études et a un diplôme d’études collégiales.
+\sphinxstyleemphasis{dec}: la femme a terminé ses études et a un diplôme d’études collégiales.
 
 \item {} 
-\sphinxstyleemphasis{uni} : la femme a terminé ses études et a un diplôme égal ou supérieur au baccalauréat.
+\sphinxstyleemphasis{uni}: la femme a terminé ses études et a un diplôme égal ou supérieur au baccalauréat.
 
 \end{itemize}
 
-\sphinxstylestrong{Variable du dernier enfant :}
+\sphinxstylestrong{Variable du dernier enfant:}
 \begin{itemize}
 \item {} 
-\sphinxstyleemphasis{lkidage} : âge du dernier enfant né. Cette variable est uniquement utilisée pour les naissances d’ordre 2 et 3.
+\sphinxstyleemphasis{lkidage}: âge du dernier enfant né. Cette variable est uniquement utilisée pour les naissances d’ordre 2 et 3.
 
 \end{itemize}
 
 
-\subsection{Résultats de régression}
+\subsubsection{Résultats de régression}
 \label{\detokenize{methodologie:resultats-de-regression}}
 Les résultats des régressions logistiques sont présentés dans le tableau suivant:
 
@@ -1103,7 +1192,7 @@ Les résultats des régressions logistiques sont présentés dans le tableau sui
 \centering
 \sphinxcapstartof{table}
 \sphinxthecaptionisattop
-\sphinxcaption{Logit \sphinxhyphen{} Coefficients des transitions de naissances}\label{\detokenize{methodologie:id13}}
+\sphinxcaption{Logit \sphinxhyphen{} Coefficients des transitions de naissances}\label{\detokenize{methodologie:id14}}
 \sphinxaftertopcaption
 \begin{tabular}[t]{|\X{20}{80}|\X{20}{80}|\X{20}{80}|\X{20}{80}|}
 \hline
@@ -1117,7 +1206,7 @@ Variables
 3e enfant
 \\
 \hline
-dage2529
+age2529
 &
 .5111452
 &
@@ -1126,7 +1215,7 @@ dage2529
 \sphinxhyphen{}.1745108
 \\
 \hline
-dage3034
+age3034
 &
 .0206863
 &
@@ -1135,7 +1224,7 @@ dage3034
 \sphinxhyphen{}.7896601
 \\
 \hline
-dage3539
+age3539
 &
 \sphinxhyphen{}.8569678
 &
@@ -1144,22 +1233,13 @@ dage3539
 \sphinxhyphen{}1.621034
 \\
 \hline
-dage40p
+age40p
 &
 \sphinxhyphen{}1.939295
 &
 \sphinxhyphen{}2.335598
 &
 \sphinxhyphen{}3.388722
-\\
-\hline
-lkidage
-&
-0
-&
-\sphinxhyphen{}.0990092
-&
-\sphinxhyphen{}.0377307
 \\
 \hline
 insch
@@ -1198,6 +1278,15 @@ uni
 .8004084
 \\
 \hline
+lkidage
+&
+0
+&
+\sphinxhyphen{}.0990092
+&
+\sphinxhyphen{}.0377307
+\\
+\hline
 constant
 &
 \sphinxhyphen{}2.532843
@@ -1212,31 +1301,25 @@ constant
 \sphinxattableend\end{savenotes}
 
 
-\subsection{Mise en œuvre}
+\subsubsection{Mise en œuvre}
 \label{\detokenize{methodologie:mise-en-oeuvre}}
-L’implémentation dans SimGen est réalisée par un tirage uniforme,
-indépendant par individu dominant. Une naissance survient lorsque le résultat de ce tirage est inférieur
-à la probabilité logistique prédite.
-Dans SimGen, les personnes à risque pour cette transition sont les femmes en couple
-(qu’elles soient enregistrées comme individu dominant ou conjointe) âgées de 18 ans à 44 ans inclusivement.
-Il est à noter que les paramètres de la régression logistique utilisés pour le 3e enfant (\sphinxstyleemphasis{kid3}) le sont également pour les enfants d’ordre subséquent (4 et plus).
+La mise en œuvre dans SimGen est réalisée par un tirage uniforme, indépendant par individu dominant. Une naissance survient lorsque le résultat de ce tirage est inférieur à la probabilité logistique prédite. Dans SimGen, les personnes à risque pour cette transition sont les femmes en couple (qu’elles soient enregistrées comme individu dominant ou conjointe) âgées de 18 à 44 ans inclusivement.
 
 
-\section{Scolarité}
+\subsection{Scolarité}
 \label{\detokenize{methodologie:scolarite}}
 Tous les enfants débutent leurs études l’année de leurs 5 ans.
 La présente transition calcule la probabilité qu’un individu finisse ses études.
-S’il est déterminé que cet individu termine ces études durant l’année en cours, un niveau de scolarité lui est ensuite attribué.
+S’il est déterminé que cet individu termine ses études durant l’année en cours, un niveau de scolarité lui est ensuite attribué.
 
 
-\subsection{Modèle économétrique}
+\subsubsection{Modèle économétrique}
 \label{\detokenize{methodologie:model2}}\label{\detokenize{methodologie:id1}}
-Deux régressions logistiques sont réalisées pour 1) calculer la probabilité de finir ses études ; 2) attribuer un niveau de scolarité aux individus qui ont complété leurs études.
-Une régression logistique dichotomique est appliquée pour calculer la probabilité de finir ses études et un modèle logistique multinomial est utilisé afin d’attribuer le niveau de scolarité correspondant.
+Deux régressions logistiques sont réalisées pour 1) calculer la probabilité de finir ses études; 2) attribuer un niveau de scolarité aux individus qui ont complété leurs études. Une régression logistique dichotomique est appliquée pour calculer la probabilité de finir ses études et un modèle logistique multinomial est utilisé afin d’attribuer le niveau de scolarité correspondant.
 \begin{enumerate}
 \sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{)}%
 \item {} 
-probabilité d’un individu \sphinxstyleemphasis{i} de finir ses études (\sphinxstyleemphasis{f} = 1) à l’année \sphinxstyleemphasis{t} :
+probabilité dpour un individu \sphinxstyleemphasis{i} de finir ses études (\sphinxstyleemphasis{f} = 1) à l’année \sphinxstyleemphasis{t}:
 
 \end{enumerate}
 \begin{equation*}
@@ -1247,7 +1330,7 @@ probabilité d’un individu \sphinxstyleemphasis{i} de finir ses études (\sphi
 \sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{)}%
 \setcounter{enumi}{1}
 \item {} 
-pour chaque niveau d’éducation \sphinxstyleemphasis{e = 1 (n’a pas terminé ses études secondaires), 2 (diplôme d’études secondaires) {[}référence{]}, 3 (diplôme d’études collégiales), 4 (diplôme égal ou supérieur au baccalauréat)} atteint par un individu \sphinxstyleemphasis{i} l’année de terminaison des études en \sphinxstyleemphasis{t} :
+pour chaque niveau de scolarité \sphinxstyleemphasis{e = 1 (n’a pas terminé ses études secondaires), 2 (diplôme d’études secondaires) {[}référence{]}, 3 (diplôme d’études collégiales), 4 (diplôme égal ou supérieur au baccalauréat)} atteint par un individu \sphinxstyleemphasis{i} l’année de terminaison des études en \sphinxstyleemphasis{t}:
 
 \end{enumerate}
 \begin{equation*}
@@ -1262,11 +1345,11 @@ pour chaque niveau d’éducation \sphinxstyleemphasis{e = 1 (n’a pas terminé
 \begin{split}\Pr(e_{i,t}=4) = \frac{\exp(\mu_{4(i,t)})}{1+\exp(\mu_{1(i,t)})+\exp(\mu_{3(i,t)})+\exp(\mu_{4(i,t)})}\end{split}
 \end{equation*}
 
-\subsection{Données et échantillon}
+\subsubsection{Données et échantillon}
 \label{\detokenize{methodologie:id2}}
 Les régressions logistiques sont réalisées à l’aide des vagues 2006 et 2011 de \sphinxhref{https://www150.statcan.gc.ca/n1/pub/89f0115x/89f0115x2013001-fra.htm}{l’Enquête sociale générale (ESG)} menée auprès des ménages par Statistique Canada.
 
-L’échantillon utilisé pour calculer les transitions d’éducation est défini en suivant plusieurs étapes :
+L’échantillon utilisé pour calculer les transitions de scolarité est défini en suivant plusieurs étapes:
 \begin{enumerate}
 \sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{)}%
 \item {} 
@@ -1276,10 +1359,10 @@ Les données des vagues 2006 et 2011 de l’ESG sont regroupées (\sphinxstyleem
 L’échantillon est restreint aux données du Québec (variable \sphinxstyleemphasis{prv}).
 
 \item {} 
-Un fichier de pseudo panel des répondants qui recense l’historique des transitions de fin d’études et le niveau de scolarité associé est créé .
+Un fichier de pseudo panel des répondants qui recense l’historique des transitions de fin d’études et le niveau de scolarité associé est créé.
 
 \item {} 
-Seul l’historique des transitions du pseudo panel depuis 30 années est conservé afin d’éviter les effets des cohortes les plus anciennes  (1976 à 2006 pour l’ESG de 2006 et 1981 à 2011 pour celui de 2011).
+Seul l’historique des transitions du pseudo panel depuis 30 années est conservé afin d’éviter les effets des cohortes les plus anciennes (1976 à 2006 pour l’ESG de 2006 et 1981 à 2011 pour celle de 2011).
 
 \item {} 
 L’échantillon est restreint aux individus âgés de 17 à 35 ans inclusivement.
@@ -1293,56 +1376,53 @@ Pour la régression logistique multinomiale du niveau de scolarité, l’échant
 \end{enumerate}
 
 
-\subsection{Variables du modèle}
+\subsubsection{Variables du modèle}
 \label{\detokenize{methodologie:id4}}
-La variable dépendante \sphinxstyleemphasis{schldone} définissant la probabilité de finir ses études est égale à 1,
-lorsque l’individu a terminé ses études et elle est égale à 0,
-lorsque l’individu n’a pas encore terminé ses études.
-Cette variable indicatrice est calculée à partir de la variable \sphinxstyleemphasis{agecmplt} (âge du répondant à la fin des études) de l’ESG.
+La variable dépendante \sphinxstyleemphasis{schldone} définissant la probabilité de finir ses études est égale à 1 lorsque l’individu a terminé ses études, et elle est égale à 0 lorsque l’individu n’a pas encore terminé ses études. Cette variable indicatrice est calculée à partir de la variable \sphinxstyleemphasis{agecmplt} (âge du répondant à la fin des études) de l’ESG.
 
-\sphinxstylestrong{La variable dépendante et indicatrice du niveau de scolarité « educ » est utilisée dans une régression logistique multinomiale. Elle inclut 4 niveaux de scolarité:}
+La variable dépendante et indicatrice du niveau de scolarité, « educ », est utilisée dans une régression logistique multinomiale. Elle inclut 4 niveaux de scolarité:
 \begin{itemize}
 \item {} 
-\sphinxstyleemphasis{inf} : n’a pas terminé ses études secondaires.
+\sphinxstyleemphasis{inf}: n’a pas terminé ses études secondaires.
 
 \item {} 
-\sphinxstyleemphasis{des} (référence) : a obtenu un diplôme d’études secondaires ou des études partielles à l’université ou au cégep.
+\sphinxstyleemphasis{des} (référence): a obtenu un diplôme d’études secondaires ou des études partielles à l’université ou au cégep.
 
 \item {} 
-\sphinxstyleemphasis{dec} : a obtenu un diplôme d’études collégiales.
+\sphinxstyleemphasis{dec}: a obtenu un diplôme d’études collégiales.
 
 \item {} 
-\sphinxstyleemphasis{uni} : a obtenu un diplôme égal ou supérieur au baccalauréat.
+\sphinxstyleemphasis{uni}: a obtenu un diplôme égal ou supérieur au baccalauréat.
 
 \end{itemize}
 
-\sphinxstylestrong{Les variables explicatives et indicatrices de la fin des études « schldone » et du niveau de scolarité atteint sont les suivantes :}
+Les variables explicatives et indicatrices de la fin des études, « schldone », et du niveau de scolarité atteint sont les suivantes:
 \begin{itemize}
 \item {} 
-\sphinxstyleemphasis{male} : égal à 1 si le répondant est un homme et égal à 0 si le répondant est une femme.
+\sphinxstyleemphasis{male}: égal à 1 si le répondant est un homme et égal à 0 si le répondant est une femme.
 
 \item {} 
-\sphinxstyleemphasis{father} : égal à 1 si le répondant est un homme avec des enfants, 0 sinon.
+\sphinxstyleemphasis{father}: égal à 1 si le répondant est un homme avec des enfants, 0 sinon.
 
 \item {} 
-\sphinxstyleemphasis{mother} : égal à 1 si le répondant est une femme avec des enfants, 0 sinon.
+\sphinxstyleemphasis{mother}: égal à 1 si le répondant est une femme avec des enfants, 0 sinon.
 
 \item {} 
-\sphinxstyleemphasis{agex} : égal à 1 si l’individu a \sphinxstyleemphasis{x} ans, 0 sinon, avec \sphinxstyleemphasis{x} = 17 à 35 ans (la catégorie de référence est constituée des individus âgés de 17 ans).
+\sphinxstyleemphasis{agex}: égal à 1 si l’individu a \sphinxstyleemphasis{x} ans, 0 sinon, avec \sphinxstyleemphasis{x} = 17 à 35 ans (la catégorie de référence est constituée des individus âgés de 17 ans).
 
 \end{itemize}
 
 
-\subsection{Résultats de régression}
+\subsubsection{Résultats de régression}
 \label{\detokenize{methodologie:id5}}
-Les résultats des régressions logistiques sont présentés dans le tableau suivant :
+Les résultats des régressions logistiques sont présentés dans le tableau suivant:
 
 
 \begin{savenotes}\sphinxattablestart
 \centering
 \sphinxcapstartof{table}
 \sphinxthecaptionisattop
-\sphinxcaption{Logit \sphinxhyphen{} Coefficients de la transition de fin d’études (colonne 2) et d’attribution du niveau de scolarité (colonne 3 à 5)}\label{\detokenize{methodologie:id14}}
+\sphinxcaption{Logit \sphinxhyphen{} Coefficients de la transition de fin d’études (colonne 2) et d’attribution du niveau de scolarité (colonne 3 à 5)}\label{\detokenize{methodologie:id15}}
 \sphinxaftertopcaption
 \begin{tabular}[t]{|\X{20}{100}|\X{20}{100}|\X{20}{100}|\X{20}{100}|\X{20}{100}|}
 \hline
@@ -1605,26 +1685,24 @@ constant
 \sphinxattableend\end{savenotes}
 
 
-\subsection{Mise en œuvre}
+\subsubsection{Mise en œuvre}
 \label{\detokenize{methodologie:id6}}
 La mise en œuvre dans SimGen est réalisée à l’aide d’un tirage uniforme, indépendant par individu dominant, et la fin des études et le niveau de scolarité associé sont déterminés lorsque le résultat de ce tirage est inférieur à la probabilité logistique prédite.
 
-Dans SimGen, les personnes à risque pour cette transition sont les individus dominants âgés de 18 à 35 ans qui sont encore aux études. Les individus âgés de 35 ans ont une probabilité de terminer leurs études fixée à 100\%. Avant l’année de fin des études, les individus sont considérés sans éducation (aucun niveau ne leur est attribué). Le niveau de scolarité obtenu l’année de fin des études est attribué aux individus jusqu’à la fin de leur vie. Aucun retour aux études n’est possible après la fin des études.
+Dans SimGen, les personnes à risque pour cette transition sont les individus dominants âgés de 17 à 35 ans qui sont encore aux études. Les individus âgés de 35 ans ont une probabilité de terminer leurs études fixée à 100\%. Avant l’année de fin des études, les individus sont considérés sans scolarité (aucun niveau ne leur est attribué). Le niveau de scolarité obtenu l’année de fin des études est attribué aux individus jusqu’à la fin de leur vie. Aucun retour aux études n’est possible après la fin des études.
 
 
-\section{Statut conjugal}
-\label{\detokenize{methodologie:statut-conjugal}}
+\subsection{État matrimonial}
+\label{\detokenize{methodologie:etat-matrimonial}}
 
-\subsection{Modèle économétrique}
+\subsubsection{Modèle économétrique}
 \label{\detokenize{methodologie:model3}}\label{\detokenize{methodologie:id7}}
 Deux régressions logistiques sont réalisées pour 1) calculer la probabilité d’entrer dans une union conjugale (union libre ou mariage, indistinctement);
-2) calculer la probabilité de se séparer. La probabilité d’entrer en union et de se séparer dépend de variables similaires liées
-1) à l’âge du répondant, à son genre et à son niveau de scolarité. De plus, la probabilité de se séparer dépend également de la présence
-1) d’au moins un enfant âgé de moins de 18 ans.
+2) calculer la probabilité de se séparer. La probabilité d’entrer en union et de se séparer dépend de variables similaires liées à l’âge du répondant, à son genre et à son niveau de scolarité. De plus, la probabilité de se séparer dépend également de la présence d’au moins un enfant âgé de moins de 18 ans.
 \begin{enumerate}
 \sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{)}%
 \item {} 
-probabilité \sphinxstyleemphasis{c} d’un individu \sphinxstyleemphasis{i} de se mettre en couple l’année \sphinxstyleemphasis{t} :
+probabilité \sphinxstyleemphasis{c} pour un individu \sphinxstyleemphasis{i} de se mettre en couple l’année \sphinxstyleemphasis{t}:
 
 \end{enumerate}
 \begin{equation*}
@@ -1635,7 +1713,7 @@ probabilité \sphinxstyleemphasis{c} d’un individu \sphinxstyleemphasis{i} de 
 \sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{)}%
 \setcounter{enumi}{1}
 \item {} 
-probabilité \sphinxstyleemphasis{s} d’un individu \sphinxstyleemphasis{i} de se séparer l’année \sphinxstyleemphasis{t} :
+probabilité \sphinxstyleemphasis{s} pour un individu \sphinxstyleemphasis{i} de se séparer l’année \sphinxstyleemphasis{t}:
 
 \end{enumerate}
 \begin{equation*}
@@ -1644,11 +1722,11 @@ probabilité \sphinxstyleemphasis{s} d’un individu \sphinxstyleemphasis{i} de 
 \begin{split}\Pr(s_{i,t}=1) = \frac{\exp(\mu_{i,t})}{1+\exp(\mu_{i,t})}\end{split}
 \end{equation*}
 
-\subsection{Données et échantillon}
+\subsubsection{Données et échantillon}
 \label{\detokenize{methodologie:id8}}
 Les modèles logistiques sont estimés à partir des vagues 2006 et 2011 de \sphinxhref{https://www150.statcan.gc.ca/n1/pub/89f0115x/89f0115x2013001-fra.htm}{l’Enquête sociale générale (ESG)} réalisée auprès des ménages par Statistique Canada.
 
-L’échantillon utilisé pour calculer les transitions maritales est défini en suivant plusieurs étapes:
+L’échantillon utilisé pour calculer les transitions matrimoniales est défini en suivant plusieurs étapes:
 \begin{enumerate}
 \sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{)}%
 \item {} 
@@ -1658,150 +1736,150 @@ Les données des vagues 2006 et 2011 de l’ESG sont regroupées dans une base u
 L’échantillon est ensuite restreint aux données de la province du Québec (variable \sphinxstyleemphasis{prv}).
 
 \item {} 
-Un fichier de pseudo panel des répondants qui recense l’historique des transitions d’unions et de séparations d’ordre 1 à 4 est créé (jusqu’à 4 unions et séparations sont possibles tout au long de la vie).
+Un fichier de pseudo panel des répondants qui recense l’historique des transitions d’unions et de séparations d’ordre 1 à 4 est créé (jusqu’à 4 unions et séparations sont donc permises tout au long de la vie).
 
 \item {} 
-Seul l’historique des transitions du pseudo panel depuis 30 années est conservé afin d’éviter les effets des cohortes les plus anciennes (1976 à 2006 pour l’ESG de 2006 et 1981 à 2011 pour celui de 2011).
+Seul l’historique des transitions du pseudo panel depuis 30 années est conservé afin d’éviter les effets des cohortes les plus anciennes (1976 à 2006 pour l’ESG de 2006 et 1981 à 2011 pour celle de 2011).
 
 \end{enumerate}
 
 
-\subsection{Variables du modèle}
+\subsubsection{Variables du modèle}
 \label{\detokenize{methodologie:id10}}
 Pour calculer la transition de mise en union, la variable dépendante est égale à 0 lorsque l’individu est célibataire et la variable dépendante est égale à 1 à partir de l’année de la mise en couple. Symétriquement, pour le calcul de la transition de séparation, la variable dépendante est égale à 0 lorsque l’individu est en couple et la variable dépendante est égale à 1 à partir de l’année de la séparation. Il faut préciser que le fait de devenir veuf n’est pas considéré comme une transition de séparation dans le modèle logistique.
 
-\sphinxstylestrong{1) Variables explicatives des transitions de mise en couple :}
+\sphinxstylestrong{1) Variables explicatives des transitions de mise en couple}
 
-\sphinxstylestrong{Genre (variable indicatrice) :}
+\sphinxstylestrong{Genre (variable indicatrice):}
 \begin{itemize}
 \item {} 
-\sphinxstyleemphasis{male} : égal à 1 si le répondant est un homme et égal à 0 si le répondant est une femme.
+\sphinxstyleemphasis{male}: égal à 1 si le répondant est un homme et égal à 0 si le répondant est une femme.
 
 \end{itemize}
 
-\sphinxstylestrong{Âge (variables indicatrices) :}
+\sphinxstylestrong{Âge (variables indicatrices):}
 \begin{itemize}
 \item {} 
-\sphinxstyleemphasis{age1619} : le répondant a entre 16 et 19 ans.
+\sphinxstyleemphasis{age1619}: le répondant a entre 16 et 19 ans.
 
 \item {} 
-\sphinxstyleemphasis{age2024} : le répondant a entre 20 et 24 ans.
+\sphinxstyleemphasis{age2024}: le répondant a entre 20 et 24 ans.
 
 \item {} 
-\sphinxstyleemphasis{age2529} : le répondant a entre 25 et 29 ans.
+\sphinxstyleemphasis{age2529}: le répondant a entre 25 et 29 ans.
 
 \item {} 
-\sphinxstyleemphasis{age3034} (référence) : le répondant a entre 30 et 34 ans.
+\sphinxstyleemphasis{age3034} (référence): le répondant a entre 30 et 34 ans.
 
 \item {} 
-\sphinxstyleemphasis{age3539} : le répondant a entre 35 et 39 ans.
+\sphinxstyleemphasis{age3539}: le répondant a entre 35 et 39 ans.
 
 \item {} 
-\sphinxstyleemphasis{age4044} : le répondant a entre 40 et 44 ans.
+\sphinxstyleemphasis{age4044}: le répondant a entre 40 et 44 ans.
 
 \item {} 
-\sphinxstyleemphasis{age4549} : le répondant a entre 45 et 49 ans.
+\sphinxstyleemphasis{age4549}: le répondant a entre 45 et 49 ans.
 
 \item {} 
-\sphinxstyleemphasis{age5054} : le répondant a entre 50 et 54 ans.
+\sphinxstyleemphasis{age5054}: le répondant a entre 50 et 54 ans.
 
 \item {} 
-\sphinxstyleemphasis{age5559} : le répondant a entre 55 et 59 ans.
+\sphinxstyleemphasis{age5559}: le répondant a entre 55 et 59 ans.
 
 \item {} 
-\sphinxstyleemphasis{age6065} : le répondant a entre 60 et 65 ans.
+\sphinxstyleemphasis{age6065}: le répondant a entre 60 et 65 ans.
 
 \end{itemize}
 
-\sphinxstylestrong{Éducation (variables indicatrices) :}
+\sphinxstylestrong{Scolarité (variables indicatrices):}
 \begin{itemize}
 \item {} 
-\sphinxstyleemphasis{insch} : le répondant n’a pas encore terminé ses études.
+\sphinxstyleemphasis{insch}: le répondant n’a pas encore terminé ses études.
 
 \item {} 
-\sphinxstyleemphasis{inf} (référence) : le répondant a terminé ses études mais n’a pas complété ses études secondaires.
+\sphinxstyleemphasis{inf} (référence): le répondant a terminé ses études mais n’a pas complété ses études secondaires.
 
 \item {} 
-\sphinxstyleemphasis{des} : le répondant a terminé ses études et a un diplôme d’études secondaires ou des études partielles à l’université ou au cégep.
+\sphinxstyleemphasis{des}: le répondant a terminé ses études et a un diplôme d’études secondaires ou des études partielles à l’université ou au cégep.
 
 \item {} 
-\sphinxstyleemphasis{dec} : le répondant a terminé ses études et a un diplôme d’études collégiales.
+\sphinxstyleemphasis{dec}: le répondant a terminé ses études et a un diplôme d’études collégiales.
 
 \item {} 
-\sphinxstyleemphasis{uni} : le répondant a terminé ses études et a un diplôme égal ou supérieur au baccalauréat.
+\sphinxstyleemphasis{uni}: le répondant a terminé ses études et a un diplôme égal ou supérieur au baccalauréat.
 
 \end{itemize}
 
-\sphinxstylestrong{2) Variables explicatives des transitions de séparation :}
+\sphinxstylestrong{2) Variables explicatives des transitions de séparation}
 
-\sphinxstylestrong{Genre (variable indicatrice) :}
+\sphinxstylestrong{Genre (variable indicatrice):}
 \begin{itemize}
 \item {} 
-\sphinxstyleemphasis{male} : le répondant est un homme et égal à 0 si le répondant est une femme.
+\sphinxstyleemphasis{male}: égal à 1 si le répondant est un homme et égal à 0 si le répondant est une femme.
 
 \end{itemize}
 
-\sphinxstylestrong{Âge :}
+\sphinxstylestrong{Âge:}
 \begin{itemize}
 \item {} 
-\sphinxstyleemphasis{mage} : âge du répondant si c’est un homme, sinon 0.
+\sphinxstyleemphasis{mage}: âge du répondant si c’est un homme, 0 sinon.
 
 \item {} 
-\sphinxstyleemphasis{mage2} : âge au carré du répondant si c’est un homme, sinon 0.
+\sphinxstyleemphasis{mage2}: âge au carré du répondant si c’est un homme, 0 sinon.
 
 \item {} 
-\sphinxstyleemphasis{mage3} : âge au cube du répondant si c’est un homme, sinon 0.
+\sphinxstyleemphasis{mage3}: âge au cube du répondant si c’est un homme, 0 sinon.
 
 \item {} 
-\sphinxstyleemphasis{wage} : âge du répondant si c’est une femme, sinon 0.
+\sphinxstyleemphasis{wage}: âge du répondant si c’est une femme, 0 sinon.
 
 \item {} 
-\sphinxstyleemphasis{wage2} : âge au carré du répondant si c’est une femme, sinon 0.
+\sphinxstyleemphasis{wage2}: âge au carré du répondant si c’est une femme, 0 sinon.
 
 \item {} 
-\sphinxstyleemphasis{wage3} : âge au cube du répondant si c’est une femme, sinon 0.
+\sphinxstyleemphasis{wage3}: âge au cube du répondant si c’est une femme, 0 sinon.
 
 \end{itemize}
 
-\sphinxstylestrong{Éducation (variables indicatrices) :}
+\sphinxstylestrong{Scolarité (variables indicatrices):}
 \begin{itemize}
 \item {} 
-\sphinxstyleemphasis{insch} : le répondant n’a pas encore terminé ses études.
+\sphinxstyleemphasis{insch}: le répondant n’a pas encore terminé ses études.
 
 \item {} 
-\sphinxstyleemphasis{inf} (référence) : le répondant a terminé ses études mais n’a pas complété ses études secondaires.
+\sphinxstyleemphasis{inf} (référence): le répondant a terminé ses études mais n’a pas complété ses études secondaires.
 
 \item {} 
-\sphinxstyleemphasis{des} : le répondant a terminé ses études et a un diplôme d’études secondaires ou des études partielles à l’université ou au cégep.
+\sphinxstyleemphasis{des}: le répondant a terminé ses études et a un diplôme d’études secondaires ou des études partielles à l’université ou au cégep.
 
 \item {} 
-\sphinxstyleemphasis{dec} : le répondant a terminé ses études et a un diplôme d’études collégiales.
+\sphinxstyleemphasis{dec}: le répondant a terminé ses études et a un diplôme d’études collégiales.
 
 \item {} 
-\sphinxstyleemphasis{uni} : le répondant a terminé ses études et a un diplôme égal ou supérieur au baccalauréat.
+\sphinxstyleemphasis{uni}: le répondant a terminé ses études et a un diplôme égal ou supérieur au baccalauréat.
 
 \end{itemize}
 
-\sphinxstylestrong{Enfants (variable indicatrice) :}
+\sphinxstylestrong{Enfants (variable indicatrice):}
 \begin{itemize}
 \item {} 
-\sphinxstyleemphasis{kid} : égal à 1 si le répondant a au moins un enfant de moins de 18 ans, 0 sinon.
+\sphinxstyleemphasis{kid}: égal à 1 si le répondant a au moins un enfant de moins de 18 ans, 0 sinon.
 
 \end{itemize}
 
-Cette variable contrôle pour la présence d’enfants mineurs, potentiellement résidants au domicile parental ou bien à la charge de leurs parents. La présence d’enfants majeurs n’est” pas prise en compte car ceux\sphinxhyphen{}ci ne sont potentiellement plus à la charge de leurs parents.
+Cette variable contrôle pour la présence d’enfants mineurs, potentiellement résidants au domicile parental ou bien à la charge de leurs parents. La présence d’enfants majeurs n’est pas prise en compte car ceux\sphinxhyphen{}ci ne sont potentiellement plus à la charge de leurs parents.
 
 
-\subsection{Résultats de régression}
+\subsubsection{Résultats de régression}
 \label{\detokenize{methodologie:id11}}
-Les résultats du modèle logistique de mise en couple sont présentés dans le tableau suivant :
+Les résultats du modèle logistique de mise en couple sont présentés dans le tableau suivant:
 
 
 \begin{savenotes}\sphinxattablestart
 \centering
 \sphinxcapstartof{table}
 \sphinxthecaptionisattop
-\sphinxcaption{Logit \sphinxhyphen{} Coefficients des transitions de mise en couple}\label{\detokenize{methodologie:id15}}
+\sphinxcaption{Logit \sphinxhyphen{} Coefficients des transitions de mise en couple}\label{\detokenize{methodologie:id16}}
 \sphinxaftertopcaption
 \begin{tabular}[t]{|\X{20}{40}|\X{20}{40}|}
 \hline
@@ -1890,14 +1968,14 @@ constant
 \par
 \sphinxattableend\end{savenotes}
 
-Les résultats du modèle logistique de séparation sont présentés dans le tableau suivant :
+Les résultats du modèle logistique de séparation sont présentés dans le tableau suivant:
 
 
 \begin{savenotes}\sphinxattablestart
 \centering
 \sphinxcapstartof{table}
 \sphinxthecaptionisattop
-\sphinxcaption{Logit \sphinxhyphen{} Coefficients des transitions de séparations}\label{\detokenize{methodologie:id16}}
+\sphinxcaption{Logit \sphinxhyphen{} Coefficients des transitions de séparations}\label{\detokenize{methodologie:id17}}
 \sphinxaftertopcaption
 \begin{tabular}[t]{|\X{20}{40}|\X{20}{40}|}
 \hline
@@ -1977,38 +2055,30 @@ constant
 \sphinxattableend\end{savenotes}
 
 
-\subsection{Mise en œuvre}
+\subsubsection{Mise en œuvre}
 \label{\detokenize{methodologie:id12}}
-La mise en œuvre des transitions de formation d’union et de séparation dans SimGen est réalisée par un tirage uniforme, indépendant par individu dominant, et ces événements surviennent,
-lorsque le résultat de ce tirage est inférieur à la probabilité prédite.
+La mise en œuvre des transitions de formation d’union et de séparation dans SimGen est réalisée par un tirage uniforme, indépendant par individu dominant, et ces événements surviennent lorsque le résultat de ce tirage est inférieur à la probabilité prédite.
 
-Lorsqu’un individu dominant \sphinxstyleemphasis{D1} est sélectionné pour former une union,
-une banque d’individus dominants en couple, ayant les mêmes caractéritiques que ce dernier par rapport à l’âge, le genre et le niveau de scolarité,
-et ayant une différence d’âge avec leur conjoint de moins de 5 ans, est créée.
-Si aucun individu dominant en couple avec ces caractéristiques n’est trouvé, un nouvelle banque d’individus dominants est créée à partir des individus dominants en couple,
-ayant les mêmes caractéritiques que l’individu dominant \sphinxstyleemphasis{D1} par rapport au genre et au niveau de scolarité,
-et ayant une différence d’âge avec leur conjoint de moins de 20 ans.
-Par la suite, les caractéritiques du conjoint \sphinxstyleemphasis{C1} de l’individu dominant \sphinxstyleemphasis{D1} sont obtenues en attribuant
-à ce conjoint les mêmes caractéristiques que le conjoint \sphinxstyleemphasis{C2} d’un individu dominant \sphinxstyleemphasis{D2} sélectionné aléatoirement à partir de la banque d’individus dominants créée à cet effet.
+Lorsqu’un individu dominant \sphinxstyleemphasis{D1} est sélectionné pour former une union, une banque d’individus dominants est créée à partir des individus en couple, ayant les mêmes caractéristiques que ce dernier quant à l’âge, le genre et le niveau de scolarité et ayant une différence d’âge avec leur conjoint de moins de 5 ans. Si aucun individu dominant en couple avec ces caractéristiques n’est trouvé, un nouvelle banque d’individus dominants est créée à partir des individus dominants en couple, ayant les mêmes caractéristiques que l’individu dominant \sphinxstyleemphasis{D1} quant au genre et au niveau de scolarité, et ayant une différence d’âge avec leur conjoint de moins de 20 ans. Par la suite, les caractéristiques du conjoint \sphinxstyleemphasis{C1} de l’individu dominant \sphinxstyleemphasis{D1} sont obtenues en attribuant à ce conjoint les mêmes caractéristiques que le conjoint \sphinxstyleemphasis{C2} d’un individu dominant \sphinxstyleemphasis{D2} sélectionné aléatoirement à partir de la banque d’individus dominants créée à cet effet.
 
 
-\section{Mortalité}
+\subsection{Mortalité}
 \label{\detokenize{methodologie:mortalite}}
-Chaque année \sphinxstyleemphasis{t}, un individu d’âge \sphinxstyleemphasis{a} et de genre \sphinxstyleemphasis{g} a une probabilité \sphinxstyleemphasis{P(t,a,g)} de décéder. Cette probabilité, définie comme un taux de mortalité, est calculée à partir des quotients prospectifs de mortalité selon l’âge et le sexe estimés par Statistique Canada entre 2013\sphinxhyphen{}2014 et 2062\sphinxhyphen{}2063 (juillet\sphinxhyphen{}juin) pour les provinces et territoires. Le \sphinxhref{https://www150.statcan.gc.ca/n1/pub/91-620-x/91-620-x2014001-fra.pdf}{rapport technique} de Statistique Canada présente la méthodologie et les hypothèses de ces quotients prospectifs.
+Chaque année \sphinxstyleemphasis{t}, un individu d’âge \sphinxstyleemphasis{a} et de genre \sphinxstyleemphasis{g} a une probabilité \sphinxstyleemphasis{P(t,a,g)} de décéder. Cette probabilité, définie comme un taux de mortalité, est calculée à partir des quotients prospectifs de mortalité selon l’âge et le sexe estimés par Statistique Canada entre 2013\sphinxhyphen{}2014 et 2062\sphinxhyphen{}2063 (juillet\sphinxhyphen{}juin) pour les provinces et territoires. Le \sphinxhref{https://www150.statcan.gc.ca/n1/pub/91-620-x/91-620-x2014001-fra.pdf}{rapport technique} de Statistique Canada présente la méthodologie et les hypothèses utilisés pour construire ces quotients prospectifs.
 
 L’âge, le genre et la cohorte de naissance sont donc les seuls déterminants de l’espérance de vie des individus. Notons également que les immigrants et les natifs ont des probabilités équivalentes de décès en fonction de leur âge, de leur genre et de leur cohorte.
 
 
-\section{Migrations}
+\subsection{Migrations}
 \label{\detokenize{methodologie:migrations}}
 
-\subsection{Immigration}
+\subsubsection{Immigration}
 \label{\detokenize{methodologie:immigration}}
-Le taux prospectif d’immigration internationale est égal à 6,6‰. Ce taux est calculé en divisant \sphinxhref{https://bdso.gouv.qc.ca/docs-ken/multimedia/PB01661FR\_Perspective\_demo2019H00F00.pdf}{le nombre d’immigrants projeté dans le scénario de référence de l’ISQ (55 000)} par la \sphinxhref{https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710000501\&pickMembers\%5B0\%5D=1.6\&pickMembers\%5B1\%5D=2.1\&cubeTimeFrame.startYear=2016\&cubeTimeFrame.endYear=2020\&referencePeriods=20160101\%2C20200101}{population québecoise enregistrée par Statistique Canada en 2017 (8 302 063)}. Les caractéristiques socio\sphinxhyphen{}économiques et démographiques des nouveaux immigrants internationaux sont attribuées en fonction des immigrants internationaux récents issus de la BDSPS de Statistique Canada pour l’année 2017. Chaque année \sphinxstyleemphasis{t}, on tire aléatoirement 6,6 pour mille de la sous\sphinxhyphen{}population des immigrants récents (depuis 5 ans au moins) parmi la base de départ. Les caractéristiques socio\sphinxhyphen{}économiques et démographiques des nouveaux immigrants sont alors celles des immigrants tirés de la BDSPS de 2017: l’âge, le genre, le niveau de scolarité, la présence de conjoint et le nombre d’enfants.
+Le taux prospectif d’immigration internationale est égal à 6,6‰. Ce taux est calculé en divisant \sphinxhref{https://bdso.gouv.qc.ca/docs-ken/multimedia/PB01661FR\_Perspective\_demo2019H00F00.pdf}{le nombre d’immigrants projeté dans le scénario de référence de l’ISQ (55 000)} par la \sphinxhref{https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710000501\&pickMembers\%5B0\%5D=1.6\&pickMembers\%5B1\%5D=2.1\&cubeTimeFrame.startYear=2016\&cubeTimeFrame.endYear=2020\&referencePeriods=20160101\%2C20200101}{population québécoise enregistrée par Statistique Canada en 2017 (8 302 063)}. Les caractéristiques socio\sphinxhyphen{}économiques et démographiques des nouveaux immigrants internationaux sont attribuées en fonction des immigrants internationaux récents issus de la BDSPS de Statistique Canada pour l’année 2017. Chaque année \sphinxstyleemphasis{t}, on tire aléatoirement dans la base de départ 6,6 pour mille de la sous\sphinxhyphen{}population des immigrants récents (depuis 5 ans ou moins). Les caractéristiques socio\sphinxhyphen{}économiques et démographiques des nouveaux immigrants sont alors celles des immigrants tirés de la BDSPS de 2017: l’âge, le genre, le niveau de scolarité, la présence de conjoint et le nombre d’enfants.
 
 
-\subsection{Émigration}
-\label{\detokenize{methodologie:emigration}}
+\subsubsection{Émigration}
+\label{\detokenize{methodologie:emigration}}\label{\detokenize{methodologie:id13}}
 Les caractéristiques des émigrants dépendent uniquement de l’âge. L’émigration intègre les émigrants internationaux ainsi que le solde migratoire interprovincial. À chaque âge donné, la probabilité d’émigrer est égale pour toutes les personnes dominantes. Les émigrants d’un âge donné sont tirés de manière aléatoire. De plus, on considère que le(la) conjoint(e) du dominant ainsi que tous ses enfants âgés de moins de 18 ans émigrent avec la personne dominante. Le taux d’émigration par âge est calculé à partir du nombre d’émigrants interprovinciaux par classe d’âge en 2018\sphinxhyphen{}2019 du \sphinxhref{https://www150.statcan.gc.ca/t1/tbl1/fr/tv.action?pid=1710001501}{tableau 17\sphinxhyphen{}10\sphinxhyphen{}0015\sphinxhyphen{}01 « Estimations des composantes de la migration interprovinciale, par âge et sexe, annuelles »}, du nombre d’émigrants internationaux par classe d’âge en 2018\sphinxhyphen{}2019 du \sphinxhref{https://www150.statcan.gc.ca/t1/tbl1/fr/tv.action?pid=1710001401}{tableau 17\sphinxhyphen{}10\sphinxhyphen{}0014\sphinxhyphen{}01 « Estimations des composantes de la migration internationale, par âge et sexe, annuelles »} et de la population québécoise par classe d’âge au 1er juillet 2018 du \sphinxhref{https://www150.statcan.gc.ca/t1/tbl1/fr/tv.action?pid=1710000501}{tableau 17\sphinxhyphen{}10\sphinxhyphen{}0005\sphinxhyphen{}01 « Estimations de la population au 1er juillet, par âge et sexe »}. À noter que le nombre d’émigrants interprovinciaux à chaque âge a été normalisé sur les hypothèses du \sphinxhref{https://bdso.gouv.qc.ca/docs-ken/multimedia/PB01661FR\_Perspective\_demo2019H00F00.pdf}{solde interprovincial annuel de l’ISQ (9 000 personnes)}. Les taux d’émigration par classe d’âge sont les suivants:
 
 
@@ -2107,35 +2177,35 @@ Taux d’émigration (‰)
 \sphinxattableend\end{savenotes}
 
 
-\chapter{Résultats}
+\section{Résultats}
 \label{\detokenize{resultats:resultats}}\label{\detokenize{resultats:id1}}\label{\detokenize{resultats::doc}}
 Cette section présente brièvement les résultats du modèle SimGen et les compare aux données officielles du Québec.
 
 
-\section{Données de comparaison}
+\subsection{Données de comparaison}
 \label{\detokenize{resultats:donnees-de-comparaison}}
-Ces données proviennent de différentes sources officielles :
+Ces données proviennent de différentes sources officielles:
 \begin{itemize}
 \item {} 
-Données pour la population totale de 1998 à 2018 (Figure 1) : les données proviennent de séries de l’ISQ.
+Données pour la population totale de 1998 à 2018 (Figure 1): les données proviennent de séries de l’ISQ.
 
 \item {} 
-Données de projections de population (Figure 1 \& 2) : les projections de population sont basées sur le scénario moyen de l’ISQ à partir des données corrigées du recensement de 2016. Pour plus d’information concernant la méthodologie utilisée pour le calcul des projections de population, se référer au rapport "Perspectives démographiques du Québec et des régions, 2016\sphinxhyphen{}2066, édition 2019" produit par \sphinxhref{https://statistique.quebec.ca/fr/fichier/perspectives-demographiques-du-quebec-et-des-regions-2016-2066-edition-2019.pdf}{l’ISQ}.
+Données de projections de population (Figures 1 \& 2): les projections de population sont basées sur le scénario moyen de l’ISQ à partir des données corrigées du recensement de 2016. Pour plus d’information concernant la méthodologie utilisée pour le calcul des projections de population, se référer au rapport « \sphinxhref{https://statistique.quebec.ca/fr/fichier/perspectives-demographiques-du-quebec-et-des-regions-2016-2066-edition-2019.pdf}{Perspectives démographiques du Québec et des régions, 2016\sphinxhyphen{}2066, édition 2019} » produit par l’ISQ.
 
 \item {} 
-Données par niveau de scolarité (Figure 3) : les données concernant le plus haut niveau de scolarité atteint proviennent des fichiers de microdonnées à grande diffusion des recensements de 2006, 2011 et 2016. Ces données sont disponibles par l’entremise de l’Initiative de démocratisation des données (\sphinxhref{https://www.statcan.gc.ca/fra/idd/idd-collection}{IDD}) de Statistique Canada.
+Données par niveau de scolarité (Figure 3): les données concernant le plus haut niveau de scolarité atteint proviennent des fichiers de microdonnées à grande diffusion des recensements de 2006, 2011 et 2016. Ces données sont disponibles par l’entremise de l’Initiative de démocratisation des données (\sphinxhref{https://www.statcan.gc.ca/fra/idd/idd-collection}{IDD}) de Statistique Canada.
 
 \item {} 
-Données pour personnes en couple (Figure 4) : ces données proviennent des estimations de la population au 1er juillet, selon l’état matrimonial ou l’état matrimonial légal, l’âge et le sexe (Tableau : 17\sphinxhyphen{}10\sphinxhyphen{}0060\sphinxhyphen{}01), qui sont produites par \sphinxhref{https://www150.statcan.gc.ca/t1/tbl1/fr/cv.action?pid=1710006001}{Statistique Canada}.
+Données pour personnes en couple (Figure 4): ces données proviennent des estimations de la population au 1er juillet, selon l’état matrimonial ou l’état matrimonial légal, l’âge et le sexe (Tableau: 17\sphinxhyphen{}10\sphinxhyphen{}0060\sphinxhyphen{}01), qui sont produites par \sphinxhref{https://www150.statcan.gc.ca/t1/tbl1/fr/cv.action?pid=1710006001}{Statistique Canada}.
 
 \end{itemize}
 
 
-\section{Données de simulation}
+\subsection{Données de simulation}
 \label{\detokenize{resultats:donnees-de-simulation}}
-Comme mentionné précédemment, la base de données de départ de SimGen correspond à la \sphinxhref{https://www.statcan.gc.ca/fra/microsimulation/bdmsps/bdmsps}{Base de données de simulation de politiques sociales (BDSPS)}.
+Comme mentionné précédemment, la base de données de départ de SimGen est tirée de la \sphinxhref{https://www.statcan.gc.ca/fra/microsimulation/bdmsps/bdmsps}{Base de données de simulation de politiques sociales (BDSPS)}.
 
-Pour ce qui est des résultats analysés, ceux\sphinxhyphen{}ci proviennent d’une simulation de 2017 à 2040 utilisant les hypothèses suivantes :
+Pour ce qui est des résultats analysés, ceux\sphinxhyphen{}ci proviennent d’une simulation de 2017 à 2040 utilisant les hypothèses suivantes:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{reference} \PYG{o}{=} \PYG{n}{model}\PYG{p}{(}\PYG{n}{start\PYGZus{}yr}\PYG{o}{=}\PYG{l+m+mi}{2017}\PYG{p}{,}\PYG{n}{stop\PYGZus{}yr}\PYG{o}{=}\PYG{l+m+mi}{2040}\PYG{p}{)}
@@ -2146,7 +2216,7 @@ Pour ce qui est des résultats analysés, ceux\sphinxhyphen{}ci proviennent d’
 \end{sphinxVerbatim}
 
 
-\section{Résultats des comparaisons}
+\subsection{Résultats des comparaisons}
 \label{\detokenize{resultats:resultats-des-comparaisons}}
 Il est important de noter que l’objectif de cet exercice n’est pas de reproduire exactement
 les projections des différentes agences statistiques,
@@ -2154,7 +2224,7 @@ mais d’illustrer les différences afin de mieux comprendre les éventuels impa
 sur les différents modules et les modèles utilisant les résultats de SimGen comme intrant.
 
 
-\subsection{Population totale}
+\subsubsection{Population totale}
 \label{\detokenize{resultats:population-totale}}
 \begin{figure}[htbp]
 \centering
@@ -2167,7 +2237,7 @@ Les données de l’année d’initialisation du modèle SimGen en 2017 sont cal
 Le modèle SimGen reproduit avec fidélité les projections réalisées par l’ISQ. En 2040, la population totale obtenue par SimGen (9,29 millions d’habitants) est similaire à la population totale obtenue par l’ISQ (9,32 millions d’habitants).
 
 
-\subsection{Population par groupes d’âge}
+\subsubsection{Population par groupes d’âge}
 \label{\detokenize{resultats:population-par-groupes-d-age}}
 \begin{figure}[htbp]
 \centering
@@ -2185,7 +2255,7 @@ En 2040, la population âgées de 0 à 24 ans devrait égaler 2,37 millions selo
 La même année, la population âgées de 25 à 64 ans devrait égaler 4,51 millions selon l’ISQ et elle devrait égaler 4,78 millions selon Simgen.
 
 
-\subsection{Niveau de scolarité}
+\subsubsection{Niveau de scolarité}
 \label{\detokenize{resultats:niveau-de-scolarite}}
 \begin{figure}[htbp]
 \centering
@@ -2193,12 +2263,12 @@ La même année, la population âgées de 25 à 64 ans devrait égaler 4,51 mill
 \noindent\sphinxincludegraphics{{educ_2564}.png}
 \end{figure}
 
-Premièrement, on remarque à la Figure 3 un saut entre les données du recensement de 2016 et celles projetées par SimGen pour 2017 en ce qui concerne les proportions de population selon le plus haut niveau de scolarité atteint. Cet écart s’explique par le fait que la variable de scolarité n’est pas catégorisée de la même manière dans la base de données initiale et dans les données publiques des recensements. Il faudra donc porter une attention particulière à cette variable pour tous projets ayant pour objectif détudier le système québécois d’éducation.
+Premièrement, on remarque à la Figure 3 un saut entre les données du recensement de 2016 et celles projetées par SimGen pour 2017 en ce qui concerne les proportions de population selon le plus haut niveau de scolarité atteint. Cet écart s’explique par le fait que la variable de scolarité n’est pas catégorisée de la même manière dans la base de données initiale et dans les données publiques des recensements. Il faudra donc porter une attention particulière à cette variable pour tous projets ayant pour objectif d’étudier le système québécois d’éducation.
 
-Pour ce qui est des tendances général, on remarque une augmentation de la proportion de personnes ayant obtenu un diplôme de niveau universitaire et une diminution de la proportion des trois autres niveaux de diplômes.
+Pour ce qui est des tendances générales, on remarque une augmentation de la proportion de personnes ayant obtenu un diplôme de niveau universitaire et une diminution de la proportion des trois autres niveaux de scolarité.
 
 
-\subsection{Personnes en couple}
+\subsubsection{Personnes en couple}
 \label{\detokenize{resultats:personnes-en-couple}}
 \begin{figure}[htbp]
 \centering
@@ -2211,10 +2281,10 @@ Concernant la part de personnes en couple, la Figure 4 met en évidence un lége
 Les résultats de SimGen mettent en avant une légère diminution de la proportion de personnes de 15 ans et plus en couple au Québec pour l’ensemble de la période de projection.
 
 
-\chapter{Dictionnaire (classes et des fonctions)}
-\label{\detokenize{code:module-simgen}}\label{\detokenize{code:dictionnaire-classes-et-des-fonctions}}\label{\detokenize{code:code}}\label{\detokenize{code::doc}}\index{module@\spxentry{module}!simgen@\spxentry{simgen}}\index{simgen@\spxentry{simgen}!module@\spxentry{module}}
+\section{Dictionnaire (classes et fonctions)}
+\label{\detokenize{code:module-simgen}}\label{\detokenize{code:dictionnaire-classes-et-fonctions}}\label{\detokenize{code:code}}\label{\detokenize{code::doc}}\index{module@\spxentry{module}!simgen@\spxentry{simgen}}\index{simgen@\spxentry{simgen}!module@\spxentry{module}}
 
-\section{Données}
+\subsection{Données}
 \label{\detokenize{code:donnees}}
 Les fonctions de données permettent de préparer les données pour la simulation.
 \index{bdsps() (dans le module simgen)@\spxentry{bdsps()}\spxextra{dans le module simgen}}
@@ -2368,7 +2438,7 @@ Fonction qui permet d’entrer les registres dominants, conjoints et enfants qui
 
 
 
-\section{Transitions}
+\subsection{Transitions}
 \label{\detokenize{code:transitions}}\index{update (classe dans simgen)@\spxentry{update}\spxextra{classe dans simgen}}
 
 \begin{fulllineitems}
@@ -2534,7 +2604,7 @@ instance de la classe population
 
 
 
-\section{Simulation}
+\subsection{Simulation}
 \label{\detokenize{code:simulation}}
 La classe permettant de réaliser les simulations est \sphinxstyleemphasis{model}. Voici sa description.
 \index{model (classe dans simgen)@\spxentry{model}\spxextra{classe dans simgen}}
@@ -2628,6 +2698,19 @@ Fonction déterminant les variables de sortie.
 
 \end{fulllineitems}
 
+\index{simulate() (méthode simgen.model)@\spxentry{simulate()}\spxextra{méthode simgen.model}}
+
+\begin{fulllineitems}
+\phantomsection\label{\detokenize{code:simgen.model.simulate}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{simulate}}}{\emph{\DUrole{n}{rep}\DUrole{o}{=}\DUrole{default_value}{1}}}{}
+Fonction déclenchant le lancement de la simulation.
+\begin{quote}\begin{description}
+\item[{Paramètres}] \leavevmode
+\sphinxstyleliteralstrong{\sphinxupquote{stratas}} (\sphinxstyleliteralemphasis{\sphinxupquote{rep}}) \textendash{} Nombre de réplications
+
+\end{description}\end{quote}
+
+\end{fulllineitems}
+
 \index{startpop() (méthode simgen.model)@\spxentry{startpop()}\spxextra{méthode simgen.model}}
 
 \begin{fulllineitems}
@@ -2648,7 +2731,7 @@ Fonction membre qui permet de charger une population de départ.
 
 
 
-\section{Statistiques}
+\subsection{Statistiques}
 \label{\detokenize{code:statistiques}}
 Cette classe permet de produire des statistiques dans le cadre d’une simulation.
 \index{statistics (classe dans simgen)@\spxentry{statistics}\spxextra{classe dans simgen}}
@@ -2783,6 +2866,25 @@ Le membre de la classe qui contient les fréquences (\sphinxstyleemphasis{counts
 
 
 
+\section{Nous joindre}
+\label{\detokenize{credits:nous-joindre}}\label{\detokenize{credits::doc}}
+
+\subsection{Principaux contributeurs}
+\label{\detokenize{credits:principaux-contributeurs}}
+Nicholas\sphinxhyphen{}James Clavet, Yann Décarie, Pierre\sphinxhyphen{}Carl Michaud, Julien Navaux
+
+
+\subsection{Personne\sphinxhyphen{}contact}
+\label{\detokenize{credits:personne-contact}}
+\sphinxhref{mailto:yann.decarie@hec.ca}{Yann Décarie}
+
+
+\subsection{Problèmes et améliorations}
+\label{\detokenize{credits:problemes-et-ameliorations}}
+SimGen est un modèle dit « open source ». Les utilisateurs sont donc invités à signaler les problèmes liés à SimGen et à soumettre des propositions d’ajout au code
+en cliquant sur le \sphinxhref{https://github.com/CREEi-models/simgen/issues}{lien} suivant, et en cliquant sur le bouton vert « New issue ».
+
+
 \chapter{Index}
 \label{\detokenize{index:index}}\begin{itemize}
 \item {} 
@@ -2793,7 +2895,7 @@ Le membre de la classe qui contient les fréquences (\sphinxstyleemphasis{counts
 
 \chapter{Documentation en PDF}
 \label{\detokenize{index:documentation-en-pdf}}
-Documentation \sphinxcode{\sphinxupquote{pdf}}
+Ficher \sphinxcode{\sphinxupquote{pdf}}
 
 
 \renewcommand{\indexname}{Index des modules Python}

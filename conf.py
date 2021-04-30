@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.abspath('../simgen'))
 # -- Project information -----------------------------------------------------
 
 project = 'SimGen'
-copyright = '2020, Équipe CREEi'
+copyright = '2021, Équipe CREEi'
 author = 'Équipe CREEi'
 
 
@@ -28,7 +28,8 @@ author = 'Équipe CREEi'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ["sphinx_rtd_theme","sphinx.ext.autodoc", "sphinx.ext.napoleon","sphinx.ext.mathjax",'sphinxcontrib.contentui','sphinx.ext.autosectionlabel'
+extensions = ["sphinx_rtd_theme","sphinx.ext.autodoc", "sphinx.ext.napoleon",
+"sphinx.ext.mathjax",'sphinxcontrib.contentui','sphinx.ext.autosectionlabel'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -55,6 +56,9 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 import sphinx_rtd_theme
 
 html_theme = "sphinx_rtd_theme"
+html_theme_options = {
+    'collapse_navigation' : False
+}
 # html_theme = 'alabaster'
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -63,3 +67,6 @@ html_theme = "sphinx_rtd_theme"
 html_static_path = ['_static']
 
 master_doc = 'index'
+
+# -- Options for LaTeX output ---------------------------------------------
+
