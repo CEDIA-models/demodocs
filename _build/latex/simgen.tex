@@ -60,12 +60,14 @@
 \fvset{fontsize=\small}
 \usepackage{geometry}
 
+
 % Include hyperref last.
 \usepackage{hyperref}
 % Fix anchor placement for figures with captions.
 \usepackage{hypcap}% it must be loaded after hyperref.
 % Set up styles of URL: it should be placed after hyperref.
 \urlstyle{same}
+
 \addto\captionsfrench{\renewcommand{\contentsname}{Menu :}}
 
 \usepackage{sphinxmessages}
@@ -107,7 +109,7 @@ de la \sphinxhref{https://www.creei.ca}{Chaire de recherche sur les enjeux écon
 une chaire conjointe \sphinxhref{https://esg.uqam.ca/}{ESG UQAM} et \sphinxhref{https://www.hec.ca/}{HEC Montréal}
 soutenue par le \sphinxhref{https://cirano.qc.ca/}{CIRANO} et
 \sphinxhref{https://www.retraitequebec.gouv.qc.ca/fr/Pages/accueil.aspx}{Retraite Québec}.
-Pour rester informé.e des mises à jour de SimGen, inscrivez-vous à notre \sphinxhref{http://eepurl.com/hs0YED}{liste d’envoi dédiée}.
+Pour rester informé.e des mises à jour de SimGen, inscrivez\sphinxhyphen{}vous à notre \sphinxhref{http://eepurl.com/hs0YED}{liste d’envoi dédiée}.
 
 
 \chapter{Installation}
@@ -118,8 +120,8 @@ Malgré tout, si vous n’avez pas accès au logiciel Python mais que vous dispo
 sera possible d’utiliser SimGen en accès à distance via \sphinxstyleemphasis{Google colab} (Voir méthode 3).
 
 Ainsi, il est possible d’avoir accès à SimGen selon trois méthodes : 1) installation automatisée, 2) installation manuelle et 3) accès à distance.
-Celles-ci sont présentées ci-dessous.
-Pour rester informé.e des mises à jour de SimGen, inscrivez-vous à notre \sphinxhref{http://eepurl.com/hs0YED}{liste d’envoi dédiée}.
+Celles\sphinxhyphen{}ci sont présentées ci\sphinxhyphen{}dessous.
+Pour rester informé.e des mises à jour de SimGen, inscrivez\sphinxhyphen{}vous à notre \sphinxhref{http://eepurl.com/hs0YED}{liste d’envoi dédiée}.
 Il est à noter que SimGen est fourni « tel quel », sous une \sphinxhref{https://rsi-models.github.io/CPR/credits.html\#licence}{licence MIT}.
 
 \begin{sphinxadmonition}{note}{Important}
@@ -132,12 +134,12 @@ de démocratisation des données (IDD). Les professeurs et étudiants des établ
 postsecondaires participants possèdent ainsi une licence d’utilisation de la BDSPS par l’entremise
 de leur établissement.
 
-Si \sphinxstylestrong{vous possédez cette licence},
+Si \sphinxstylestrong{vous possédez une licence},
 écrivez à \sphinxhref{mailto:yann.decarie@hec.ca}{yann.decarie@hec.ca} et un fichier .csv prêt à l’emploi
 dans SimGen vous sera envoyé.
 
-Si \sphinxstylestrong{vous ne possédez pas cette licence}, vous devez faire une demande de licence pour la BDSPS
-en écrivant à \sphinxhref{mailto:statcan.spsdm-bdmsps.statcan@canada.ca}{statcan.spsdm-bdmsps.statcan@canada.ca} (Voir également le \sphinxhref{https://www.statcan.gc.ca/fra/microsimulation/bdmsps/bdmsps}{site internet} de la BDSPS). Lorsque vous aurez obtenu
+Si \sphinxstylestrong{vous ne possédez pas de licence}, vous devez faire une demande de licence pour la BDSPS
+en écrivant à \sphinxhref{mailto:statcan.spsdm-bdmsps.statcan@canada.ca}{statcan.spsdm\sphinxhyphen{}bdmsps.statcan@canada.ca} (Voir également le \sphinxhref{https://www.statcan.gc.ca/fra/microsimulation/bdmsps/bdmsps}{site internet} de la BDSPS). Lorsque vous aurez obtenu
 cette licence, il vous suffira d’écrire à \sphinxhref{mailto:yann.decarie@hec.ca}{yann.decarie@hec.ca} et
 un fichier .csv prêt à l’emploi dans SimGen vous sera envoyé.
 \end{sphinxadmonition}
@@ -169,19 +171,19 @@ il est possible d’installer manuellement SimGen en suivant les étapes suivant
 Allez sur le site internet \sphinxhref{https://pypi.org/}{Pypi} et faites une recherche du package « simgen ».
 
 \item {} 
-Cliquez sur l’onglet « simgen-x.x.x », où « x.x.x » correspond au numéro de version.
+Cliquez sur l’onglet « simgen\sphinxhyphen{}x.x.x », où « x.x.x » correspond au numéro de version.
 
 \item {} 
-Ensuite, cliquez sur « Download files » dans le menu à gauche et puis cliquez sur le nom du fichier « simgen-x.x.x.tar.gz » pour télécharger le fichier compressé.
+Ensuite, cliquez sur « Download files » dans le menu à gauche et puis cliquez sur le nom du fichier « simgen\sphinxhyphen{}x.x.x.tar.gz » pour télécharger le fichier compressé.
 
 \item {} 
-Une fois le fichier téléchargé, décompressez le fichier « simgen-x.x.x.tar.gz » une première fois.
+Une fois le fichier téléchargé, décompressez le fichier « simgen\sphinxhyphen{}x.x.x.tar.gz » une première fois.
 
 \item {} 
-Ouvrez le dossier créé par l’extraction (ex. simgen-x.x.x.tar), continuez ensuite en ouvrant le dossier « dist » et décompressez le fichier « simgen-x.x.x.tar ».
+Ouvrez le dossier créé par l’extraction (ex. simgen\sphinxhyphen{}x.x.x.tar), continuez ensuite en ouvrant le dossier « dist » et décompressez le fichier « simgen\sphinxhyphen{}x.x.x.tar ».
 
 \item {} 
-Une fois le fichier décompressé, transférez le dossier « simgen-x.x.x » dans le dossier où vous entreposez vos packages (Si vous n’en avez pas créez-en un à l’endroit qui vous convient le mieux).
+Une fois le fichier décompressé, transférez le dossier « simgen\sphinxhyphen{}x.x.x » dans le dossier où vous entreposez vos packages (Si vous n’en avez pas créez\sphinxhyphen{}en un à l’endroit qui vous convient le mieux).
 
 \item {} 
 Enfin, ajoutez dans votre notebook ou votre script le sentier d’accès de votre dossier de packages et vous pourrez importer SimGen en tant que module.
@@ -216,7 +218,7 @@ Par la suite, il est possible d’importer SimGen en tant que module :
 
 \chapter{Utilisation}
 \label{\detokenize{utilisation:utilisation}}\label{\detokenize{utilisation:id1}}\label{\detokenize{utilisation::doc}}
-Cette section a pour objectif de guider les utilisateurs de SimGen dans l’utilisation de celui-ci.
+Cette section a pour objectif de guider les utilisateurs de SimGen dans l’utilisation de celui\sphinxhyphen{}ci.
 Dans un premier temps, les étapes d’utilisation et les différents choix possibiles de paramètres sont présentés.
 Par la suite, un exemple de notebook/script est proposé afin de servir de point de départ
 aux utilisateurs pour le lancement de simulations et l’analyse des résultats.
@@ -386,7 +388,7 @@ Il est à noter que les caractéristiques des nouveaux immigrants sont issues de
 \subsection{2. Initialisation du modèle}
 \label{\detokenize{utilisation:initialisation-du-modele}}
 L’initialisation du modèle vise à charger en mémoire l’ensemble des informations nécessaires au lancement de la simulation.
-Cette étape se divise en plusieurs sous-étapes.
+Cette étape se divise en plusieurs sous\sphinxhyphen{}étapes.
 
 \sphinxstylestrong{Importation des packages}
 
@@ -425,7 +427,7 @@ où \sphinxstyleemphasis{donnees\_brutes} correspond au sentier d’accès et au
 \index{bdsps (classe dans simgen)@\spxentry{bdsps}\spxextra{classe dans simgen}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{utilisation:simgen.bdsps}}\pysigline{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{bdsps}}}
+\phantomsection\label{\detokenize{utilisation:simgen.bdsps}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{bdsps}}}{\emph{\DUrole{n}{file}}, \emph{\DUrole{n}{year}\DUrole{o}{=}\DUrole{default_value}{2017}}, \emph{\DUrole{n}{iprint}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{n}{file\_format}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}.dta\textquotesingle{}}}}{}
 Nettoyage de la BDSPS.
 
 Fonction qui permet de mettre en forme la BDSPS.
@@ -462,7 +464,7 @@ où \sphinxstyleemphasis{annee\_fin} correspond à l’année de fin de la simul
 \index{model (classe dans simgen)@\spxentry{model}\spxextra{classe dans simgen}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{utilisation:simgen.model}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{model}}}{\emph{start\_yr=2017}, \emph{stop\_yr=2100}}{}
+\phantomsection\label{\detokenize{utilisation:simgen.model}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{model}}}{\emph{\DUrole{n}{start\_yr}\DUrole{o}{=}\DUrole{default_value}{2017}}, \emph{\DUrole{n}{stop\_yr}\DUrole{o}{=}\DUrole{default_value}{2100}}}{}
 Modèle de simulation SimGen.
 
 Cette classe permet de créer une instance d’un modèle de microsimulation.
@@ -508,7 +510,7 @@ où \sphinxstyleemphasis{start\_pop} est le nom donné par défaut à la base de
 \index{model (classe dans simgen)@\spxentry{model}\spxextra{classe dans simgen}}
 
 \begin{fulllineitems}
-\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{model}}}{\emph{start\_yr=2017}, \emph{stop\_yr=2100}}{}
+\phantomsection\label{\detokenize{utilisation:id0}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{model}}}{\emph{\DUrole{n}{start\_yr}\DUrole{o}{=}\DUrole{default_value}{2017}}, \emph{\DUrole{n}{stop\_yr}\DUrole{o}{=}\DUrole{default_value}{2100}}}{}
 Modèle de simulation SimGen.
 
 Cette classe permet de créer une instance d’un modèle de microsimulation.
@@ -526,7 +528,7 @@ Cette classe permet de créer une instance d’un modèle de microsimulation.
 \index{startpop() (méthode simgen.model)@\spxentry{startpop()}\spxextra{méthode simgen.model}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{utilisation:simgen.model.startpop}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{startpop}}}{\emph{file}}{}
+\phantomsection\label{\detokenize{utilisation:simgen.model.startpop}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{startpop}}}{\emph{\DUrole{n}{file}}}{}
 Charger une population de départ.
 
 Fonction membre qui permet de charger une population de départ.
@@ -560,7 +562,7 @@ où \sphinxstyleemphasis{imm\_pop} correspond à la la banque de données des im
 \index{model (classe dans simgen)@\spxentry{model}\spxextra{classe dans simgen}}
 
 \begin{fulllineitems}
-\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{model}}}{\emph{start\_yr=2017}, \emph{stop\_yr=2100}}{}
+\phantomsection\label{\detokenize{utilisation:id2}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{model}}}{\emph{\DUrole{n}{start\_yr}\DUrole{o}{=}\DUrole{default_value}{2017}}, \emph{\DUrole{n}{stop\_yr}\DUrole{o}{=}\DUrole{default_value}{2100}}}{}
 Modèle de simulation SimGen.
 
 Cette classe permet de créer une instance d’un modèle de microsimulation.
@@ -578,7 +580,7 @@ Cette classe permet de créer une instance d’un modèle de microsimulation.
 \index{immig\_assumptions() (méthode simgen.model)@\spxentry{immig\_assumptions()}\spxextra{méthode simgen.model}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{utilisation:simgen.model.immig_assumptions}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{immig\_assumptions}}}{\emph{allow=True}, \emph{num=0.0066}, \emph{init=None}}{}
+\phantomsection\label{\detokenize{utilisation:simgen.model.immig_assumptions}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{immig\_assumptions}}}{\emph{\DUrole{n}{allow}\DUrole{o}{=}\DUrole{default_value}{True}}, \emph{\DUrole{n}{num}\DUrole{o}{=}\DUrole{default_value}{0.0066}}, \emph{\DUrole{n}{init}\DUrole{o}{=}\DUrole{default_value}{None}}}{}
 Hypothèses d’immigration.
 
 Fonction membre qui permet de spécifier les hypothèses d’immigration.
@@ -625,7 +627,7 @@ Le temps de simulation croît de manière substantielle selon l’année de fin 
 \index{model (classe dans simgen)@\spxentry{model}\spxextra{classe dans simgen}}
 
 \begin{fulllineitems}
-\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{model}}}{\emph{start\_yr=2017}, \emph{stop\_yr=2100}}{}
+\phantomsection\label{\detokenize{utilisation:id3}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{model}}}{\emph{\DUrole{n}{start\_yr}\DUrole{o}{=}\DUrole{default_value}{2017}}, \emph{\DUrole{n}{stop\_yr}\DUrole{o}{=}\DUrole{default_value}{2100}}}{}
 Modèle de simulation SimGen.
 
 Cette classe permet de créer une instance d’un modèle de microsimulation.
@@ -651,7 +653,7 @@ Cette classe permet de créer une instance d’un modèle de microsimulation.
 
 \subsection{4. Affichage des résultats}
 \label{\detokenize{utilisation:affichage-des-resultats}}
-Tout d’abord, le tableau ci-dessous présente la liste des variables pouvant servir lors de l’affichage des résultats de SimGen :
+Tout d’abord, le tableau ci\sphinxhyphen{}dessous présente la liste des variables pouvant servir lors de l’affichage des résultats de SimGen :
 
 
 \begin{savenotes}\sphinxattablestart
@@ -763,19 +765,19 @@ Entier
 \sphinxstylestrong{Production de résultats}
 
 Il est possible de produire des résultats à l’aide de deux fonctions.
-La fonction \sphinxstyleemphasis{stats.freq()} calcul le nombre d’individus selon le sous-groupe spécifié. Par exemple :
+La fonction \sphinxstyleemphasis{stats.freq()} calcul le nombre d’individus selon le sous\sphinxhyphen{}groupe spécifié. Par exemple :
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{population\PYGZus{}hommes}\PYG{o}{=}\PYG{n}{base}\PYG{o}{.}\PYG{n}{stats}\PYG{o}{.}\PYG{n}{freq}\PYG{p}{(}\PYG{n}{sub}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{male==True}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 \end{sphinxVerbatim}
 
-Si aucun argument n’est inscrit dans la fonction, celle-ci calcule le nombre de personne dans l’ensemble de la population.
+Si aucun argument n’est inscrit dans la fonction, celle\sphinxhyphen{}ci calcule le nombre de personne dans l’ensemble de la population.
 
 \sphinxstylestrong{Détails : fonction stats.freq()}
 \index{statistics (classe dans simgen)@\spxentry{statistics}\spxextra{classe dans simgen}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{utilisation:simgen.statistics}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{statistics}}}{\emph{stratas}}{}
+\phantomsection\label{\detokenize{utilisation:simgen.statistics}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{statistics}}}{\emph{\DUrole{n}{stratas}}}{}
 Classe pour créer les statistiques provenant d’une simulation.
 
 Cette classe permet de capturer la distribution de la population par strate durant une simulation. Elle permet ensuite de faire plusieurs tableaux dynamiques à partir de ces distributions.
@@ -787,7 +789,7 @@ Cette classe permet de capturer la distribution de la population par strate dura
 \index{freq() (méthode simgen.statistics)@\spxentry{freq()}\spxextra{méthode simgen.statistics}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{utilisation:simgen.statistics.freq}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{freq}}}{\emph{strata=None, bins={[}0{]}, sub=None}}{}
+\phantomsection\label{\detokenize{utilisation:simgen.statistics.freq}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{freq}}}{\emph{\DUrole{n}{strata}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{bins}\DUrole{o}{=}\DUrole{default_value}{{[}0{]}}}, \emph{\DUrole{n}{sub}\DUrole{o}{=}\DUrole{default_value}{None}}}{}
 Fonction de fréquences.
 
 Fonction qui permet, à l’aide de \sphinxstyleemphasis{counts}, de calculer les fréquences pondérées pour une strate donnée. Deux options sont disponibles: l’une, \sphinxstyleemphasis{bins}, permet de modifier les catégories de la strate (par exemple le groupe d’âge), tandis que \sphinxstyleemphasis{sub} permet de définir un critère de sélection particulier pour le calcul des fréquences (en str).
@@ -800,7 +802,7 @@ Fonction qui permet, à l’aide de \sphinxstyleemphasis{counts}, de calculer le
 \sphinxstyleliteralstrong{\sphinxupquote{bins}} (\sphinxstyleliteralemphasis{\sphinxupquote{list of int}}) \textendash{} liste de valeurs pour découper les données selon la variable strata; fonctionne seulement avec des variables de types int (pas de str)
 
 \item {} 
-\sphinxstyleliteralstrong{\sphinxupquote{sub}} (\sphinxstyleliteralemphasis{\sphinxupquote{str}}) \textendash{} condition à respecter pour un sous-échantillon, p.ex. « age\textgreater{}=18 »
+\sphinxstyleliteralstrong{\sphinxupquote{sub}} (\sphinxstyleliteralemphasis{\sphinxupquote{str}}) \textendash{} condition à respecter pour un sous\sphinxhyphen{}échantillon, p.ex. « age\textgreater{}=18 »
 
 \end{itemize}
 
@@ -832,7 +834,7 @@ La fonction \sphinxstyleemphasis{stats.prop()} calcule pour sa part la proportio
 \index{statistics (classe dans simgen)@\spxentry{statistics}\spxextra{classe dans simgen}}
 
 \begin{fulllineitems}
-\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{statistics}}}{\emph{stratas}}{}
+\phantomsection\label{\detokenize{utilisation:id4}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{statistics}}}{\emph{\DUrole{n}{stratas}}}{}
 Classe pour créer les statistiques provenant d’une simulation.
 
 Cette classe permet de capturer la distribution de la population par strate durant une simulation. Elle permet ensuite de faire plusieurs tableaux dynamiques à partir de ces distributions.
@@ -844,7 +846,7 @@ Cette classe permet de capturer la distribution de la population par strate dura
 \index{prop() (méthode simgen.statistics)@\spxentry{prop()}\spxextra{méthode simgen.statistics}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{utilisation:simgen.statistics.prop}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{prop}}}{\emph{strata, bins={[}0{]}, sub=None}}{}
+\phantomsection\label{\detokenize{utilisation:simgen.statistics.prop}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{prop}}}{\emph{\DUrole{n}{strata}}, \emph{\DUrole{n}{bins}\DUrole{o}{=}\DUrole{default_value}{{[}0{]}}}, \emph{\DUrole{n}{sub}\DUrole{o}{=}\DUrole{default_value}{None}}}{}
 Fonction de proportions.
 
 Fonction qui permet, à l’aide de \sphinxstyleemphasis{counts}, de calculer les proportions pondérées pour une strate donnée. Deux options sont disponibles: l’une, \sphinxstyleemphasis{bins}, permet de modifier les catégories de la strate (par exemple le groupe d’âge), tandis que \sphinxstyleemphasis{sub} permet de définir un critère de sélection particulier pour le calcul des proportions (en str).
@@ -857,7 +859,7 @@ Fonction qui permet, à l’aide de \sphinxstyleemphasis{counts}, de calculer le
 \sphinxstyleliteralstrong{\sphinxupquote{bins}} (\sphinxstyleliteralemphasis{\sphinxupquote{list of int}}) \textendash{} liste de valeurs pour découper les données selon la variable strata; fonctionne seulement avec des variables de types int (pas de str)
 
 \item {} 
-\sphinxstyleliteralstrong{\sphinxupquote{sub}} (\sphinxstyleliteralemphasis{\sphinxupquote{str}}) \textendash{} condition à respecter pour un sous-échantillon, p.ex. « age\textgreater{}=18 »
+\sphinxstyleliteralstrong{\sphinxupquote{sub}} (\sphinxstyleliteralemphasis{\sphinxupquote{str}}) \textendash{} condition à respecter pour un sous\sphinxhyphen{}échantillon, p.ex. « age\textgreater{}=18 »
 
 \end{itemize}
 
@@ -891,7 +893,7 @@ Enfin, il est possible de sauvegarder les résultats de la simulation dans un fi
 \index{statistics (classe dans simgen)@\spxentry{statistics}\spxextra{classe dans simgen}}
 
 \begin{fulllineitems}
-\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{statistics}}}{\emph{stratas}}{}
+\phantomsection\label{\detokenize{utilisation:id5}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{statistics}}}{\emph{\DUrole{n}{stratas}}}{}
 Classe pour créer les statistiques provenant d’une simulation.
 
 Cette classe permet de capturer la distribution de la population par strate durant une simulation. Elle permet ensuite de faire plusieurs tableaux dynamiques à partir de ces distributions.
@@ -903,7 +905,7 @@ Cette classe permet de capturer la distribution de la population par strate dura
 \index{save() (méthode simgen.statistics)@\spxentry{save()}\spxextra{méthode simgen.statistics}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{utilisation:simgen.statistics.save}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{save}}}{\emph{file}}{}
+\phantomsection\label{\detokenize{utilisation:simgen.statistics.save}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{save}}}{\emph{\DUrole{n}{file}}}{}
 Fonction pour sauvegarder les fichiers de fréquences.
 \begin{quote}\begin{description}
 \item[{Paramètres}] \leavevmode
@@ -983,14 +985,14 @@ d’émigration. La figure suivante illustre plus explicitement la dynamique des
 \noindent\sphinxincludegraphics{{diagramme_flux-simgen}.jpg}
 \end{figure}
 
-Lorsque SimGen arrive à l’année de fin de la simulation, celui-ci recommence le processus de simulation
+Lorsque SimGen arrive à l’année de fin de la simulation, celui\sphinxhyphen{}ci recommence le processus de simulation
 de l’année de départ à l’année de fin, jusqu’à ce que le nombre de réplications sélectionnés soit atteint.
 Une fois cette étape accomplie, la moyenne des résultats des réplications est calculée afin de créer
 la base de données finale des résultats.
 
 \sphinxstylestrong{Structure des données}
 
-De manière plus spécifique, la base de données de simulation de SimGen est composée de trois registres. Un premier registre contient les individus dominants, un deuxième contient les conjoints de ceux-ci et
+De manière plus spécifique, la base de données de simulation de SimGen est composée de trois registres. Un premier registre contient les individus dominants, un deuxième contient les conjoints de ceux\sphinxhyphen{}ci et
 un troisième contient leurs enfants. Le registre des individus dominants représente l’échantillon principal sur lequel les transitions sont appliquées et sur lequels les sorties statistiques sont basées.
 Les registres des conjoints et des enfants servent essentiellement à décrire le contexte familial des individus dominants. Ils ne sont donc pas inclus dans les sorties statistiques.
 Cette approche a été choisie, puisqu’elle permet de simplifier le processus de simulation et de rendre plus flexible la production de résultats
@@ -1101,7 +1103,7 @@ Les résultats des régressions logistiques sont présentés dans le tableau sui
 \centering
 \sphinxcapstartof{table}
 \sphinxthecaptionisattop
-\sphinxcaption{Logit - Coefficients des transitions de naissances}\label{\detokenize{methodologie:id13}}
+\sphinxcaption{Logit \sphinxhyphen{} Coefficients des transitions de naissances}\label{\detokenize{methodologie:id13}}
 \sphinxaftertopcaption
 \begin{tabular}[t]{|\X{20}{80}|\X{20}{80}|\X{20}{80}|\X{20}{80}|}
 \hline
@@ -1121,7 +1123,7 @@ dage2529
 &
 .20215
 &
--.1745108
+\sphinxhyphen{}.1745108
 \\
 \hline
 dage3034
@@ -1130,39 +1132,39 @@ dage3034
 &
 .0036399
 &
--.7896601
+\sphinxhyphen{}.7896601
 \\
 \hline
 dage3539
 &
--.8569678
+\sphinxhyphen{}.8569678
 &
--.8245546
+\sphinxhyphen{}.8245546
 &
--1.621034
+\sphinxhyphen{}1.621034
 \\
 \hline
 dage40p
 &
--1.939295
+\sphinxhyphen{}1.939295
 &
--2.335598
+\sphinxhyphen{}2.335598
 &
--3.388722
+\sphinxhyphen{}3.388722
 \\
 \hline
 lkidage
 &
 0
 &
--.0990092
+\sphinxhyphen{}.0990092
 &
--.0377307
+\sphinxhyphen{}.0377307
 \\
 \hline
 insch
 &
--1.025785
+\sphinxhyphen{}1.025785
 &
 .1545281
 &
@@ -1171,7 +1173,7 @@ insch
 \hline
 des
 &
--.223628
+\sphinxhyphen{}.223628
 &
 .1972002
 &
@@ -1180,7 +1182,7 @@ des
 \hline
 dec
 &
--.1165148
+\sphinxhyphen{}.1165148
 &
 .1987852
 &
@@ -1189,7 +1191,7 @@ dec
 \hline
 uni
 &
--.1596642
+\sphinxhyphen{}.1596642
 &
 .4500001
 &
@@ -1198,11 +1200,11 @@ uni
 \hline
 constant
 &
--2.532843
+\sphinxhyphen{}2.532843
 &
--1.634364
+\sphinxhyphen{}1.634364
 &
--2.288871
+\sphinxhyphen{}2.288871
 \\
 \hline
 \end{tabular}
@@ -1340,7 +1342,7 @@ Les résultats des régressions logistiques sont présentés dans le tableau sui
 \centering
 \sphinxcapstartof{table}
 \sphinxthecaptionisattop
-\sphinxcaption{Logit - Coefficients de la transition de fin d’études (colonne 2) et d’attribution du niveau de scolarité (colonne 3 à 5)}\label{\detokenize{methodologie:id14}}
+\sphinxcaption{Logit \sphinxhyphen{} Coefficients de la transition de fin d’études (colonne 2) et d’attribution du niveau de scolarité (colonne 3 à 5)}\label{\detokenize{methodologie:id14}}
 \sphinxaftertopcaption
 \begin{tabular}[t]{|\X{20}{100}|\X{20}{100}|\X{20}{100}|\X{20}{100}|\X{20}{100}|}
 \hline
@@ -1362,36 +1364,36 @@ male
 &
 .410925
 &
--.190319
+\sphinxhyphen{}.190319
 &
--.598743
+\sphinxhyphen{}.598743
 \\
 \hline
 mother
 &
--.184402
+\sphinxhyphen{}.184402
 &
 .317556
 &
 .170107
 &
--1.0691
+\sphinxhyphen{}1.0691
 \\
 \hline
 father
 &
--.182383
+\sphinxhyphen{}.182383
 &
--.609737
+\sphinxhyphen{}.609737
 &
--.423941
+\sphinxhyphen{}.423941
 &
--.688694
+\sphinxhyphen{}.688694
 \\
 \hline
 age18
 &
--.108408
+\sphinxhyphen{}.108408
 &
 2.5816
 &
@@ -1415,7 +1417,7 @@ age20
 &
 .832675
 &
--35.5138
+\sphinxhyphen{}35.5138
 &
 3.13082
 &
@@ -1426,7 +1428,7 @@ age21
 &
 .849631
 &
--34.2392
+\sphinxhyphen{}34.2392
 &
 3.51179
 &
@@ -1437,7 +1439,7 @@ age22
 &
 1.13566
 &
--33.5076
+\sphinxhyphen{}33.5076
 &
 3.37148
 &
@@ -1448,7 +1450,7 @@ age23
 &
 1.33625
 &
--34.0375
+\sphinxhyphen{}34.0375
 &
 2.75714
 &
@@ -1459,7 +1461,7 @@ age24
 &
 1.23258
 &
--17.3182
+\sphinxhyphen{}17.3182
 &
 2.7163
 &
@@ -1470,7 +1472,7 @@ age25
 &
 1.08433
 &
--17.6177
+\sphinxhyphen{}17.6177
 &
 2.45016
 &
@@ -1481,7 +1483,7 @@ age26
 &
 .960907
 &
--17.5423
+\sphinxhyphen{}17.5423
 &
 2.60372
 &
@@ -1492,7 +1494,7 @@ age27
 &
 1.06736
 &
--17.2421
+\sphinxhyphen{}17.2421
 &
 3.01988
 &
@@ -1503,7 +1505,7 @@ age28
 &
 1.02315
 &
--17.1569
+\sphinxhyphen{}17.1569
 &
 3.16667
 &
@@ -1514,7 +1516,7 @@ age29
 &
 1.00341
 &
--17.3664
+\sphinxhyphen{}17.3664
 &
 2.61141
 &
@@ -1525,7 +1527,7 @@ age30
 &
 .875271
 &
--17.8062
+\sphinxhyphen{}17.8062
 &
 2.1641
 &
@@ -1536,7 +1538,7 @@ age31
 &
 .994532
 &
--17.6105
+\sphinxhyphen{}17.6105
 &
 2.34907
 &
@@ -1547,7 +1549,7 @@ age32
 &
 1.36367
 &
--17.3727
+\sphinxhyphen{}17.3727
 &
 2.69095
 &
@@ -1558,7 +1560,7 @@ age33
 &
 1.52
 &
--16.9129
+\sphinxhyphen{}16.9129
 &
 3.37866
 &
@@ -1569,7 +1571,7 @@ age34
 &
 1.95557
 &
--1.56612
+\sphinxhyphen{}1.56612
 &
 2.70337
 &
@@ -1580,7 +1582,7 @@ age35
 &
 2.4045
 &
--2.35543
+\sphinxhyphen{}2.35543
 &
 2.26993
 &
@@ -1589,13 +1591,13 @@ age35
 \hline
 constant
 &
--3.1736
+\sphinxhyphen{}3.1736
 &
--.133584
+\sphinxhyphen{}.133584
 &
--1.66927
+\sphinxhyphen{}1.66927
 &
--5.01949
+\sphinxhyphen{}5.01949
 \\
 \hline
 \end{tabular}
@@ -1787,7 +1789,7 @@ Pour calculer la transition de mise en union, la variable dépendante est égale
 
 \end{itemize}
 
-Cette variable contrôle pour la présence d’enfants mineurs, potentiellement résidants au domicile parental ou bien à la charge de leurs parents. La présence d’enfants majeurs n’est” pas prise en compte car ceux-ci ne sont potentiellement plus à la charge de leurs parents.
+Cette variable contrôle pour la présence d’enfants mineurs, potentiellement résidants au domicile parental ou bien à la charge de leurs parents. La présence d’enfants majeurs n’est” pas prise en compte car ceux\sphinxhyphen{}ci ne sont potentiellement plus à la charge de leurs parents.
 
 
 \subsection{Résultats de régression}
@@ -1799,7 +1801,7 @@ Les résultats du modèle logistique de mise en couple sont présentés dans le 
 \centering
 \sphinxcapstartof{table}
 \sphinxthecaptionisattop
-\sphinxcaption{Logit - Coefficients des transitions de mise en couple}\label{\detokenize{methodologie:id15}}
+\sphinxcaption{Logit \sphinxhyphen{} Coefficients des transitions de mise en couple}\label{\detokenize{methodologie:id15}}
 \sphinxaftertopcaption
 \begin{tabular}[t]{|\X{20}{40}|\X{20}{40}|}
 \hline
@@ -1811,12 +1813,12 @@ Coefficients
 \hline
 male
 &
--.1837456
+\sphinxhyphen{}.1837456
 \\
 \hline
 age1619
 &
--.6663195
+\sphinxhyphen{}.6663195
 \\
 \hline
 age2024
@@ -1831,37 +1833,37 @@ age2529
 \hline
 age3539
 &
--.3277921
+\sphinxhyphen{}.3277921
 \\
 \hline
 age4044
 &
--.399524
+\sphinxhyphen{}.399524
 \\
 \hline
 age4549
 &
--.5470281
+\sphinxhyphen{}.5470281
 \\
 \hline
 age5054
 &
--.4505239
+\sphinxhyphen{}.4505239
 \\
 \hline
 age5559
 &
--.8944283
+\sphinxhyphen{}.8944283
 \\
 \hline
 age6065
 &
--.8323357
+\sphinxhyphen{}.8323357
 \\
 \hline
 insch
 &
--.732394
+\sphinxhyphen{}.732394
 \\
 \hline
 des
@@ -1881,7 +1883,7 @@ uni
 \hline
 constant
 &
--2.408129
+\sphinxhyphen{}2.408129
 \\
 \hline
 \end{tabular}
@@ -1895,7 +1897,7 @@ Les résultats du modèle logistique de séparation sont présentés dans le tab
 \centering
 \sphinxcapstartof{table}
 \sphinxthecaptionisattop
-\sphinxcaption{Logit - Coefficients des transitions de séparations}\label{\detokenize{methodologie:id16}}
+\sphinxcaption{Logit \sphinxhyphen{} Coefficients des transitions de séparations}\label{\detokenize{methodologie:id16}}
 \sphinxaftertopcaption
 \begin{tabular}[t]{|\X{20}{40}|\X{20}{40}|}
 \hline
@@ -1907,12 +1909,12 @@ Coefficients
 \hline
 male
 &
--.7359777
+\sphinxhyphen{}.7359777
 \\
 \hline
 mage
 &
--.277098
+\sphinxhyphen{}.277098
 \\
 \hline
 mage2
@@ -1922,12 +1924,12 @@ mage2
 \hline
 mage3
 &
--.0000819
+\sphinxhyphen{}.0000819
 \\
 \hline
 wage
 &
--.327683
+\sphinxhyphen{}.327683
 \\
 \hline
 wage2
@@ -1937,7 +1939,7 @@ wage2
 \hline
 wage3
 &
--.0000913
+\sphinxhyphen{}.0000913
 \\
 \hline
 insch
@@ -1947,22 +1949,22 @@ insch
 \hline
 des
 &
--.1025277
+\sphinxhyphen{}.1025277
 \\
 \hline
 dec
 &
--.1902154
+\sphinxhyphen{}.1902154
 \\
 \hline
 uni
 &
--.4476943
+\sphinxhyphen{}.4476943
 \\
 \hline
 kid
 &
--.5016676
+\sphinxhyphen{}.5016676
 \\
 \hline
 constant
@@ -1992,7 +1994,7 @@ Par la suite, les caractéritiques du conjoint \sphinxstyleemphasis{C1} de l’i
 
 \section{Mortalité}
 \label{\detokenize{methodologie:mortalite}}
-Chaque année \sphinxstyleemphasis{t}, un individu d’âge \sphinxstyleemphasis{a} et de genre \sphinxstyleemphasis{g} a une probabilité \sphinxstyleemphasis{P(t,a,g)} de décéder. Cette probabilité, définie comme un taux de mortalité, est calculée à partir des quotients prospectifs de mortalité selon l’âge et le sexe estimés par Statistique Canada entre 2013-2014 et 2062-2063 (juillet-juin) pour les provinces et territoires. Le \sphinxhref{https://www150.statcan.gc.ca/n1/pub/91-620-x/91-620-x2014001-fra.pdf}{rapport technique} de Statistique Canada présente la méthodologie et les hypothèses de ces quotients prospectifs.
+Chaque année \sphinxstyleemphasis{t}, un individu d’âge \sphinxstyleemphasis{a} et de genre \sphinxstyleemphasis{g} a une probabilité \sphinxstyleemphasis{P(t,a,g)} de décéder. Cette probabilité, définie comme un taux de mortalité, est calculée à partir des quotients prospectifs de mortalité selon l’âge et le sexe estimés par Statistique Canada entre 2013\sphinxhyphen{}2014 et 2062\sphinxhyphen{}2063 (juillet\sphinxhyphen{}juin) pour les provinces et territoires. Le \sphinxhref{https://www150.statcan.gc.ca/n1/pub/91-620-x/91-620-x2014001-fra.pdf}{rapport technique} de Statistique Canada présente la méthodologie et les hypothèses de ces quotients prospectifs.
 
 L’âge, le genre et la cohorte de naissance sont donc les seuls déterminants de l’espérance de vie des individus. Notons également que les immigrants et les natifs ont des probabilités équivalentes de décès en fonction de leur âge, de leur genre et de leur cohorte.
 
@@ -2002,12 +2004,12 @@ L’âge, le genre et la cohorte de naissance sont donc les seuls déterminants 
 
 \subsection{Immigration}
 \label{\detokenize{methodologie:immigration}}
-Le taux prospectif d’immigration internationale est égal à 6,6‰. Ce taux est calculé en divisant \sphinxhref{https://bdso.gouv.qc.ca/docs-ken/multimedia/PB01661FR\_Perspective\_demo2019H00F00.pdf}{le nombre d’immigrants projeté dans le scénario de référence de l’ISQ (55 000)} par la \sphinxhref{https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710000501\&pickMembers\%5B0\%5D=1.6\&pickMembers\%5B1\%5D=2.1\&cubeTimeFrame.startYear=2016\&cubeTimeFrame.endYear=2020\&referencePeriods=20160101\%2C20200101}{population québecoise enregistrée par Statistique Canada en 2017 (8 302 063)}. Les caractéristiques socio-économiques et démographiques des nouveaux immigrants internationaux sont attribuées en fonction des immigrants internationaux récents issus de la BDSPS de Statistique Canada pour l’année 2017. Chaque année \sphinxstyleemphasis{t}, on tire aléatoirement 6,6 pour mille de la sous-population des immigrants récents (depuis 5 ans au moins) parmi la base de départ. Les caractéristiques socio-économiques et démographiques des nouveaux immigrants sont alors celles des immigrants tirés de la BDSPS de 2017: l’âge, le genre, le niveau de scolarité, la présence de conjoint et le nombre d’enfants.
+Le taux prospectif d’immigration internationale est égal à 6,6‰. Ce taux est calculé en divisant \sphinxhref{https://bdso.gouv.qc.ca/docs-ken/multimedia/PB01661FR\_Perspective\_demo2019H00F00.pdf}{le nombre d’immigrants projeté dans le scénario de référence de l’ISQ (55 000)} par la \sphinxhref{https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710000501\&pickMembers\%5B0\%5D=1.6\&pickMembers\%5B1\%5D=2.1\&cubeTimeFrame.startYear=2016\&cubeTimeFrame.endYear=2020\&referencePeriods=20160101\%2C20200101}{population québecoise enregistrée par Statistique Canada en 2017 (8 302 063)}. Les caractéristiques socio\sphinxhyphen{}économiques et démographiques des nouveaux immigrants internationaux sont attribuées en fonction des immigrants internationaux récents issus de la BDSPS de Statistique Canada pour l’année 2017. Chaque année \sphinxstyleemphasis{t}, on tire aléatoirement 6,6 pour mille de la sous\sphinxhyphen{}population des immigrants récents (depuis 5 ans au moins) parmi la base de départ. Les caractéristiques socio\sphinxhyphen{}économiques et démographiques des nouveaux immigrants sont alors celles des immigrants tirés de la BDSPS de 2017: l’âge, le genre, le niveau de scolarité, la présence de conjoint et le nombre d’enfants.
 
 
 \subsection{Émigration}
 \label{\detokenize{methodologie:emigration}}
-Les caractéristiques des émigrants dépendent uniquement de l’âge. L’émigration intègre les émigrants internationaux ainsi que le solde migratoire interprovincial. À chaque âge donné, la probabilité d’émigrer est égale pour toutes les personnes dominantes. Les émigrants d’un âge donné sont tirés de manière aléatoire. De plus, on considère que le(la) conjoint(e) du dominant ainsi que tous ses enfants âgés de moins de 18 ans émigrent avec la personne dominante. Le taux d’émigration par âge est calculé à partir du nombre d’émigrants interprovinciaux par classe d’âge en 2018-2019 du \sphinxhref{https://www150.statcan.gc.ca/t1/tbl1/fr/tv.action?pid=1710001501}{tableau 17-10-0015-01 « Estimations des composantes de la migration interprovinciale, par âge et sexe, annuelles »}, du nombre d’émigrants internationaux par classe d’âge en 2018-2019 du \sphinxhref{https://www150.statcan.gc.ca/t1/tbl1/fr/tv.action?pid=1710001401}{tableau 17-10-0014-01 « Estimations des composantes de la migration internationale, par âge et sexe, annuelles »} et de la population québécoise par classe d’âge au 1er juillet 2018 du \sphinxhref{https://www150.statcan.gc.ca/t1/tbl1/fr/tv.action?pid=1710000501}{tableau 17-10-0005-01 « Estimations de la population au 1er juillet, par âge et sexe »}. À noter que le nombre d’émigrants interprovinciaux à chaque âge a été normalisé sur les hypothèses du \sphinxhref{https://bdso.gouv.qc.ca/docs-ken/multimedia/PB01661FR\_Perspective\_demo2019H00F00.pdf}{solde interprovincial annuel de l’ISQ (9 000 personnes)}. Les taux d’émigration par classe d’âge sont les suivants:
+Les caractéristiques des émigrants dépendent uniquement de l’âge. L’émigration intègre les émigrants internationaux ainsi que le solde migratoire interprovincial. À chaque âge donné, la probabilité d’émigrer est égale pour toutes les personnes dominantes. Les émigrants d’un âge donné sont tirés de manière aléatoire. De plus, on considère que le(la) conjoint(e) du dominant ainsi que tous ses enfants âgés de moins de 18 ans émigrent avec la personne dominante. Le taux d’émigration par âge est calculé à partir du nombre d’émigrants interprovinciaux par classe d’âge en 2018\sphinxhyphen{}2019 du \sphinxhref{https://www150.statcan.gc.ca/t1/tbl1/fr/tv.action?pid=1710001501}{tableau 17\sphinxhyphen{}10\sphinxhyphen{}0015\sphinxhyphen{}01 « Estimations des composantes de la migration interprovinciale, par âge et sexe, annuelles »}, du nombre d’émigrants internationaux par classe d’âge en 2018\sphinxhyphen{}2019 du \sphinxhref{https://www150.statcan.gc.ca/t1/tbl1/fr/tv.action?pid=1710001401}{tableau 17\sphinxhyphen{}10\sphinxhyphen{}0014\sphinxhyphen{}01 « Estimations des composantes de la migration internationale, par âge et sexe, annuelles »} et de la population québécoise par classe d’âge au 1er juillet 2018 du \sphinxhref{https://www150.statcan.gc.ca/t1/tbl1/fr/tv.action?pid=1710000501}{tableau 17\sphinxhyphen{}10\sphinxhyphen{}0005\sphinxhyphen{}01 « Estimations de la population au 1er juillet, par âge et sexe »}. À noter que le nombre d’émigrants interprovinciaux à chaque âge a été normalisé sur les hypothèses du \sphinxhref{https://bdso.gouv.qc.ca/docs-ken/multimedia/PB01661FR\_Perspective\_demo2019H00F00.pdf}{solde interprovincial annuel de l’ISQ (9 000 personnes)}. Les taux d’émigration par classe d’âge sont les suivants:
 
 
 \begin{savenotes}\sphinxattablestart
@@ -2118,13 +2120,13 @@ Ces données proviennent de différentes sources officielles :
 Données pour la population totale de 1998 à 2018 (Figure 1) : les données proviennent de séries de l’ISQ.
 
 \item {} 
-Données de projections de population (Figure 1 \& 2) : les projections de population sont basées sur le scénario moyen de l’ISQ à partir des données corrigées du recensement de 2016. Pour plus d’information concernant la méthodologie utilisée pour le calcul des projections de population, se référer au rapport « Perspectives démographiques du Québec et des régions, 2016-2066, édition 2019 » produit par \sphinxhref{https://statistique.quebec.ca/fr/fichier/perspectives-demographiques-du-quebec-et-des-regions-2016-2066-edition-2019.pdf}{l’ISQ}.
+Données de projections de population (Figure 1 \& 2) : les projections de population sont basées sur le scénario moyen de l’ISQ à partir des données corrigées du recensement de 2016. Pour plus d’information concernant la méthodologie utilisée pour le calcul des projections de population, se référer au rapport "Perspectives démographiques du Québec et des régions, 2016\sphinxhyphen{}2066, édition 2019" produit par \sphinxhref{https://statistique.quebec.ca/fr/fichier/perspectives-demographiques-du-quebec-et-des-regions-2016-2066-edition-2019.pdf}{l’ISQ}.
 
 \item {} 
 Données par niveau de scolarité (Figure 3) : les données concernant le plus haut niveau de scolarité atteint proviennent des fichiers de microdonnées à grande diffusion des recensements de 2006, 2011 et 2016. Ces données sont disponibles par l’entremise de l’Initiative de démocratisation des données (\sphinxhref{https://www.statcan.gc.ca/fra/idd/idd-collection}{IDD}) de Statistique Canada.
 
 \item {} 
-Données pour personnes en couple (Figure 4) : ces données proviennent des estimations de la population au 1er juillet, selon l’état matrimonial ou l’état matrimonial légal, l’âge et le sexe (Tableau : 17-10-0060-01), qui sont produites par \sphinxhref{https://www150.statcan.gc.ca/t1/tbl1/fr/cv.action?pid=1710006001}{Statistique Canada}.
+Données pour personnes en couple (Figure 4) : ces données proviennent des estimations de la population au 1er juillet, selon l’état matrimonial ou l’état matrimonial légal, l’âge et le sexe (Tableau : 17\sphinxhyphen{}10\sphinxhyphen{}0060\sphinxhyphen{}01), qui sont produites par \sphinxhref{https://www150.statcan.gc.ca/t1/tbl1/fr/cv.action?pid=1710006001}{Statistique Canada}.
 
 \end{itemize}
 
@@ -2133,7 +2135,7 @@ Données pour personnes en couple (Figure 4) : ces données proviennent des esti
 \label{\detokenize{resultats:donnees-de-simulation}}
 Comme mentionné précédemment, la base de données de départ de SimGen correspond à la \sphinxhref{https://www.statcan.gc.ca/fra/microsimulation/bdmsps/bdmsps}{Base de données de simulation de politiques sociales (BDSPS)}.
 
-Pour ce qui est des résultats analysés, ceux-ci proviennent d’une simulation de 2017 à 2040 utilisant les hypothèses suivantes :
+Pour ce qui est des résultats analysés, ceux\sphinxhyphen{}ci proviennent d’une simulation de 2017 à 2040 utilisant les hypothèses suivantes :
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{reference} \PYG{o}{=} \PYG{n}{model}\PYG{p}{(}\PYG{n}{start\PYGZus{}yr}\PYG{o}{=}\PYG{l+m+mi}{2017}\PYG{p}{,}\PYG{n}{stop\PYGZus{}yr}\PYG{o}{=}\PYG{l+m+mi}{2040}\PYG{p}{)}
@@ -2160,7 +2162,7 @@ sur les différents modules et les modèles utilisant les résultats de SimGen c
 \noindent\sphinxincludegraphics{{pop_total}.png}
 \end{figure}
 
-Les données de l’année d’initialisation du modèle SimGen en 2017 sont calibrées sur les données de population par âge et par genre de l’ISQ pour cette même année. La Figure 1 compare les projections de population totale du modèle SimGen (2017-2040) avec les projections réalisées par l’Institut de la statistique du Québec (ISQ) à partir de l’année 2017.
+Les données de l’année d’initialisation du modèle SimGen en 2017 sont calibrées sur les données de population par âge et par genre de l’ISQ pour cette même année. La Figure 1 compare les projections de population totale du modèle SimGen (2017\sphinxhyphen{}2040) avec les projections réalisées par l’Institut de la statistique du Québec (ISQ) à partir de l’année 2017.
 
 Le modèle SimGen reproduit avec fidélité les projections réalisées par l’ISQ. En 2040, la population totale obtenue par SimGen (9,29 millions d’habitants) est similaire à la population totale obtenue par l’ISQ (9,32 millions d’habitants).
 
@@ -2178,7 +2180,7 @@ On remarque que les deux séries de projections sont relativement similaires.
 
 Les projections de la population âgée de 65 ans et plus sont quasiment identiques entre l’ISQ et SimGen.
 Cette population devrait égaler 2,45 millions en 2040 selon l’ISQ et elle devrait égaler 2,43 millions la même année selon Simgen.
-En revanche, les projections de population pour les 0-24 ans  et pour les 25-64 ans présentent de légères différences entre l’ISQ et SimGen.
+En revanche, les projections de population pour les 0\sphinxhyphen{}24 ans  et pour les 25\sphinxhyphen{}64 ans présentent de légères différences entre l’ISQ et SimGen.
 En 2040, la population âgées de 0 à 24 ans devrait égaler 2,37 millions selon l’ISQ et elle devrait égaler 2,08 millions selon Simgen.
 La même année, la population âgées de 25 à 64 ans devrait égaler 4,51 millions selon l’ISQ et elle devrait égaler 4,78 millions selon Simgen.
 
@@ -2210,7 +2212,7 @@ Les résultats de SimGen mettent en avant une légère diminution de la proporti
 
 
 \chapter{Dictionnaire (classes et des fonctions)}
-\label{\detokenize{code:module-simgen}}\label{\detokenize{code:dictionnaire-classes-et-des-fonctions}}\label{\detokenize{code:code}}\label{\detokenize{code::doc}}\index{simgen (module)@\spxentry{simgen}\spxextra{module}}
+\label{\detokenize{code:module-simgen}}\label{\detokenize{code:dictionnaire-classes-et-des-fonctions}}\label{\detokenize{code:code}}\label{\detokenize{code::doc}}\index{module@\spxentry{module}!simgen@\spxentry{simgen}}\index{simgen@\spxentry{simgen}!module@\spxentry{module}}
 
 \section{Données}
 \label{\detokenize{code:donnees}}
@@ -2218,7 +2220,7 @@ Les fonctions de données permettent de préparer les données pour la simulatio
 \index{bdsps() (dans le module simgen)@\spxentry{bdsps()}\spxextra{dans le module simgen}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{code:simgen.bdsps}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{bdsps}}}{\emph{file}, \emph{year=2017}, \emph{iprint=False}, \emph{file\_format='.dta'}}{}
+\phantomsection\label{\detokenize{code:simgen.bdsps}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{bdsps}}}{\emph{\DUrole{n}{file}}, \emph{\DUrole{n}{year}\DUrole{o}{=}\DUrole{default_value}{2017}}, \emph{\DUrole{n}{iprint}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{n}{file\_format}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}.dta\textquotesingle{}}}}{}
 Nettoyage de la BDSPS.
 
 Fonction qui permet de mettre en forme la BDSPS.
@@ -2239,7 +2241,7 @@ Fonction qui permet de mettre en forme la BDSPS.
 \index{isq() (dans le module simgen)@\spxentry{isq()}\spxextra{dans le module simgen}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{code:simgen.isq}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{isq}}}{\emph{year}}{}
+\phantomsection\label{\detokenize{code:simgen.isq}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{isq}}}{\emph{\DUrole{n}{year}}}{}
 Population par âge de l’ISQ.
 
 Fonction qui permet d’obtenir la population par âge de l’ISQ.
@@ -2267,7 +2269,7 @@ Classe qui permet de prendre un dataframe provenant d’une base de données par
 \index{dominants() (méthode simgen.parse)@\spxentry{dominants()}\spxextra{méthode simgen.parse}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{code:simgen.parse.dominants}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{dominants}}}{\emph{data}}{}
+\phantomsection\label{\detokenize{code:simgen.parse.dominants}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{dominants}}}{\emph{\DUrole{n}{data}}}{}
 Mise en forme des dominants.
 
 Fonction membre qui permet de prendre un dataframe dominant et d’appliquer les dictionnaires \sphinxstyleemphasis{map\_hh} pour les noms de variables qui concordent avec SimGen.
@@ -2288,7 +2290,7 @@ dataframe
 \index{kids() (méthode simgen.parse)@\spxentry{kids()}\spxextra{méthode simgen.parse}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{code:simgen.parse.kids}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{kids}}}{\emph{data}}{}
+\phantomsection\label{\detokenize{code:simgen.parse.kids}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{kids}}}{\emph{\DUrole{n}{data}}}{}
 Mise en forme des enfants.
 
 Fonction membre qui permet de prendre un dataframe enfants et d’appliquer les dictionnaires \sphinxstyleemphasis{map\_kd} pour les noms de variables qui concordent avec SimGen.
@@ -2309,7 +2311,7 @@ dataframe
 \index{spouses() (méthode simgen.parse)@\spxentry{spouses()}\spxextra{méthode simgen.parse}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{code:simgen.parse.spouses}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{spouses}}}{\emph{data}}{}
+\phantomsection\label{\detokenize{code:simgen.parse.spouses}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{spouses}}}{\emph{\DUrole{n}{data}}}{}
 Mise en forme des conjoints.
 
 Fonction membre qui permet de prendre un dataframe conjoint et d’appliquer les dictionnaires \sphinxstyleemphasis{map\_sp} pour les noms de variables qui concordent avec SimGen.
@@ -2340,7 +2342,7 @@ Cette classe permet d’abriter sous un seul toit les dominants, conjoints et en
 \index{input() (méthode simgen.population)@\spxentry{input()}\spxextra{méthode simgen.population}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{code:simgen.population.input}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{input}}}{\emph{hh}, \emph{sp}, \emph{kd}}{}
+\phantomsection\label{\detokenize{code:simgen.population.input}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{input}}}{\emph{\DUrole{n}{hh}}, \emph{\DUrole{n}{sp}}, \emph{\DUrole{n}{kd}}}{}
 Fonction pour entrer les registres.
 
 Fonction qui permet d’entrer les registres dominants, conjoints et enfants qui ont été préalablement passés dans \sphinxstyleemphasis{parse()}.
@@ -2377,7 +2379,7 @@ Classe permettant d’effectuer différentes transitions d’une année à l’a
 \index{birth() (méthode simgen.update)@\spxentry{birth()}\spxextra{méthode simgen.update}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{code:simgen.update.birth}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{birth}}}{\emph{pop}, \emph{year}, \emph{ntarget}}{}
+\phantomsection\label{\detokenize{code:simgen.update.birth}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{birth}}}{\emph{\DUrole{n}{pop}}, \emph{\DUrole{n}{year}}, \emph{\DUrole{n}{ntarget}}}{}
 Fonction de transitions pour les naissances.
 \begin{quote}\begin{description}
 \item[{Paramètres}] \leavevmode\begin{itemize}
@@ -2405,7 +2407,7 @@ instance de la classe population
 \index{dead() (méthode simgen.update)@\spxentry{dead()}\spxextra{méthode simgen.update}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{code:simgen.update.dead}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{dead}}}{\emph{pop}, \emph{year}}{}
+\phantomsection\label{\detokenize{code:simgen.update.dead}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{dead}}}{\emph{\DUrole{n}{pop}}, \emph{\DUrole{n}{year}}}{}
 Fonction de transitions pour les décès.
 \begin{quote}\begin{description}
 \item[{Paramètres}] \leavevmode\begin{itemize}
@@ -2430,7 +2432,7 @@ instance de la classe population
 \index{divorce() (méthode simgen.update)@\spxentry{divorce()}\spxextra{méthode simgen.update}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{code:simgen.update.divorce}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{divorce}}}{\emph{pop}, \emph{year}}{}
+\phantomsection\label{\detokenize{code:simgen.update.divorce}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{divorce}}}{\emph{\DUrole{n}{pop}}, \emph{\DUrole{n}{year}}}{}
 Fonction de transitions pour les dissolutions d’unions.
 \begin{quote}\begin{description}
 \item[{Paramètres}] \leavevmode\begin{itemize}
@@ -2455,7 +2457,7 @@ instance de la classe population
 \index{educ() (méthode simgen.update)@\spxentry{educ()}\spxextra{méthode simgen.update}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{code:simgen.update.educ}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{educ}}}{\emph{pop}, \emph{year}}{}
+\phantomsection\label{\detokenize{code:simgen.update.educ}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{educ}}}{\emph{\DUrole{n}{pop}}, \emph{\DUrole{n}{year}}}{}
 Fonction de transitions pour changements de niveau d’éducation.
 \begin{quote}\begin{description}
 \item[{Paramètres}] \leavevmode\begin{itemize}
@@ -2480,7 +2482,7 @@ instance de la classe population
 \index{emig() (méthode simgen.update)@\spxentry{emig()}\spxextra{méthode simgen.update}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{code:simgen.update.emig}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{emig}}}{\emph{pop}, \emph{year}}{}
+\phantomsection\label{\detokenize{code:simgen.update.emig}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{emig}}}{\emph{\DUrole{n}{pop}}, \emph{\DUrole{n}{year}}}{}
 Fonction de transitions pour gérer l’émigration.
 \begin{quote}\begin{description}
 \item[{Paramètres}] \leavevmode\begin{itemize}
@@ -2505,7 +2507,7 @@ instance de la classe population
 \index{marriage() (méthode simgen.update)@\spxentry{marriage()}\spxextra{méthode simgen.update}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{code:simgen.update.marriage}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{marriage}}}{\emph{pop}, \emph{year}}{}
+\phantomsection\label{\detokenize{code:simgen.update.marriage}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{marriage}}}{\emph{\DUrole{n}{pop}}, \emph{\DUrole{n}{year}}}{}
 Fonction de transitions pour les formations d’unions.
 \begin{quote}\begin{description}
 \item[{Paramètres}] \leavevmode\begin{itemize}
@@ -2538,7 +2540,7 @@ La classe permettant de réaliser les simulations est \sphinxstyleemphasis{model
 \index{model (classe dans simgen)@\spxentry{model}\spxextra{classe dans simgen}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{code:simgen.model}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{model}}}{\emph{start\_yr=2017}, \emph{stop\_yr=2100}}{}
+\phantomsection\label{\detokenize{code:simgen.model}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{model}}}{\emph{\DUrole{n}{start\_yr}\DUrole{o}{=}\DUrole{default_value}{2017}}, \emph{\DUrole{n}{stop\_yr}\DUrole{o}{=}\DUrole{default_value}{2100}}}{}
 Modèle de simulation SimGen.
 
 Cette classe permet de créer une instance d’un modèle de microsimulation.
@@ -2556,7 +2558,7 @@ Cette classe permet de créer une instance d’un modèle de microsimulation.
 \index{birth\_assumptions() (méthode simgen.model)@\spxentry{birth\_assumptions()}\spxextra{méthode simgen.model}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{code:simgen.model.birth_assumptions}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{birth\_assumptions}}}{\emph{scenario='reference'}, \emph{align=True}}{}
+\phantomsection\label{\detokenize{code:simgen.model.birth_assumptions}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{birth\_assumptions}}}{\emph{\DUrole{n}{scenario}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}reference\textquotesingle{}}}, \emph{\DUrole{n}{align}\DUrole{o}{=}\DUrole{default_value}{True}}}{}
 Hypothèses de fécondité.
 
 Fonction membre qui permet de spécifier les hypothèses de fécondité.
@@ -2577,7 +2579,7 @@ Fonction membre qui permet de spécifier les hypothèses de fécondité.
 \index{dead\_assumptions() (méthode simgen.model)@\spxentry{dead\_assumptions()}\spxextra{méthode simgen.model}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{code:simgen.model.dead_assumptions}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{dead\_assumptions}}}{\emph{scenario='medium'}}{}
+\phantomsection\label{\detokenize{code:simgen.model.dead_assumptions}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{dead\_assumptions}}}{\emph{\DUrole{n}{scenario}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}medium\textquotesingle{}}}}{}
 Hypothèses de mortalité.
 
 Fonction membre qui permet de spécifier les hypothèses de mortalité.
@@ -2592,7 +2594,7 @@ Fonction membre qui permet de spécifier les hypothèses de mortalité.
 \index{immig\_assumptions() (méthode simgen.model)@\spxentry{immig\_assumptions()}\spxextra{méthode simgen.model}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{code:simgen.model.immig_assumptions}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{immig\_assumptions}}}{\emph{allow=True}, \emph{num=0.0066}, \emph{init=None}}{}
+\phantomsection\label{\detokenize{code:simgen.model.immig_assumptions}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{immig\_assumptions}}}{\emph{\DUrole{n}{allow}\DUrole{o}{=}\DUrole{default_value}{True}}, \emph{\DUrole{n}{num}\DUrole{o}{=}\DUrole{default_value}{0.0066}}, \emph{\DUrole{n}{init}\DUrole{o}{=}\DUrole{default_value}{None}}}{}
 Hypothèses d’immigration.
 
 Fonction membre qui permet de spécifier les hypothèses d’immigration.
@@ -2616,7 +2618,7 @@ Fonction membre qui permet de spécifier les hypothèses d’immigration.
 \index{set\_statistics() (méthode simgen.model)@\spxentry{set\_statistics()}\spxextra{méthode simgen.model}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{code:simgen.model.set_statistics}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{set\_statistics}}}{\emph{stratas={[}'age', 'male', 'insch', 'educ', 'married', 'nkids', 'risk\_iso'{]}}}{}
+\phantomsection\label{\detokenize{code:simgen.model.set_statistics}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{set\_statistics}}}{\emph{\DUrole{n}{stratas}\DUrole{o}{=}\DUrole{default_value}{{[}\textquotesingle{}age\textquotesingle{}, \textquotesingle{}male\textquotesingle{}, \textquotesingle{}insch\textquotesingle{}, \textquotesingle{}educ\textquotesingle{}, \textquotesingle{}married\textquotesingle{}, \textquotesingle{}nkids\textquotesingle{}, \textquotesingle{}risk\_iso\textquotesingle{}{]}}}}{}
 Fonction déterminant les variables de sortie.
 \begin{quote}\begin{description}
 \item[{Paramètres}] \leavevmode
@@ -2629,7 +2631,7 @@ Fonction déterminant les variables de sortie.
 \index{startpop() (méthode simgen.model)@\spxentry{startpop()}\spxextra{méthode simgen.model}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{code:simgen.model.startpop}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{startpop}}}{\emph{file}}{}
+\phantomsection\label{\detokenize{code:simgen.model.startpop}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{startpop}}}{\emph{\DUrole{n}{file}}}{}
 Charger une population de départ.
 
 Fonction membre qui permet de charger une population de départ.
@@ -2652,7 +2654,7 @@ Cette classe permet de produire des statistiques dans le cadre d’une simulatio
 \index{statistics (classe dans simgen)@\spxentry{statistics}\spxextra{classe dans simgen}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{code:simgen.statistics}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{statistics}}}{\emph{stratas}}{}
+\phantomsection\label{\detokenize{code:simgen.statistics}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{statistics}}}{\emph{\DUrole{n}{stratas}}}{}
 Classe pour créer les statistiques provenant d’une simulation.
 
 Cette classe permet de capturer la distribution de la population par strate durant une simulation. Elle permet ensuite de faire plusieurs tableaux dynamiques à partir de ces distributions.
@@ -2664,7 +2666,7 @@ Cette classe permet de capturer la distribution de la population par strate dura
 \index{add() (méthode simgen.statistics)@\spxentry{add()}\spxextra{méthode simgen.statistics}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{code:simgen.statistics.add}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{add}}}{\emph{pop}, \emph{year}}{}
+\phantomsection\label{\detokenize{code:simgen.statistics.add}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{add}}}{\emph{\DUrole{n}{pop}}, \emph{\DUrole{n}{year}}}{}
 Fonction pour ajouter une année à la distribution.
 
 À chaque année d’une simulation, cette fonction est invoquée afin de récolter la distribution par strate dans l’année en cours. Cette population est ajoutée à \sphinxstyleemphasis{counts}.
@@ -2685,7 +2687,7 @@ Fonction pour ajouter une année à la distribution.
 \index{freq() (méthode simgen.statistics)@\spxentry{freq()}\spxextra{méthode simgen.statistics}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{code:simgen.statistics.freq}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{freq}}}{\emph{strata=None, bins={[}0{]}, sub=None}}{}
+\phantomsection\label{\detokenize{code:simgen.statistics.freq}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{freq}}}{\emph{\DUrole{n}{strata}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{bins}\DUrole{o}{=}\DUrole{default_value}{{[}0{]}}}, \emph{\DUrole{n}{sub}\DUrole{o}{=}\DUrole{default_value}{None}}}{}
 Fonction de fréquences.
 
 Fonction qui permet, à l’aide de \sphinxstyleemphasis{counts}, de calculer les fréquences pondérées pour une strate donnée. Deux options sont disponibles: l’une, \sphinxstyleemphasis{bins}, permet de modifier les catégories de la strate (par exemple le groupe d’âge), tandis que \sphinxstyleemphasis{sub} permet de définir un critère de sélection particulier pour le calcul des fréquences (en str).
@@ -2698,7 +2700,7 @@ Fonction qui permet, à l’aide de \sphinxstyleemphasis{counts}, de calculer le
 \sphinxstyleliteralstrong{\sphinxupquote{bins}} (\sphinxstyleliteralemphasis{\sphinxupquote{list of int}}) \textendash{} liste de valeurs pour découper les données selon la variable strata; fonctionne seulement avec des variables de types int (pas de str)
 
 \item {} 
-\sphinxstyleliteralstrong{\sphinxupquote{sub}} (\sphinxstyleliteralemphasis{\sphinxupquote{str}}) \textendash{} condition à respecter pour un sous-échantillon, p.ex. « age\textgreater{}=18 »
+\sphinxstyleliteralstrong{\sphinxupquote{sub}} (\sphinxstyleliteralemphasis{\sphinxupquote{str}}) \textendash{} condition à respecter pour un sous\sphinxhyphen{}échantillon, p.ex. « age\textgreater{}=18 »
 
 \end{itemize}
 
@@ -2715,7 +2717,7 @@ dataframe
 \index{prop() (méthode simgen.statistics)@\spxentry{prop()}\spxextra{méthode simgen.statistics}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{code:simgen.statistics.prop}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{prop}}}{\emph{strata, bins={[}0{]}, sub=None}}{}
+\phantomsection\label{\detokenize{code:simgen.statistics.prop}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{prop}}}{\emph{\DUrole{n}{strata}}, \emph{\DUrole{n}{bins}\DUrole{o}{=}\DUrole{default_value}{{[}0{]}}}, \emph{\DUrole{n}{sub}\DUrole{o}{=}\DUrole{default_value}{None}}}{}
 Fonction de proportions.
 
 Fonction qui permet, à l’aide de \sphinxstyleemphasis{counts}, de calculer les proportions pondérées pour une strate donnée. Deux options sont disponibles: l’une, \sphinxstyleemphasis{bins}, permet de modifier les catégories de la strate (par exemple le groupe d’âge), tandis que \sphinxstyleemphasis{sub} permet de définir un critère de sélection particulier pour le calcul des proportions (en str).
@@ -2728,7 +2730,7 @@ Fonction qui permet, à l’aide de \sphinxstyleemphasis{counts}, de calculer le
 \sphinxstyleliteralstrong{\sphinxupquote{bins}} (\sphinxstyleliteralemphasis{\sphinxupquote{list of int}}) \textendash{} liste de valeurs pour découper les données selon la variable strata; fonctionne seulement avec des variables de types int (pas de str)
 
 \item {} 
-\sphinxstyleliteralstrong{\sphinxupquote{sub}} (\sphinxstyleliteralemphasis{\sphinxupquote{str}}) \textendash{} condition à respecter pour un sous-échantillon, p.ex. « age\textgreater{}=18 »
+\sphinxstyleliteralstrong{\sphinxupquote{sub}} (\sphinxstyleliteralemphasis{\sphinxupquote{str}}) \textendash{} condition à respecter pour un sous\sphinxhyphen{}échantillon, p.ex. « age\textgreater{}=18 »
 
 \end{itemize}
 
@@ -2745,7 +2747,7 @@ dataframe
 \index{save() (méthode simgen.statistics)@\spxentry{save()}\spxextra{méthode simgen.statistics}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{code:simgen.statistics.save}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{save}}}{\emph{file}}{}
+\phantomsection\label{\detokenize{code:simgen.statistics.save}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{save}}}{\emph{\DUrole{n}{file}}}{}
 Fonction pour sauvegarder les fichiers de fréquences.
 \begin{quote}\begin{description}
 \item[{Paramètres}] \leavevmode
@@ -2758,7 +2760,7 @@ Fonction pour sauvegarder les fichiers de fréquences.
 \index{start() (méthode simgen.statistics)@\spxentry{start()}\spxextra{méthode simgen.statistics}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{code:simgen.statistics.start}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{start}}}{\emph{pop}, \emph{year}}{}
+\phantomsection\label{\detokenize{code:simgen.statistics.start}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{start}}}{\emph{\DUrole{n}{pop}}, \emph{\DUrole{n}{year}}}{}
 Initialisation de la distribution sur l’année de départ.
 
 Le membre de la classe qui contient les fréquences (\sphinxstyleemphasis{counts}) est populé pour l’année de départ.
@@ -2787,6 +2789,11 @@ Le membre de la classe qui contient les fréquences (\sphinxstyleemphasis{counts
 \DUrole{xref,std,std-ref}{genindex}
 
 \end{itemize}
+
+
+\chapter{Documentation en PDF}
+\label{\detokenize{index:documentation-en-pdf}}
+Documentation \sphinxcode{\sphinxupquote{pdf}}
 
 
 \renewcommand{\indexname}{Index des modules Python}
