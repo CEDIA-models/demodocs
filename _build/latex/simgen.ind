@@ -5,7 +5,8 @@
 \let\spxextra \sphinxstyleindexextra
 
   \bigletter A
-  \item \spxentry{add()}\spxextra{méthode simgen.statistics}, \hyperpage{29}
+  \item \spxentry{add()}\spxextra{méthode simgen.statistics}, \hyperpage{30}
+  \item \spxentry{add\_to\_mean()}\spxextra{méthode simgen.statistics}, \hyperpage{31}
 
   \indexspace
   \bigletter B
@@ -30,7 +31,8 @@
 
   \indexspace
   \bigletter F
-  \item \spxentry{freq()}\spxextra{méthode simgen.statistics}, \hyperpage{11}, \hyperpage{30}
+  \item \spxentry{freq()}\spxextra{méthode simgen.replicate}, \hyperpage{11}, \hyperpage{30}
+  \item \spxentry{freq()}\spxextra{méthode simgen.statistics}, \hyperpage{31}
 
   \indexspace
   \bigletter I
@@ -46,7 +48,7 @@
   \indexspace
   \bigletter M
   \item \spxentry{marriage()}\spxextra{méthode simgen.update}, \hyperpage{28}
-  \item \spxentry{model}\spxextra{classe dans simgen}, \hyperpage{8--10}, \hyperpage{28}
+  \item \spxentry{model}\spxextra{classe dans simgen}, \hyperpage{8, 9}, \hyperpage{28}
   \item \spxentry{module}
     \subitem \spxentry{simgen}, \hyperpage{26}
 
@@ -54,19 +56,26 @@
   \bigletter P
   \item \spxentry{parse}\spxextra{classe dans simgen}, \hyperpage{27}
   \item \spxentry{population}\spxextra{classe dans simgen}, \hyperpage{27}
-  \item \spxentry{prop()}\spxextra{méthode simgen.statistics}, \hyperpage{12}, \hyperpage{30}
+  \item \spxentry{prop()}\spxextra{méthode simgen.replicate}, \hyperpage{12}, \hyperpage{30}
+  \item \spxentry{prop()}\spxextra{méthode simgen.statistics}, \hyperpage{31}
+
+  \indexspace
+  \bigletter R
+  \item \spxentry{replicate}\spxextra{classe dans simgen}, \hyperpage{10--12}, \hyperpage{29}
 
   \indexspace
   \bigletter S
-  \item \spxentry{save()}\spxextra{méthode simgen.statistics}, \hyperpage{12}, \hyperpage{30}
+  \item \spxentry{save()}\spxextra{méthode simgen.replicate}, \hyperpage{13}, \hyperpage{30}
+  \item \spxentry{save()}\spxextra{méthode simgen.statistics}, \hyperpage{31}
   \item \spxentry{set\_statistics()}\spxextra{méthode simgen.model}, \hyperpage{29}
   \item \spxentry{simgen}
     \subitem \spxentry{module}, \hyperpage{26}
-  \item \spxentry{simulate()}\spxextra{méthode simgen.model}, \hyperpage{10}, \hyperpage{29}
+  \item \spxentry{simulate()}\spxextra{méthode simgen.model}, \hyperpage{29}
+  \item \spxentry{simulate()}\spxextra{méthode simgen.replicate}, \hyperpage{10}, \hyperpage{29}
   \item \spxentry{spouses()}\spxextra{méthode simgen.parse}, \hyperpage{27}
-  \item \spxentry{start()}\spxextra{méthode simgen.statistics}, \hyperpage{30}
+  \item \spxentry{start()}\spxextra{méthode simgen.statistics}, \hyperpage{31}
   \item \spxentry{startpop()}\spxextra{méthode simgen.model}, \hyperpage{9}, \hyperpage{29}
-  \item \spxentry{statistics}\spxextra{classe dans simgen}, \hyperpage{11, 12}, \hyperpage{29}
+  \item \spxentry{statistics}\spxextra{classe dans simgen}, \hyperpage{30}
 
   \indexspace
   \bigletter U

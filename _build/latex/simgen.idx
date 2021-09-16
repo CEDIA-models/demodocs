@@ -6,14 +6,15 @@
 \indexentry{birth\_assumptions() (méthode simgen.model)@\spxentry{birth\_assumptions()}\spxextra{méthode simgen.model}|hyperpage}{9}
 \indexentry{dead\_assumptions() (méthode simgen.model)@\spxentry{dead\_assumptions()}\spxextra{méthode simgen.model}|hyperpage}{9}
 \indexentry{immig\_assumptions() (méthode simgen.model)@\spxentry{immig\_assumptions()}\spxextra{méthode simgen.model}|hyperpage}{9}
-\indexentry{model (classe dans simgen)@\spxentry{model}\spxextra{classe dans simgen}|hyperpage}{10}
-\indexentry{simulate() (méthode simgen.model)@\spxentry{simulate()}\spxextra{méthode simgen.model}|hyperpage}{10}
-\indexentry{statistics (classe dans simgen)@\spxentry{statistics}\spxextra{classe dans simgen}|hyperpage}{11}
-\indexentry{freq() (méthode simgen.statistics)@\spxentry{freq()}\spxextra{méthode simgen.statistics}|hyperpage}{11}
-\indexentry{statistics (classe dans simgen)@\spxentry{statistics}\spxextra{classe dans simgen}|hyperpage}{12}
-\indexentry{prop() (méthode simgen.statistics)@\spxentry{prop()}\spxextra{méthode simgen.statistics}|hyperpage}{12}
-\indexentry{statistics (classe dans simgen)@\spxentry{statistics}\spxextra{classe dans simgen}|hyperpage}{12}
-\indexentry{save() (méthode simgen.statistics)@\spxentry{save()}\spxextra{méthode simgen.statistics}|hyperpage}{12}
+\indexentry{replicate (classe dans simgen)@\spxentry{replicate}\spxextra{classe dans simgen}|hyperpage}{10}
+\indexentry{replicate (classe dans simgen)@\spxentry{replicate}\spxextra{classe dans simgen}|hyperpage}{10}
+\indexentry{simulate() (méthode simgen.replicate)@\spxentry{simulate()}\spxextra{méthode simgen.replicate}|hyperpage}{10}
+\indexentry{replicate (classe dans simgen)@\spxentry{replicate}\spxextra{classe dans simgen}|hyperpage}{11}
+\indexentry{freq() (méthode simgen.replicate)@\spxentry{freq()}\spxextra{méthode simgen.replicate}|hyperpage}{11}
+\indexentry{replicate (classe dans simgen)@\spxentry{replicate}\spxextra{classe dans simgen}|hyperpage}{12}
+\indexentry{prop() (méthode simgen.replicate)@\spxentry{prop()}\spxextra{méthode simgen.replicate}|hyperpage}{12}
+\indexentry{replicate (classe dans simgen)@\spxentry{replicate}\spxextra{classe dans simgen}|hyperpage}{12}
+\indexentry{save() (méthode simgen.replicate)@\spxentry{save()}\spxextra{méthode simgen.replicate}|hyperpage}{13}
 \indexentry{module@\spxentry{module}!simgen@\spxentry{simgen}|hyperpage}{26}
 \indexentry{simgen@\spxentry{simgen}!module@\spxentry{module}|hyperpage}{26}
 \indexentry{bdsps() (dans le module simgen)@\spxentry{bdsps()}\spxextra{dans le module simgen}|hyperpage}{26}
@@ -38,9 +39,16 @@
 \indexentry{set\_statistics() (méthode simgen.model)@\spxentry{set\_statistics()}\spxextra{méthode simgen.model}|hyperpage}{29}
 \indexentry{simulate() (méthode simgen.model)@\spxentry{simulate()}\spxextra{méthode simgen.model}|hyperpage}{29}
 \indexentry{startpop() (méthode simgen.model)@\spxentry{startpop()}\spxextra{méthode simgen.model}|hyperpage}{29}
-\indexentry{statistics (classe dans simgen)@\spxentry{statistics}\spxextra{classe dans simgen}|hyperpage}{29}
-\indexentry{add() (méthode simgen.statistics)@\spxentry{add()}\spxextra{méthode simgen.statistics}|hyperpage}{29}
-\indexentry{freq() (méthode simgen.statistics)@\spxentry{freq()}\spxextra{méthode simgen.statistics}|hyperpage}{30}
-\indexentry{prop() (méthode simgen.statistics)@\spxentry{prop()}\spxextra{méthode simgen.statistics}|hyperpage}{30}
-\indexentry{save() (méthode simgen.statistics)@\spxentry{save()}\spxextra{méthode simgen.statistics}|hyperpage}{30}
-\indexentry{start() (méthode simgen.statistics)@\spxentry{start()}\spxextra{méthode simgen.statistics}|hyperpage}{30}
+\indexentry{replicate (classe dans simgen)@\spxentry{replicate}\spxextra{classe dans simgen}|hyperpage}{29}
+\indexentry{simulate() (méthode simgen.replicate)@\spxentry{simulate()}\spxextra{méthode simgen.replicate}|hyperpage}{29}
+\indexentry{replicate (classe dans simgen)@\spxentry{replicate}\spxextra{classe dans simgen}|hyperpage}{29}
+\indexentry{freq() (méthode simgen.replicate)@\spxentry{freq()}\spxextra{méthode simgen.replicate}|hyperpage}{30}
+\indexentry{prop() (méthode simgen.replicate)@\spxentry{prop()}\spxextra{méthode simgen.replicate}|hyperpage}{30}
+\indexentry{save() (méthode simgen.replicate)@\spxentry{save()}\spxextra{méthode simgen.replicate}|hyperpage}{30}
+\indexentry{statistics (classe dans simgen)@\spxentry{statistics}\spxextra{classe dans simgen}|hyperpage}{30}
+\indexentry{add() (méthode simgen.statistics)@\spxentry{add()}\spxextra{méthode simgen.statistics}|hyperpage}{30}
+\indexentry{add\_to\_mean() (méthode simgen.statistics)@\spxentry{add\_to\_mean()}\spxextra{méthode simgen.statistics}|hyperpage}{31}
+\indexentry{freq() (méthode simgen.statistics)@\spxentry{freq()}\spxextra{méthode simgen.statistics}|hyperpage}{31}
+\indexentry{prop() (méthode simgen.statistics)@\spxentry{prop()}\spxextra{méthode simgen.statistics}|hyperpage}{31}
+\indexentry{save() (méthode simgen.statistics)@\spxentry{save()}\spxextra{méthode simgen.statistics}|hyperpage}{31}
+\indexentry{start() (méthode simgen.statistics)@\spxentry{start()}\spxextra{méthode simgen.statistics}|hyperpage}{31}

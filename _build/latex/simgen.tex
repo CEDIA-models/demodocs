@@ -76,7 +76,7 @@
 
 
 \title{SimGen}
-\date{avr. 30, 2021}
+\date{sept. 16, 2021}
 \release{}
 \author{Équipe CREEi}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -137,7 +137,7 @@ SOFTWARE.
 SimGen est programmé en langage Python. Il est ainsi nécessaire de posséder la version 3.7 de Python ou une version supérieure pour faire fonctionner SimGen sur votre ordinateur.
 Malgré tout, si vous n’avez pas accès au logiciel Python mais que vous disposez d’un compte Google, il vous sera possible d’utiliser SimGen en accès à distance via \sphinxstyleemphasis{Google Colab}.
 Ainsi, il est possible d’avoir accès à SimGen selon trois méthodes présentées ci\sphinxhyphen{}dessous.
-Dans tous les cas, veillez lire les \sphinxhref{https://pypi.org/policy/terms-of-use/}{condition d’utilisation} du site internet \sphinxstyleemphasis{pypi} qui héberge le package.
+Dans tous les cas, veillez lire les \sphinxhref{https://pypi.org/policy/terms-of-use/}{conditions d’utilisation} du site internet \sphinxstyleemphasis{pypi} qui héberge le package.
 
 \begin{sphinxadmonition}{note}{Important}
 
@@ -180,19 +180,19 @@ il est possible d’installer manuellement SimGen en complétant les étapes sui
 Allez sur le site internet \sphinxhref{https://pypi.org/}{Pypi} et faites une recherche du package « simgen\sphinxhyphen{}creei ».
 
 \item {} 
-Cliquez sur l’onglet « simgen\sphinxhyphen{}x.x.x », où « x.x.x » correspond au numéro de version.
+Cliquez sur l’onglet « simgen\sphinxhyphen{}creei x.x.x », où « x.x.x » correspond au numéro de version.
 
 \item {} 
-Ensuite, cliquez sur « Download files » dans le menu à gauche et puis cliquez sur le nom du fichier « simgen\sphinxhyphen{}x.x.x.tar.gz » pour télécharger le fichier compressé.
+Ensuite, cliquez sur « Download files » dans le menu à gauche et puis cliquez sur le nom du fichier « simgen\sphinxhyphen{}creei x.x.x.tar.gz » pour télécharger le fichier compressé.
 
 \item {} 
-Une fois le fichier téléchargé, décompressez le fichier « simgen\sphinxhyphen{}x.x.x.tar.gz » une première fois.
+Une fois le fichier téléchargé, décompressez le fichier « simgen\sphinxhyphen{}creei x.x.x.tar.gz » une première fois.
 
 \item {} 
-Ouvrez le dossier créé par l’extraction (ex. simgen\sphinxhyphen{}x.x.x.tar), continuez ensuite en ouvrant le dossier « dist » et décompressez le fichier « simgen\sphinxhyphen{}x.x.x.tar ».
+Ouvrez le dossier créé par l’extraction (ex. simgen\sphinxhyphen{}creei x.x.x.tar), continuez ensuite en ouvrant le dossier « dist » et décompressez le fichier « simgen\sphinxhyphen{}creei x.x.x.tar ».
 
 \item {} 
-Une fois le fichier décompressé, transférez le dossier « simgen\sphinxhyphen{}x.x.x » qui en résulte dans le dossier où vous entreposez vos packages (si vous n’en avez pas, créez\sphinxhyphen{}en un à l’endroit qui vous convient le mieux).
+Une fois le fichier décompressé, transférez le dossier « simgen\sphinxhyphen{}creei x.x.x » qui en résulte dans le dossier où vous entreposez vos packages (si vous n’en avez pas, créez\sphinxhyphen{}en un à l’endroit qui vous convient le mieux).
 
 \item {} 
 Enfin, ajoutez dans votre notebook ou votre script le chemin d’accès de votre dossier de packages et vous pourrez invoquer SimGen en tant que module de la manière suivante:
@@ -429,7 +429,7 @@ Il est ensuite nécessaire d’importer SimGen en tant que tel:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{k+kn}{import} \PYG{n+nn}{simgen}
-\PYG{k+kn}{from} \PYG{n+nn}{simgen} \PYG{k+kn}{import} \PYG{n}{model}\PYG{p}{,} \PYG{n}{formating}
+\PYG{k+kn}{from} \PYG{n+nn}{simgen} \PYG{k+kn}{import} \PYG{n}{model}\PYG{p}{,} \PYG{n}{formating}\PYG{p}{,} \PYG{n}{replicate}
 \end{sphinxVerbatim}
 
 \sphinxstylestrong{Formatage données de départ}
@@ -674,49 +674,84 @@ Fonction membre qui permet de spécifier les hypothèses d’immigration.
 \item[] 
 \end{DUlineblock}
 
-
-\subsubsection{3. Lancement de la simulation}
-\label{\detokenize{utilisation:lancement-de-la-simulation}}
-Le lancement de la simulation s’effectue à l’aide de la fonction suivante:
+La dernière étape avant le lancement de la simulation est de créer un gabarit permettant la parallélisation
+du calcul des différentes réplications. Cette étape s’effectue à l’aide des commandes suivantes:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{base}\PYG{o}{.}\PYG{n}{simulate}\PYG{p}{(}\PYG{n}{rep}\PYG{o}{=}\PYG{n}{nb\PYGZus{}rep}\PYG{p}{)}
+\PYG{n}{exp} \PYG{o}{=} \PYG{n}{replicate}\PYG{p}{(}\PYG{n}{nreps}\PYG{o}{=}\PYG{n}{nb\PYGZus{}rep}\PYG{p}{,}\PYG{n}{ncpus}\PYG{o}{=}\PYG{l+m+mi}{6}\PYG{p}{)}
+\PYG{n}{exp}\PYG{o}{.}\PYG{n}{set\PYGZus{}model}\PYG{p}{(}\PYG{n}{base}\PYG{p}{)}
 \end{sphinxVerbatim}
 
-où \sphinxstyleemphasis{nb\_rep} correspond au nombre de réplications de la simulation (ex.: nb\_rep = 50). Si l’argument \sphinxstyleemphasis{rep} n’est pas spécifié, SimGen fixe par défaut le nombre de réplications à 1.
+où \sphinxstyleemphasis{nb\_rep} correspond au nombre de réplications de la simulation (ex.: nb\_rep = 50). Si l’argument \sphinxstyleemphasis{nreps} n’est pas spécifié, SimGen fixe par défaut le nombre de réplications à 1.
+L’argument \sphinxstyleemphasis{ncpus} correspond au nombre de processeurs utilisés pour le calcul en parallèle (ex.: ncpus = 6).
+Il est suggéré d’utiliser seulement une partie du nombre total de processeurs possédés par l’appareil.
+Si l’argument \sphinxstyleemphasis{ncpus} n’est pas spécifié, SimGen fixe par défaut le nombre de processeurs utilisés à 1.
+Le calcul des réplications n’est donc pas parallélisé dans cette situation. Si vous souhaitez effectuer une seule réplication, vous n’avez pas à spécifier l’argument \sphinxstyleemphasis{ncpus}.
 
-Il est à noter que cette commande a un temps d’exécution plus élevé que les commandes présentées précédemment.
-Le temps de simulation croît de manière substantielle avec l’année de fin et le nombre de réplications.
-
-\sphinxstylestrong{Détails: fonction simulate()}
-\index{model (classe dans simgen)@\spxentry{model}\spxextra{classe dans simgen}}
+\sphinxstylestrong{Détails: replicate()}
+\index{replicate (classe dans simgen)@\spxentry{replicate}\spxextra{classe dans simgen}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{utilisation:id6}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{model}}}{\emph{\DUrole{n}{start\_yr}\DUrole{o}{=}\DUrole{default_value}{2017}}, \emph{\DUrole{n}{stop\_yr}\DUrole{o}{=}\DUrole{default_value}{2100}}}{}
+\phantomsection\label{\detokenize{utilisation:simgen.replicate}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{replicate}}}{\emph{\DUrole{n}{nreps}\DUrole{o}{=}\DUrole{default_value}{1}}, \emph{\DUrole{n}{ncpus}\DUrole{o}{=}\DUrole{default_value}{1}}}{}
 Modèle de simulation SimGen.
 
-Cette classe permet de créer une instance d’un modèle de microsimulation.
+Cette classe permet la parallélisation du calcul des différentes réplications.
 \begin{quote}\begin{description}
 \item[{Paramètres}] \leavevmode\begin{itemize}
 \item {} 
-\sphinxstyleliteralstrong{\sphinxupquote{start\_yr}} (\sphinxstyleliteralemphasis{\sphinxupquote{int}}) \textendash{} année de départ de la simulation (défaut=2017)
+\sphinxstyleliteralstrong{\sphinxupquote{nreps}} (\sphinxstyleliteralemphasis{\sphinxupquote{int}}) \textendash{} nombre de réplications (défaut=1)
 
 \item {} 
-\sphinxstyleliteralstrong{\sphinxupquote{stop\_yr}} (\sphinxstyleliteralemphasis{\sphinxupquote{int}}) \textendash{} dernière année de la simulation (défaut=2100)
+\sphinxstyleliteralstrong{\sphinxupquote{ncpus}} (\sphinxstyleliteralemphasis{\sphinxupquote{int}}) \textendash{} nombre de coeurs utilisés pour le calcul (défaut=1)
 
 \end{itemize}
 
 \end{description}\end{quote}
-\index{simulate() (méthode simgen.model)@\spxentry{simulate()}\spxextra{méthode simgen.model}}
+
+\end{fulllineitems}
+
+
+\begin{DUlineblock}{0em}
+\item[] 
+\end{DUlineblock}
+
+
+\subsubsection{1. Lancement de la simulation}
+\label{\detokenize{utilisation:lancement-de-la-simulation}}
+Le lancement de la simulation s’effectue à l’aide de la fonction suivante:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{exp}\PYG{o}{.}\PYG{n}{simulate}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+Il est à noter que cette commande a un temps d’exécution plus élevé que les commandes présentées précédemment.
+Le temps de simulation croît de manière substantielle avec l’année de fin et le nombre de réplications.
+Il diminue toutefois plus le nombre de processeurs utilisés est élevé.
+
+\sphinxstylestrong{Détails: fonction simulate()}
+\index{replicate (classe dans simgen)@\spxentry{replicate}\spxextra{classe dans simgen}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{utilisation:simgen.model.simulate}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{simulate}}}{\emph{\DUrole{n}{rep}\DUrole{o}{=}\DUrole{default_value}{1}}}{}
-Fonction déclenchant le lancement de la simulation.
+\phantomsection\label{\detokenize{utilisation:id6}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{replicate}}}{\emph{\DUrole{n}{nreps}\DUrole{o}{=}\DUrole{default_value}{1}}, \emph{\DUrole{n}{ncpus}\DUrole{o}{=}\DUrole{default_value}{1}}}{}
+Modèle de simulation SimGen.
+
+Cette classe permet la parallélisation du calcul des différentes réplications.
 \begin{quote}\begin{description}
-\item[{Paramètres}] \leavevmode
-\sphinxstyleliteralstrong{\sphinxupquote{stratas}} (\sphinxstyleliteralemphasis{\sphinxupquote{rep}}) \textendash{} Nombre de réplications
+\item[{Paramètres}] \leavevmode\begin{itemize}
+\item {} 
+\sphinxstyleliteralstrong{\sphinxupquote{nreps}} (\sphinxstyleliteralemphasis{\sphinxupquote{int}}) \textendash{} nombre de réplications (défaut=1)
+
+\item {} 
+\sphinxstyleliteralstrong{\sphinxupquote{ncpus}} (\sphinxstyleliteralemphasis{\sphinxupquote{int}}) \textendash{} nombre de coeurs utilisés pour le calcul (défaut=1)
+
+\end{itemize}
 
 \end{description}\end{quote}
+\index{simulate() (méthode simgen.replicate)@\spxentry{simulate()}\spxextra{méthode simgen.replicate}}
+
+\begin{fulllineitems}
+\phantomsection\label{\detokenize{utilisation:simgen.replicate.simulate}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{simulate}}}{}{}
+Fonction déclenchant le lancement de la simulation.
 
 \end{fulllineitems}
 
@@ -729,7 +764,7 @@ Fonction déclenchant le lancement de la simulation.
 \end{DUlineblock}
 
 
-\subsubsection{4. Production des résultats}
+\subsubsection{1. Production des résultats}
 \label{\detokenize{utilisation:production-des-resultats}}
 Tout d’abord, le tableau ci\sphinxhyphen{}dessous présente la liste des variables pouvant servir lors de l’affichage des résultats de SimGen:
 
@@ -844,31 +879,37 @@ Il est possible de produire deux types de résultats: 1) des fréquences et 2) d
 
 \sphinxstylestrong{Fréquences}
 
-La fonction \sphinxstyleemphasis{stats.freq()} calcule le nombre d’individus selon le sous\sphinxhyphen{}groupe spécifié. Par exemple:
+La fonction \sphinxstyleemphasis{freq()} de la classe \sphinxstyleemphasis{replicate} calcule le nombre d’individus selon le sous\sphinxhyphen{}groupe spécifié. Par exemple:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{population\PYGZus{}hommes}\PYG{o}{=}\PYG{n}{base}\PYG{o}{.}\PYG{n}{stats}\PYG{o}{.}\PYG{n}{freq}\PYG{p}{(}\PYG{n}{sub}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{male==True}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{population\PYGZus{}hommes}\PYG{o}{=}\PYG{n}{exp}\PYG{o}{.}\PYG{n}{freq}\PYG{p}{(}\PYG{n}{sub}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{male==True}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 \end{sphinxVerbatim}
 
 Si l’argument \sphinxstyleemphasis{sub} n’est pas spécifié, la fonction renvoie le nombre de personnes dans l’ensemble de la population.
 
-\sphinxstylestrong{Détails: fonction stats.freq()}
-\index{statistics (classe dans simgen)@\spxentry{statistics}\spxextra{classe dans simgen}}
+\sphinxstylestrong{Détails: fonction freq()}
+\index{replicate (classe dans simgen)@\spxentry{replicate}\spxextra{classe dans simgen}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{utilisation:simgen.statistics}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{statistics}}}{\emph{\DUrole{n}{stratas}}}{}
-Classe pour créer les statistiques provenant d’une simulation.
+\phantomsection\label{\detokenize{utilisation:id7}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{replicate}}}{\emph{\DUrole{n}{nreps}\DUrole{o}{=}\DUrole{default_value}{1}}, \emph{\DUrole{n}{ncpus}\DUrole{o}{=}\DUrole{default_value}{1}}}{}
+Modèle de simulation SimGen.
 
-Cette classe permet de capturer la distribution de la population par strate durant une simulation. Elle permet ensuite de faire plusieurs tableaux dynamiques à partir de ces distributions.
+Cette classe permet la parallélisation du calcul des différentes réplications.
 \begin{quote}\begin{description}
-\item[{Paramètres}] \leavevmode
-\sphinxstyleliteralstrong{\sphinxupquote{stratas}} (\sphinxstyleliteralemphasis{\sphinxupquote{list of str}}) \textendash{} liste des noms de variables du fichiers de dominants afin de stratifier la population et récolter les fréquences (pondérées)
+\item[{Paramètres}] \leavevmode\begin{itemize}
+\item {} 
+\sphinxstyleliteralstrong{\sphinxupquote{nreps}} (\sphinxstyleliteralemphasis{\sphinxupquote{int}}) \textendash{} nombre de réplications (défaut=1)
+
+\item {} 
+\sphinxstyleliteralstrong{\sphinxupquote{ncpus}} (\sphinxstyleliteralemphasis{\sphinxupquote{int}}) \textendash{} nombre de coeurs utilisés pour le calcul (défaut=1)
+
+\end{itemize}
 
 \end{description}\end{quote}
-\index{freq() (méthode simgen.statistics)@\spxentry{freq()}\spxextra{méthode simgen.statistics}}
+\index{freq() (méthode simgen.replicate)@\spxentry{freq()}\spxextra{méthode simgen.replicate}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{utilisation:simgen.statistics.freq}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{freq}}}{\emph{\DUrole{n}{strata}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{bins}\DUrole{o}{=}\DUrole{default_value}{{[}0{]}}}, \emph{\DUrole{n}{sub}\DUrole{o}{=}\DUrole{default_value}{None}}}{}
+\phantomsection\label{\detokenize{utilisation:simgen.replicate.freq}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{freq}}}{\emph{\DUrole{n}{strata}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{bins}\DUrole{o}{=}\DUrole{default_value}{{[}0{]}}}, \emph{\DUrole{n}{sub}\DUrole{o}{=}\DUrole{default_value}{None}}}{}
 Fonction de fréquences.
 
 Fonction qui permet, à l’aide de \sphinxstyleemphasis{counts}, de calculer les fréquences pondérées pour une strate donnée. Deux options sont disponibles: l’une, \sphinxstyleemphasis{bins}, permet de modifier les catégories de la strate (par exemple le groupe d’âge), tandis que \sphinxstyleemphasis{sub} permet de définir un critère de sélection particulier pour le calcul des fréquences (en str).
@@ -905,31 +946,37 @@ dataframe
 
 \sphinxstylestrong{Proportion}
 
-La fonction \sphinxstyleemphasis{stats.prop()} calcule pour sa part la proportion de la population respectant les caractéristiques spécifiées. Par exemple:
+La fonction \sphinxstyleemphasis{prop()} de la classe \sphinxstyleemphasis{replicate} calcule pour sa part la proportion de la population respectant les caractéristiques spécifiées. Par exemple:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{proportion\PYGZus{}niveau\PYGZus{}scolarite} \PYG{o}{=} \PYG{n}{base}\PYG{o}{.}\PYG{n}{stats}\PYG{o}{.}\PYG{n}{prop}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{educ}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{sub}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{age\PYGZgt{}=25 and age\PYGZlt{}=64 and insch==False}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{proportion\PYGZus{}niveau\PYGZus{}scolarite} \PYG{o}{=} \PYG{n}{exp}\PYG{o}{.}\PYG{n}{prop}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{educ}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{sub}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{age\PYGZgt{}=25 and age\PYGZlt{}=64 and insch==False}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
 \end{sphinxVerbatim}
 
 Si l’argument \sphinxstyleemphasis{sub} n’est pas spécifié, la fonction renvoie la proportion de personnes selon les catégories de la variable spécifiée dans l’ensemble de la population.
 
-\sphinxstylestrong{Détails: fonction stats.prop()}
-\index{statistics (classe dans simgen)@\spxentry{statistics}\spxextra{classe dans simgen}}
+\sphinxstylestrong{Détails: fonction prop()}
+\index{replicate (classe dans simgen)@\spxentry{replicate}\spxextra{classe dans simgen}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{utilisation:id7}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{statistics}}}{\emph{\DUrole{n}{stratas}}}{}
-Classe pour créer les statistiques provenant d’une simulation.
+\phantomsection\label{\detokenize{utilisation:id8}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{replicate}}}{\emph{\DUrole{n}{nreps}\DUrole{o}{=}\DUrole{default_value}{1}}, \emph{\DUrole{n}{ncpus}\DUrole{o}{=}\DUrole{default_value}{1}}}{}
+Modèle de simulation SimGen.
 
-Cette classe permet de capturer la distribution de la population par strate durant une simulation. Elle permet ensuite de faire plusieurs tableaux dynamiques à partir de ces distributions.
+Cette classe permet la parallélisation du calcul des différentes réplications.
 \begin{quote}\begin{description}
-\item[{Paramètres}] \leavevmode
-\sphinxstyleliteralstrong{\sphinxupquote{stratas}} (\sphinxstyleliteralemphasis{\sphinxupquote{list of str}}) \textendash{} liste des noms de variables du fichiers de dominants afin de stratifier la population et récolter les fréquences (pondérées)
+\item[{Paramètres}] \leavevmode\begin{itemize}
+\item {} 
+\sphinxstyleliteralstrong{\sphinxupquote{nreps}} (\sphinxstyleliteralemphasis{\sphinxupquote{int}}) \textendash{} nombre de réplications (défaut=1)
+
+\item {} 
+\sphinxstyleliteralstrong{\sphinxupquote{ncpus}} (\sphinxstyleliteralemphasis{\sphinxupquote{int}}) \textendash{} nombre de coeurs utilisés pour le calcul (défaut=1)
+
+\end{itemize}
 
 \end{description}\end{quote}
-\index{prop() (méthode simgen.statistics)@\spxentry{prop()}\spxextra{méthode simgen.statistics}}
+\index{prop() (méthode simgen.replicate)@\spxentry{prop()}\spxextra{méthode simgen.replicate}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{utilisation:simgen.statistics.prop}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{prop}}}{\emph{\DUrole{n}{strata}}, \emph{\DUrole{n}{bins}\DUrole{o}{=}\DUrole{default_value}{{[}0{]}}}, \emph{\DUrole{n}{sub}\DUrole{o}{=}\DUrole{default_value}{None}}}{}
+\phantomsection\label{\detokenize{utilisation:simgen.replicate.prop}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{prop}}}{\emph{\DUrole{n}{strata}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{bins}\DUrole{o}{=}\DUrole{default_value}{{[}0{]}}}, \emph{\DUrole{n}{sub}\DUrole{o}{=}\DUrole{default_value}{None}}}{}
 Fonction de proportions.
 
 Fonction qui permet, à l’aide de \sphinxstyleemphasis{counts}, de calculer les proportions pondérées pour une strate donnée. Deux options sont disponibles: l’une, \sphinxstyleemphasis{bins}, permet de modifier les catégories de la strate (par exemple le groupe d’âge), tandis que \sphinxstyleemphasis{sub} permet de définir un critère de sélection particulier pour le calcul des proportions (en str).
@@ -969,30 +1016,38 @@ dataframe
 Enfin, il est possible de sauvegarder les résultats de la simulation dans un fichier .pkl à l’aide de la commande suivante:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{base}\PYG{o}{.}\PYG{n}{stats}\PYG{o}{.}\PYG{n}{save}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{.../resultats\PYGZus{}simgen}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{exp}\PYG{o}{.}\PYG{n}{save}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{./resultats\PYGZus{}simgen}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 \end{sphinxVerbatim}
 
 \sphinxstylestrong{Détails: fonction save()}
-\index{statistics (classe dans simgen)@\spxentry{statistics}\spxextra{classe dans simgen}}
+\index{replicate (classe dans simgen)@\spxentry{replicate}\spxextra{classe dans simgen}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{utilisation:id8}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{statistics}}}{\emph{\DUrole{n}{stratas}}}{}
-Classe pour créer les statistiques provenant d’une simulation.
+\phantomsection\label{\detokenize{utilisation:id9}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{replicate}}}{\emph{\DUrole{n}{nreps}\DUrole{o}{=}\DUrole{default_value}{1}}, \emph{\DUrole{n}{ncpus}\DUrole{o}{=}\DUrole{default_value}{1}}}{}
+Modèle de simulation SimGen.
 
-Cette classe permet de capturer la distribution de la population par strate durant une simulation. Elle permet ensuite de faire plusieurs tableaux dynamiques à partir de ces distributions.
+Cette classe permet la parallélisation du calcul des différentes réplications.
 \begin{quote}\begin{description}
-\item[{Paramètres}] \leavevmode
-\sphinxstyleliteralstrong{\sphinxupquote{stratas}} (\sphinxstyleliteralemphasis{\sphinxupquote{list of str}}) \textendash{} liste des noms de variables du fichiers de dominants afin de stratifier la population et récolter les fréquences (pondérées)
+\item[{Paramètres}] \leavevmode\begin{itemize}
+\item {} 
+\sphinxstyleliteralstrong{\sphinxupquote{nreps}} (\sphinxstyleliteralemphasis{\sphinxupquote{int}}) \textendash{} nombre de réplications (défaut=1)
+
+\item {} 
+\sphinxstyleliteralstrong{\sphinxupquote{ncpus}} (\sphinxstyleliteralemphasis{\sphinxupquote{int}}) \textendash{} nombre de coeurs utilisés pour le calcul (défaut=1)
+
+\end{itemize}
 
 \end{description}\end{quote}
-\index{save() (méthode simgen.statistics)@\spxentry{save()}\spxextra{méthode simgen.statistics}}
+\index{save() (méthode simgen.replicate)@\spxentry{save()}\spxextra{méthode simgen.replicate}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{utilisation:simgen.statistics.save}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{save}}}{\emph{\DUrole{n}{file}}}{}
+\phantomsection\label{\detokenize{utilisation:simgen.replicate.save}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{save}}}{\emph{\DUrole{n}{file}}, \emph{\DUrole{n}{imean}\DUrole{o}{=}\DUrole{default_value}{True}}, \emph{\DUrole{n}{isd}\DUrole{o}{=}\DUrole{default_value}{True}}}{}
 Fonction pour sauvegarder les fichiers de fréquences.
+
+Sauvegarde de 3 fichiers : 1) \sphinxstyleemphasis{.pkl} avec les fréquences de l’ensemble des réplications 2) \sphinxstyleemphasis{\_mean.pkl} avec les fréquences moyennes des réplications 3) \sphinxstyleemphasis{\_sd.pkl} avec l’écart\sphinxhyphen{}type des fréquences des réplications
 \begin{quote}\begin{description}
 \item[{Paramètres}] \leavevmode
-\sphinxstyleliteralstrong{\sphinxupquote{file}} (\sphinxstyleliteralemphasis{\sphinxupquote{str}}) \textendash{} nom du fichier de sauvegarde, incluant l’extension pkl (format pickle)
+\sphinxstyleliteralstrong{\sphinxupquote{file}} (\sphinxstyleliteralemphasis{\sphinxupquote{str}}) \textendash{} Nom du fichier de sauvegarde, incluant l’extension pkl (format pickle)
 
 \end{description}\end{quote}
 
@@ -2701,13 +2756,8 @@ Fonction déterminant les variables de sortie.
 \index{simulate() (méthode simgen.model)@\spxentry{simulate()}\spxextra{méthode simgen.model}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{code:simgen.model.simulate}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{simulate}}}{\emph{\DUrole{n}{rep}\DUrole{o}{=}\DUrole{default_value}{1}}}{}
+\phantomsection\label{\detokenize{code:simgen.model.simulate}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{simulate}}}{}{}
 Fonction déclenchant le lancement de la simulation.
-\begin{quote}\begin{description}
-\item[{Paramètres}] \leavevmode
-\sphinxstyleliteralstrong{\sphinxupquote{stratas}} (\sphinxstyleliteralemphasis{\sphinxupquote{rep}}) \textendash{} Nombre de réplications
-
-\end{description}\end{quote}
 
 \end{fulllineitems}
 
@@ -2730,10 +2780,139 @@ Fonction membre qui permet de charger une population de départ.
 \end{fulllineitems}
 
 
+La classe permettant de paralléliser le calcul des réplications est \sphinxstyleemphasis{replicate}. Voici sa description.
+\index{replicate (classe dans simgen)@\spxentry{replicate}\spxextra{classe dans simgen}}
+
+\begin{fulllineitems}
+\phantomsection\label{\detokenize{code:simgen.replicate}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{replicate}}}{\emph{\DUrole{n}{nreps}\DUrole{o}{=}\DUrole{default_value}{1}}, \emph{\DUrole{n}{ncpus}\DUrole{o}{=}\DUrole{default_value}{1}}}{}
+Modèle de simulation SimGen.
+
+Cette classe permet la parallélisation du calcul des différentes réplications.
+\begin{quote}\begin{description}
+\item[{Paramètres}] \leavevmode\begin{itemize}
+\item {} 
+\sphinxstyleliteralstrong{\sphinxupquote{nreps}} (\sphinxstyleliteralemphasis{\sphinxupquote{int}}) \textendash{} nombre de réplications (défaut=1)
+
+\item {} 
+\sphinxstyleliteralstrong{\sphinxupquote{ncpus}} (\sphinxstyleliteralemphasis{\sphinxupquote{int}}) \textendash{} nombre de coeurs utilisés pour le calcul (défaut=1)
+
+\end{itemize}
+
+\end{description}\end{quote}
+\index{simulate() (méthode simgen.replicate)@\spxentry{simulate()}\spxextra{méthode simgen.replicate}}
+
+\begin{fulllineitems}
+\phantomsection\label{\detokenize{code:simgen.replicate.simulate}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{simulate}}}{}{}
+Fonction déclenchant le lancement de la simulation.
+
+\end{fulllineitems}
+
+
+\end{fulllineitems}
+
+
 
 \subsection{Statistiques}
 \label{\detokenize{code:statistiques}}
-Cette classe permet de produire des statistiques dans le cadre d’une simulation.
+La classe \sphinxstyleemphasis{replicate} permet également de produire des statistiques dans le cadre d’une simulation, lorsque cette classe est utilisée pour la simulation.
+\index{replicate (classe dans simgen)@\spxentry{replicate}\spxextra{classe dans simgen}}
+
+\begin{fulllineitems}
+\phantomsection\label{\detokenize{code:id0}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{simgen.}}\sphinxbfcode{\sphinxupquote{replicate}}}{\emph{\DUrole{n}{nreps}\DUrole{o}{=}\DUrole{default_value}{1}}, \emph{\DUrole{n}{ncpus}\DUrole{o}{=}\DUrole{default_value}{1}}}{}
+Modèle de simulation SimGen.
+
+Cette classe permet la parallélisation du calcul des différentes réplications.
+\begin{quote}\begin{description}
+\item[{Paramètres}] \leavevmode\begin{itemize}
+\item {} 
+\sphinxstyleliteralstrong{\sphinxupquote{nreps}} (\sphinxstyleliteralemphasis{\sphinxupquote{int}}) \textendash{} nombre de réplications (défaut=1)
+
+\item {} 
+\sphinxstyleliteralstrong{\sphinxupquote{ncpus}} (\sphinxstyleliteralemphasis{\sphinxupquote{int}}) \textendash{} nombre de coeurs utilisés pour le calcul (défaut=1)
+
+\end{itemize}
+
+\end{description}\end{quote}
+\index{freq() (méthode simgen.replicate)@\spxentry{freq()}\spxextra{méthode simgen.replicate}}
+
+\begin{fulllineitems}
+\phantomsection\label{\detokenize{code:simgen.replicate.freq}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{freq}}}{\emph{\DUrole{n}{strata}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{bins}\DUrole{o}{=}\DUrole{default_value}{{[}0{]}}}, \emph{\DUrole{n}{sub}\DUrole{o}{=}\DUrole{default_value}{None}}}{}
+Fonction de fréquences.
+
+Fonction qui permet, à l’aide de \sphinxstyleemphasis{counts}, de calculer les fréquences pondérées pour une strate donnée. Deux options sont disponibles: l’une, \sphinxstyleemphasis{bins}, permet de modifier les catégories de la strate (par exemple le groupe d’âge), tandis que \sphinxstyleemphasis{sub} permet de définir un critère de sélection particulier pour le calcul des fréquences (en str).
+\begin{quote}\begin{description}
+\item[{Paramètres}] \leavevmode\begin{itemize}
+\item {} 
+\sphinxstyleliteralstrong{\sphinxupquote{strata}} (\sphinxstyleliteralemphasis{\sphinxupquote{str}}) \textendash{} nom de la variable par laquelle on veut découper les données; ne pas spécifier cette option revient à demander les fréquences totales
+
+\item {} 
+\sphinxstyleliteralstrong{\sphinxupquote{bins}} (\sphinxstyleliteralemphasis{\sphinxupquote{list of int}}) \textendash{} liste de valeurs pour découper les données selon la variable strata; fonctionne seulement avec des variables de types int (pas de str)
+
+\item {} 
+\sphinxstyleliteralstrong{\sphinxupquote{sub}} (\sphinxstyleliteralemphasis{\sphinxupquote{str}}) \textendash{} condition à respecter pour un sous\sphinxhyphen{}échantillon, p.ex. « age\textgreater{}=18 »
+
+\end{itemize}
+
+\item[{Renvoie}] \leavevmode
+dataframe avec les fréquences par année (ligne) et valeur de la strate (colonne)
+
+\item[{Type renvoyé}] \leavevmode
+dataframe
+
+\end{description}\end{quote}
+
+\end{fulllineitems}
+
+\index{prop() (méthode simgen.replicate)@\spxentry{prop()}\spxextra{méthode simgen.replicate}}
+
+\begin{fulllineitems}
+\phantomsection\label{\detokenize{code:simgen.replicate.prop}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{prop}}}{\emph{\DUrole{n}{strata}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{bins}\DUrole{o}{=}\DUrole{default_value}{{[}0{]}}}, \emph{\DUrole{n}{sub}\DUrole{o}{=}\DUrole{default_value}{None}}}{}
+Fonction de proportions.
+
+Fonction qui permet, à l’aide de \sphinxstyleemphasis{counts}, de calculer les proportions pondérées pour une strate donnée. Deux options sont disponibles: l’une, \sphinxstyleemphasis{bins}, permet de modifier les catégories de la strate (par exemple le groupe d’âge), tandis que \sphinxstyleemphasis{sub} permet de définir un critère de sélection particulier pour le calcul des proportions (en str).
+\begin{quote}\begin{description}
+\item[{Paramètres}] \leavevmode\begin{itemize}
+\item {} 
+\sphinxstyleliteralstrong{\sphinxupquote{strata}} (\sphinxstyleliteralemphasis{\sphinxupquote{str}}) \textendash{} nom de la variable par laquelle on veut découper les données
+
+\item {} 
+\sphinxstyleliteralstrong{\sphinxupquote{bins}} (\sphinxstyleliteralemphasis{\sphinxupquote{list of int}}) \textendash{} liste de valeurs pour découper les données selon la variable strata; fonctionne seulement avec des variables de types int (pas de str)
+
+\item {} 
+\sphinxstyleliteralstrong{\sphinxupquote{sub}} (\sphinxstyleliteralemphasis{\sphinxupquote{str}}) \textendash{} condition à respecter pour un sous\sphinxhyphen{}échantillon, p.ex. « age\textgreater{}=18 »
+
+\end{itemize}
+
+\item[{Renvoie}] \leavevmode
+dataframe avec les proportions par année (ligne) et valeur de la strate (colonne)
+
+\item[{Type renvoyé}] \leavevmode
+dataframe
+
+\end{description}\end{quote}
+
+\end{fulllineitems}
+
+\index{save() (méthode simgen.replicate)@\spxentry{save()}\spxextra{méthode simgen.replicate}}
+
+\begin{fulllineitems}
+\phantomsection\label{\detokenize{code:simgen.replicate.save}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{save}}}{\emph{\DUrole{n}{file}}, \emph{\DUrole{n}{imean}\DUrole{o}{=}\DUrole{default_value}{True}}, \emph{\DUrole{n}{isd}\DUrole{o}{=}\DUrole{default_value}{True}}}{}
+Fonction pour sauvegarder les fichiers de fréquences.
+
+Sauvegarde de 3 fichiers : 1) \sphinxstyleemphasis{.pkl} avec les fréquences de l’ensemble des réplications 2) \sphinxstyleemphasis{\_mean.pkl} avec les fréquences moyennes des réplications 3) \sphinxstyleemphasis{\_sd.pkl} avec l’écart\sphinxhyphen{}type des fréquences des réplications
+\begin{quote}\begin{description}
+\item[{Paramètres}] \leavevmode
+\sphinxstyleliteralstrong{\sphinxupquote{file}} (\sphinxstyleliteralemphasis{\sphinxupquote{str}}) \textendash{} Nom du fichier de sauvegarde, incluant l’extension pkl (format pickle)
+
+\end{description}\end{quote}
+
+\end{fulllineitems}
+
+
+\end{fulllineitems}
+
+
+La classe \sphinxstyleemphasis{statistics} peut  être utilisée pour produire des statistiques, si la classe \sphinxstyleemphasis{model} est utilisée plutôt que \sphinxstyleemphasis{replicate} pour produire la simulation. Voici sa description.
 \index{statistics (classe dans simgen)@\spxentry{statistics}\spxextra{classe dans simgen}}
 
 \begin{fulllineitems}
@@ -2762,6 +2941,21 @@ Fonction pour ajouter une année à la distribution.
 \sphinxstyleliteralstrong{\sphinxupquote{year}} (\sphinxstyleliteralemphasis{\sphinxupquote{int}}) \textendash{} année de départ de la simulation
 
 \end{itemize}
+
+\end{description}\end{quote}
+
+\end{fulllineitems}
+
+\index{add\_to\_mean() (méthode simgen.statistics)@\spxentry{add\_to\_mean()}\spxextra{méthode simgen.statistics}}
+
+\begin{fulllineitems}
+\phantomsection\label{\detokenize{code:simgen.statistics.add_to_mean}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{add\_to\_mean}}}{\emph{\DUrole{n}{rep}}}{}
+Fonction pour ajouter une réplication à la moyenne des distributions.
+
+À chaque réplication, les valeurs du aataFrame self.counts/nbr\_réplication sont ajoutées à la moyenne des valeurs.
+\begin{quote}\begin{description}
+\item[{Paramètres}] \leavevmode
+\sphinxstyleliteralstrong{\sphinxupquote{rep}} (\sphinxstyleliteralemphasis{\sphinxupquote{nombre de réplications de la simulation}}) \textendash{} 
 
 \end{description}\end{quote}
 
@@ -2895,7 +3089,7 @@ en cliquant sur le \sphinxhref{https://github.com/CREEi-models/simgen/issues}{li
 
 \chapter{Documentation en PDF}
 \label{\detokenize{index:documentation-en-pdf}}
-Ficher \sphinxcode{\sphinxupquote{pdf}}
+Fichier \sphinxcode{\sphinxupquote{pdf}}
 
 
 \renewcommand{\indexname}{Index des modules Python}

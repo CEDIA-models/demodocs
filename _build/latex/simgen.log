@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.29)  30 APR 2021 14:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.29)  16 SEP 2021 13:06
 entering extended mode
 **./simgen.tex
 (simgen.tex
@@ -752,27 +752,27 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 461.
 
-[8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 839--839
+[8] [9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 874--874
 []\T1/ptm/m/n/10 Sco-la-rité com-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 839--839
+Underfull \hbox (badness 10000) in paragraph at lines 874--874
 []\T1/ptm/m/n/10 Ca-rac-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 839--839
+Underfull \hbox (badness 10000) in paragraph at lines 874--874
 []\T1/ptm/m/n/10 mar-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 839--839
+Underfull \hbox (badness 10000) in paragraph at lines 874--874
 []\T1/ptm/m/n/10 Nombre d'en-
  []
 
-[10] [11] [12]
+[11] [12]
 <colab-badge.png, id=201, 117.43875pt x 20.075pt>
 File: colab-badge.png Graphic file (type png)
 <use colab-badge.png>
@@ -781,45 +781,45 @@ Package pdftex.def Info: colab-badge.png  used on input line 2.
 <diagramme_flux-simgen.jpg, id=204, 643.40375pt x 332.24126pt>
 File: diagramme_flux-simgen.jpg Graphic file (type jpg)
 <use diagramme_flux-simgen.jpg>
-Package pdftex.def Info: diagramme_flux-simgen.jpg  used on input line 1070.
+Package pdftex.def Info: diagramme_flux-simgen.jpg  used on input line 1125.
 (pdftex.def)             Requested size: 469.7692pt x 242.57465pt.
- [13 <./colab-badge.png>] [14 <./diagramme_flux-simgen.jpg>]
-[15] [16] [17] [18] [19] [20] [21]
+ [13 <./colab-badge.png>] [14 <./diagramme_flux-simgen.jpg>] [15]
+[16] [17] [18] [19] [20] [21]
 LaTeX Font Info:    Trying to load font information for TS1+phv on input line 2
-092.
+147.
 
 (C:\Users\80002036\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 [22]
-<pop_total.png, id=325, 597.23125pt x 335.2525pt>
+<pop_total.png, id=326, 597.23125pt x 335.2525pt>
 File: pop_total.png Graphic file (type png)
 <use pop_total.png>
-Package pdftex.def Info: pop_total.png  used on input line 2232.
+Package pdftex.def Info: pop_total.png  used on input line 2287.
 (pdftex.def)             Requested size: 469.75708pt x 263.69557pt.
  [23]
-<pop_age.jpg, id=336, 597.23125pt x 335.2525pt>
+<pop_age.jpg, id=337, 597.23125pt x 335.2525pt>
 File: pop_age.jpg Graphic file (type jpg)
 <use pop_age.jpg>
-Package pdftex.def Info: pop_age.jpg  used on input line 2245.
+Package pdftex.def Info: pop_age.jpg  used on input line 2300.
 (pdftex.def)             Requested size: 469.75708pt x 263.69557pt.
-<educ_2564.png, id=337, 594.22pt x 335.2525pt>
+<educ_2564.png, id=338, 594.22pt x 335.2525pt>
 File: educ_2564.png Graphic file (type png)
 <use educ_2564.png>
-Package pdftex.def Info: educ_2564.png  used on input line 2263.
+Package pdftex.def Info: educ_2564.png  used on input line 2318.
 (pdftex.def)             Requested size: 469.77321pt x 265.03073pt.
  [24 <./pop_total.png>] [25 <./pop_age.jpg> <./educ_2564.png>]
-<union_15over.png, id=351, 594.22pt x 335.2525pt>
+<union_15over.png, id=352, 594.22pt x 335.2525pt>
 File: union_15over.png Graphic file (type png)
 <use union_15over.png>
-Package pdftex.def Info: union_15over.png  used on input line 2276.
+Package pdftex.def Info: union_15over.png  used on input line 2331.
 (pdftex.def)             Requested size: 469.77321pt x 265.03073pt.
 
-[26 <./union_15over.png>] [27] [28] [29] [30] [31] [32
-
-]
+[26 <./union_15over.png>] [27] [28] [29] [30] [31] [32]
 Chapitre 2.
-[33] [34
+[33
+
+] [34
 
 ]
 Chapitre 3.
@@ -835,13 +835,13 @@ Chapitre 3.
 
 ]) (simgen.aux)
 Package rerunfilecheck Info: File `simgen.out' has not changed.
-(rerunfilecheck)             Checksum: 95975C31DF1790947D711FEE42B7043E;1415.
+(rerunfilecheck)             Checksum: 5D868A4BA978935551C82A3C9939CFED;1415.
  ) 
 Here is how much of TeX's memory you used:
- 14325 strings out of 479321
- 212104 string characters out of 2855152
- 566562 words of memory out of 3000000
- 31241 multiletter control sequences out of 15000+600000
+ 14341 strings out of 479321
+ 212506 string characters out of 2855152
+ 566911 words of memory out of 3000000
+ 31249 multiletter control sequences out of 15000+600000
  459748 words of font info for 93 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  83i,16n,88p,1965b,728s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -862,9 +862,9 @@ tic/uhvr8a.pfb><C:/Users/80002036/AppData/Local/Programs/MiKTeX/fonts/type1/urw
 /times/utmb8a.pfb><C:/Users/80002036/AppData/Local/Programs/MiKTeX/fonts/type1/
 urw/times/utmr8a.pfb><C:/Users/80002036/AppData/Local/Programs/MiKTeX/fonts/typ
 e1/urw/times/utmri8a.pfb>
-Output written on simgen.pdf (43 pages, 427875 bytes).
+Output written on simgen.pdf (43 pages, 434285 bytes).
 PDF statistics:
- 596 PDF objects out of 1000 (max. 8388607)
- 182 named destinations out of 1000 (max. 500000)
+ 611 PDF objects out of 1000 (max. 8388607)
+ 190 named destinations out of 1000 (max. 500000)
  139 words of extra memory for PDF output out of 10000 (max. 10000000)
 
